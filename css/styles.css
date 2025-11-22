@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ccc;
+    gap: 20px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav a {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+
+
+.buscador {
+    display: flex;
+    align-items: center;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 5px 15px;
+    flex-grow: 0;
+    width: 300px;
+}
+
+.buscador input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.buscador button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.usuario {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    margin-left: auto;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    padding: 40px 30px 20px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    margin-left: auto;
+    padding-right: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.footer-nav {
+    padding-left: 20px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.direccion {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 20px;
+}
