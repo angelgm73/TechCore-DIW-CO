@@ -19,15 +19,52 @@
       <div class="detalle-info">
         <h1>Monitor Lenovo Legion 24-10</h1>
         <div class="precio">€399</div>
-        <p>Monitor gaming 23.8" FullHD 240Hz para juegos competitivos.</p>
-        <ul>
-          <li>Resolución: 1920x1080</li>
-          <li>Refresco: 240Hz</li>
-          <li>Tiempo de respuesta: 1ms</li>
-        </ul>
+        <p>Monitor gaming 23.8" FullHD con tasa de refresco alta y tiempo de respuesta reducido, ideal para jugadores competitivos.</p>
+
+        <h3>Especificaciones técnicas</h3>
+        <table class="specs-table">
+          <tr><th>Característica</th><th>Detalle</th></tr>
+          <tr><td>Resolución</td><td>1920 x 1080 (Full HD)</td></tr>
+          <tr><td>Tasa de refresco</td><td>240 Hz</td></tr>
+          <tr><td>Tiempo de respuesta</td><td>1 ms</td></tr>
+          <tr><td>Conectividad</td><td>HDMI, DisplayPort</td></tr>
+          <tr><td>Diagonal</td><td>23.8"</td></tr>
+        </table>
+
+        <button class="add-cart">Añadir al carrito</button>
+
         <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
       </div>
     </div>
+
+    <section class="similares">
+        <h3>Productos similares</h3>
+        <div class="similares-grid">
+          <a class="similar-item" href="detalle-monitor1.html">
+            <img src="../imagenes/monitor1.jpg" alt="Lenovo L27q">
+            <div class="simil-name">Lenovo L27q-27"</div>
+            <div class="precio">€239</div>
+          </a>
+          <a class="similar-item" href="detalle-monitor2.html">
+            <img src="../imagenes/monitor2.jpg" alt="ThinkVision P24q">
+            <div class="simil-name">ThinkVision P24q-40</div>
+            <div class="precio">€266</div>
+          </a>
+          <a class="similar-item" href="detalle-monitor4.html">
+            <img src="../imagenes/monitor4.jpg" alt="Aorus CV27Q">
+            <div class="simil-name">Aorus CV27Q</div>
+            <div class="precio">€129</div>
+          </a>
+        </div>
+      </section>
+
+    <script>
+      document.addEventListener('click', function(e){
+        if(e.target && e.target.classList.contains('add-cart')){
+          alert('Producto añadido');
+        }
+      });
+    </script>
   </main>
   <footer><div class="direccion">TechCore Av Schultz Nº 23 Gijon, Asturias.</div></footer>
 </body>
