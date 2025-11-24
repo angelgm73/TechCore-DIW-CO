@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Monitor Lenovo L27q-27" - TechCore</title>
+</head>
+<body>
+  <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logoSinTexto.png" alt="Volver a la pagina de inicio">
+                <span>TechCore</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+  <main>
+    <div class="detalle-container">
+      <div class="detalle-img"><img src="../imagenes/raton3.jpg" alt="Ratón Corsair Harpoon RGB"></div>
+      <div class="detalle-info">
+        <h1>Corsair Harpoon RGB</h1>
+        <div class="precio">€39</div>
+        <p>Ratón ligero y económico con iluminación RGB y buen rendimiento para uso cotidiano y gaming casual.</p>
+
+        <h3>Especificaciones técnicas</h3>
+        <table class="specs-table">
+          <tr><th>Característica</th><th>Detalle</th></tr>
+          <tr><td>Sensor</td><td>6.500 DPI</td></tr>
+          <tr><td>Peso</td><td>85 g</td></tr>
+          <tr><td>Conectividad</td><td>USB</td></tr>
+          <tr><td>Botones</td><td>6</td></tr>
+        </table>
+
+        <button class="add-cart">Añadir al carrito</button>
+
+        <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+      </div>
+    </div>
+
+    <section class="similares">
+      <h3>Productos similares</h3>
+      <div class="similares-grid">
+        <a class="similar-item" href="detalle-raton2.html">
+          <img src="../imagenes/raton2.jpg" alt="Ratón Logitech G502">
+          <div class="simil-name">Logitech G502</div>
+          <div class="precio">€79</div>
+        </a>
+        <a class="similar-item" href="detalle-raton1.html">
+          <img src="../imagenes/raton1.jpg" alt="Ratón Logitech MX Master 3">
+          <div class="simil-name">Logitech MX Master 3</div>
+          <div class="precio">€239</div>
+        </a>
+        <a class="similar-item" href="detalle-raton4.html">
+          <img src="../imagenes/raton4.jpg" alt="Ratón Aorus CV27Q">
+          <div class="simil-name">Aorus CV27Q</div>
+          <div class="precio">€129</div>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('click', function(e){
+        if(e.target && e.target.classList.contains('add-cart')){
+          alert('Producto añadido');
+        }
+      });
+    </script>
+  </main>
+
+  <footer>
+        <div class="footer-info">
+            <div class="footer-logo">
+               <a href="index.html">
+                <img src="../imagenes\logojpg-removebg-preview.png" alt="Inicio">
+               </a>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://x.com" class="icono-x">
+                    <img src="../imagenes/x.png" alt="X" width="30">
+                </a>
+                <a href="https://facebook.com" class="icon-fb">
+                    <img src="../imagenes/facebook.png" alt="Facebook" width="30">
+                </a>
+                <a href="https://instagram.com" class="icon-ig">
+                    <img src="../imagenes/instagram.png" alt="Instagram" width="30">
+                </a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                    <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="direccion">
+            <p>TechCore Av Schultz Nº 23 Gijon, Asturias.</p>
+        </div>
+    </footer>
+</body>
+</html>

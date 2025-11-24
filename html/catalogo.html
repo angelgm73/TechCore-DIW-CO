@@ -38,8 +38,173 @@
 
 
     <main>
-        <section class="principal">
-            <h1>Catalogo de productos</h1>
+        <aside class="sidebar">
+            <h2>Filtros</h2>
+            <div class="filtro-buscador">
+                <input type="search" placeholder="buscar">
+            </div>
+            <div class="filtro-section">
+                <h3>Marcas</h3>
+                <label><input type="checkbox"> Lenovo</label>
+                <label><input type="checkbox"> Aorus</label>
+                <label><input type="checkbox"> Asus</label>
+            </div>
+            <div class="filtro-section">
+                <h3>Categoría</h3>
+                <label><input type="checkbox"> Monitores</label>
+                <label><input type="checkbox"> Portátiles</label>
+                <label><input type="checkbox"> Teclados</label>
+                <label><input type="checkbox"> Ratones</label>
+            </div>
+            <div class="filtro-section">
+                <h3>Precio</h3>
+                <input type="range" min="50" max="2000" value="500">
+                <div class="precio-valores">€50 - €2000</div>
+            </div>
+        </aside>
+
+        <section class="catalogo">
+            <div class="catalogo-header">
+                <h1>Catálogo de productos</h1>
+                <div class="ordenar">
+                    <label for="orden">Ordenar:</label>
+                    <select id="orden">
+                        <option>Más relevante</option>
+                        <option>Precio: menor a mayor</option>
+                        <option>Precio: mayor a menor</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="productos-grid">
+                <article class="producto">
+                    <a class="producto-link" href="detalle-monitor1.html">
+                        <img src="../imagenes/monitor1.jpg" alt="Monitor 1">
+                        <h4>Monitor Lenovo L27q-27"</h4>
+                        <p class="precio">€239</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-monitor2.html">
+                        <img src="../imagenes/monitor2.jpg" alt="Monitor 2">
+                        <h4>Monitor Lenovo ThinkVision P24q-40</h4>
+                        <p class="precio">€266</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-monitor3.html">
+                        <img src="../imagenes/monitor3.jpg" alt="Monitor 3">
+                        <h4>Monitor Lenovo Legion 24-10 23.8"</h4>
+                        <p class="precio">€399</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                        <a class="producto-link" href="detalle-monitor4.html">
+                            <img src="../imagenes/monitor4.jpg" alt="Aorus CV27Q">
+                            <h4>Aorus CV27Q</h4>
+                            <p class="precio">€129</p>
+                        </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-raton1.html">
+                        <img src="../imagenes/raton1.jpg" alt="Logitech G502">
+                        <h4>Logitech G502 HERO</h4>
+                        <p class="precio">€59</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-raton2.html">
+                        <img src="../imagenes/raton2.jpg" alt="Razer DeathAdder V2">
+                        <h4>Razer DeathAdder V2</h4>
+                        <p class="precio">€69</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-raton3.html">
+                        <img src="../imagenes/raton3.jpg" alt="Corsair Harpoon">
+                        <h4>Corsair Harpoon RGB</h4>
+                        <p class="precio">€39</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-raton4.html">
+                        <img src="../imagenes/raton4.jpg" alt="SteelSeries Rival 3">
+                        <h4>SteelSeries Rival 3</h4>
+                        <p class="precio">€34</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-portatil1.html">
+                        <img src="../imagenes/portatil1.jpg" alt="Dell XPS 13">
+                        <h4>Dell XPS 13</h4>
+                        <p class="precio">€999</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-portatil2.html">
+                        <img src="../imagenes/portatil2.jpg" alt="MacBook Air M2">
+                        <h4>MacBook Air M2</h4>
+                        <p class="precio">€1199</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-portatil3.html">
+                        <img src="../imagenes/portatil3.jpg" alt="HP Omen 16">
+                        <h4>HP Omen 16</h4>
+                        <p class="precio">€1299</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-portatil4.html">
+                        <img src="../imagenes/portatil4.jpg" alt="Asus ZenBook 14">
+                        <h4>Asus ZenBook 14</h4>
+                        <p class="precio">€849</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-teclado1.html">
+                        <img src="../imagenes/teclado1.jpg" alt="Logitech G Pro Keyboard">
+                        <h4>Logitech G Pro Keyboard</h4>
+                        <p class="precio">€119</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-teclado2.html">
+                        <img src="../imagenes/teclado2.jpg" alt="Razer Huntsman Tournament">
+                        <h4>Razer Huntsman Tournament</h4>
+                        <p class="precio">€89</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-teclado3.html">
+                        <img src="../imagenes/teclado3.jpg" alt="Corsair K70 RGB">
+                        <h4>Corsair K70 RGB</h4>
+                        <p class="precio">€149</p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-teclado4.html">
+                        <img src="../imagenes/teclado4.jpg" alt="HyperX Alloy FPS">
+                        <h4>HyperX Alloy FPS</h4>
+                        <p class="precio">€79</p>
+                    </a>
+                </article>
+            </div>
         </section>
     </main>
 
