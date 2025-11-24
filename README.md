@@ -47,6 +47,7 @@ Ninguna. Proyecto estático hecho con HTML y CSS.
 **Autor / Contacto**
 
 - Repositorio: `TechCore-DIW-CO` (owner: angelgm73)
+- Coworker (IkerFM69)
 - Para cambios o preguntas, abrir un issue en el repositorio.
 
 ---
