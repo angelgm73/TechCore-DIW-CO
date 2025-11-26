@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario</title>
+    <title>Mi Cuenta - TechCore</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-               <img src="../imagenes/logoSinTexto.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/logoSinTexto.png" alt="Volver a la pagina de inicio">
                 <span>TechCore</span>
             </a>
         </div>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -33,64 +34,59 @@
             <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
             <a href="carrito.html">🛒 Mi cesta</a>
         </div>
-
     </header>
-
-
+    
     <main>
-        <section class="principal">
-            <h1 class="titulo-usuario">Iniciar sesion</h1>
-            <div class="usuario-caja">
+        <section class="main">
+            <h1 class="titulo-usuario">Iniciar sesión</h1>
 
-                <form action="#">
-                    <label for="" class="label-usuario">Nombre de usuario</label>
-                    <input type="text" class="input-usuario">
-                    <label for="" class="label-usuario">Contraseña</label>
-                    <input type="password" class="input-usuario">
-                    <button class="boton-registro">Iniciar sesion</button>
+            <div class="usuario-caja">
+                <form action="#" class="form-usuario">
+                    <label for="username" class="label-usuario">Nombre de usuario</label>
+                    <input type="text" id="username" class="input-usuario">
+
+                    <label for="password" class="label-usuario">Contraseña</label>
+                    <input type="password" id="password" class="input-usuario">
+
+                    <button type="submit" class="boton-registro">Iniciar sesión</button>
                 </form>
 
                 <div class="registro-usuario">
-                    <p>¿Aun no tienes una cuenta?</p>
-                    <button class="boton-usuario">Registrate</button>
+                    <p>¿Aún no tienes una cuenta?</p>
+                    <button class="boton-usuario">Regístrate</button>
                 </div>
-
             </div>
-
         </section>
     </main>
     
     <footer>
-        <div class="footer-info">
+        <div class="footer-container">
             <div class="footer-logo">
-               <a href="index.html">
-                <img src="../imagenes\logojpg-removebg-preview.png" alt="Inicio">
-               </a>
-            </div>
-            <div class="redes-sociales">
-                <a href="https://x.com" class="icono-x">
-                    <img src="../imagenes/x.png" alt="X" width="30">
-                </a>
-                <a href="https://facebook.com" class="icon-fb">
-                    <img src="../imagenes/facebook.png" alt="Facebook" width="30">
-                </a>
-                <a href="https://instagram.com" class="icon-ig">
-                    <img src="../imagenes/instagram.png" alt="Instagram" width="30">
+                <a href="index.html">
+                    <img src="../imagenes/logojpg-removebg-preview.png" alt="Inicio">
                 </a>
             </div>
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                    <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                </ul>
+
+            <div class="footer-secciones">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
             </div>
         </div>
 
         <div class="direccion">
-            <p>TechCore Av Schultz Nº 23 Gijon, Asturias.</p>
+            <p>TechCore Av Schultz Nº 23 Gijón, Asturias</p>
         </div>
-    </footer> 
-    
+    </footer>
 </body>
 </html>
