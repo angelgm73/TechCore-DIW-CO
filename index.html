@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .proyectos-lista {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .proyecto-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            transition: box-shadow 0.3s;
+        }
+
+        .proyecto-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .proyecto-item h2 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .proyecto-item p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .proyecto-item a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .proyecto-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            border-top: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Índice de Proyectos</h1>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h2>Bienvenido al portal de proyectos</h2>
+            <p>Selecciona un proyecto para acceder a su contenido</p>
+        </div>
+
+        <div class="proyectos-lista">
+            <div class="proyecto-item">
+                <h2>TechCore Main</h2>
+                <p>Página principal del proyecto TechCore con información general y navegación.</p>
+                <a href="TechCore-DIW-CO-main/html/index.html">→ Acceder al proyecto</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h2>Gadgets</h2>
+                <p>Catálogo de gadgets tecnológicos y dispositivos inteligentes.</p>
+                <a href="TechCore-DIW-CO-GADGETS/html/index.html">→ Acceder al proyecto</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h2>InnerChip</h2>
+                <p>Componentes internos y hardware especializado para computadoras.</p>
+                <a href="TechCore-DIW-CO-INNERCHIP/html/index.html">→ Acceder al proyecto</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h2>PC Master</h2>
+                <p>Equipos completos y configuraciones de PC de alto rendimiento.</p>
+                <a href="TechCore-DIW-CO-PCMASTER/html/index.html">→ Acceder al proyecto</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h2>Periféricos</h2>
+                <p>Accesorios y periféricos para mejorar tu experiencia tecnológica.</p>
+                <a href="TechCore-DIW-CO-PERIFERICOS/html/index.html">→ Acceder al proyecto</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>DIW & CO 2025</p>
+    </footer>
+</body>
+
+</html>

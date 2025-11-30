@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Samsung Portable SSD T7 1TB - WiredZone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../imagenes/LogoSinTexto.png" alt="Volver a la pagina de inicio">
+                <span>WiredZone</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+    </header>
+    <main>
+        <div class="detalle-container">
+            <div class="detalle-img">
+                <img src="../imagenes/ssd1.jpg" alt="Samsung T7 1TB">
+            </div>
+            <div class="detalle-info">
+                <h1>Samsung Portable SSD T7 1TB</h1>
+                <p class="precio">
+                    <span class="oferta">119€</span>
+                    <span class="preciomenos"><s>129€</s></span>
+                </p>
+                <p>SSD portátil NVMe compacto y rápido con cifrado AES 256-bit, ideal para transferencias y almacenamiento seguro.</p>
+
+                <h3>Especificaciones técnicas</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Característica</th>
+                        <th>Detalle</th>
+                    </tr>
+                    <tr>
+                        <td>Tipo</td>
+                        <td>SSD portátil NVMe (en carcasa externa)</td>
+                    </tr>
+                    <tr>
+                        <td>Capacidad</td>
+                        <td>1 TB</td>
+                    </tr>
+                    <tr>
+                        <td>Interfaz</td>
+                        <td>USB 3.2 Gen 2 (USB-C)</td>
+                    </tr>
+                    <tr>
+                        <td>Velocidad máxima</td>
+                        <td>Lectura hasta 1050 MB/s, Escritura hasta 1000 MB/s</td>
+                    </tr>
+                    <tr>
+                        <td>Encriptación</td>
+                        <td>AES 256-bit (opcional mediante software)</td>
+                    </tr>
+                    <tr>
+                        <td>Compatibilidad</td>
+                        <td>Windows, macOS, Android (con adaptador)</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensiones (aprox.)</td>
+                        <td>85 x 57 x 8 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Peso (aprox.)</td>
+                        <td>58 g</td>
+                    </tr>
+                    <tr>
+                        <td>Resistencia</td>
+                        <td>Resistente a golpes y vibraciones (no sumergible)</td>
+                    </tr>
+                </table>
+
+                <button class="add-cart">Añadir al carrito</button>
+                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+            </div>
+        </div>
+        <section class="similares">
+            <h3>Productos similares</h3>
+            <div class="similares-grid">
+                <a class="similar-item" href="detalle-ssd2.html">
+                    <img src="../imagenes/ssd2.jpg" alt="Crucial X8 1TB">
+                    <div class="simil-name">Crucial X8 1TB</div>
+                    <p class="precio">
+                        <span class="oferta">109€</span>
+                        <span class="preciomenos"><s>119€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-discoduro1.html">
+                    <img src="../imagenes/discoduro1.jpg" alt="WD Elements 2TB">
+                    <div class="simil-name">WD Elements 2TB</div>
+                    <p class="precio">
+                        <span>59€</span>
+                    </p>
+                </a>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('click', function(e){ if(e.target && e.target.classList.contains('add-cart')){ alert('Producto añadido al carrito'); } });
+        </script>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo"><a href="index.html"><img src="../imagenes/WiredZoneLogo.png" alt="Inicio"></a></div>
+            <div class="footer-secciones"><div class="footer-nav"><ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+            </ul></div></div>
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="direccion"><p>TechCore Av Schultz Nº 30 Gijón, Asturias</p></div>
+    </footer>
+</body>
+</html>

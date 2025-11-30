@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrito</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <span>PCMaster</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+        <main>
+            <section class="main">
+                <h1 class="titulo-carrito">Carrito</h1>
+                
+                <div class="contenedor-carrito">
+                    <div class="lista-productos">
+
+                        <!-- Producto 1: Pieza suelta -->
+                        <div class="producto-item">
+                            <div class="producto-img">
+                                <img src="../imagenes/psuelta1.jpg" alt="Intel Core i5-13400F">
+                            </div>
+                            <div class="producto-info">
+                                <p class="producto-nombre">Intel Core i5-13400F</p>
+                                <p class="producto-precio">182€</p>
+                                <div class="producto-cantidad">
+                                    <label>Cantidad</label>
+                                    <input type="number" value="1" min="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2: Portátil -->
+                        <div class="producto-item">
+                            <div class="producto-img">
+                                <img src="../imagenes/portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
+                            </div>
+                            <div class="producto-info">
+                                <p class="producto-nombre">Lenovo LOQ 15.6" Gaming</p>
+                                <p class="producto-precio">899€</p>
+                                <div class="producto-cantidad">
+                                    <label>Cantidad</label>
+                                    <input type="number" value="1" min="1">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="resumen-carrito">
+                        <h4>Resumen</h4>
+                        <hr>
+                        <div class="fila-resumen">
+                            <span>Subtotal</span>
+                            <span>1081€</span>
+                        </div>
+                        <div class="fila-resumen">
+                            <span>Coste de envío ⓘ</span>
+                            <span>Gratis</span>
+                        </div>
+                        <hr>
+                        <div class="fila-resumen total">
+                            <span>Total</span>
+                            <span>1081€</span>
+                        </div>
+                        <button class="boton-tramitar">Tramitar Pedido</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-container">
+
+
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logoletras.png" alt="Inicio">
+                    </a>
+                </div>
+
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+
+            </div>
+
+
+            <div class="direccion">
+                <p>PCMaster · Av. de la Costa Nº 184, Gijón, Asturias</p>
+            </div>
+    </footer>
+
+    </body>
+</html>

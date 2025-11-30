@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/LogoSinTexto.png" alt="Volver a la pagina de inicio">
+                <span>WiredZone</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="principal">
+            <h1>¡Mejores ofertas!</h1>
+            <div class="productos-grid">
+                <article class="producto">
+                    <a class="producto-link" href="detalle-raton2.html">
+                        <img src="../imagenes/raton2.jpg" alt="Ratón 2">
+                        <h4>Razer DeathAdder V2</h4>
+                        <p class="precio">
+                            <span class="oferta">63€</span>
+                            <span class="preciomenos"><s>69€</s></span>
+                        </p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-impresora2.html">
+                        <img src="../imagenes/impresora2.jpg" alt="Impresora 2">
+                        <h4>HP OfficeJet Pro 9025e</h4>
+                        <p class="precio">
+                            <span class="oferta">299€</span>
+                            <span class="preciomenos"><s>329€</s></span>
+                        </p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-teclado1.html">
+                        <img src="../imagenes/teclado1.jpg" alt="Teclado 1">
+                        <h4>Logitech G Pro Keyboard</h4>
+                        <p class="precio">
+                            <span class="oferta">100€</span>
+                            <span class="preciomenos"><s>119€</s></span>
+                        </p>
+                    </a>
+                </article>
+            </div>
+            <h1>Nuestros productos mas solicitados</h1>
+            <div class="productos-grid">
+                <article class="producto">
+                    <a class="producto-link" href="detalle-discoduro2.html">
+                        <img src="../imagenes/discoduro2.jpg" alt="Disco Duro 2">
+                        <h4>Seagate Backup Plus Portable 4TB</h4>
+                        <p class="precio">
+                            <span class="oferta">85€</span>
+                            <span class="preciomenos"><s>99€</s></span>
+                        </p>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-monitor3.html">
+                        <img src="../imagenes/monitor3.jpg" alt="Monitor 3">
+                        <h4>Monitor Lenovo Legion 24-10</h4>
+                        <div class="precio">399€</div>
+                    </a>
+                </article>
+
+                <article class="producto">
+                    <a class="producto-link" href="detalle-impresora4.html">
+                        <img src="../imagenes/impresora4.jpg" alt="Impresora 4">
+                        <h4>Canon PIXMA TR4720</h4>
+                        <p class="precio">
+                            <span>119€</span>
+                        </p>
+                    </a>
+                </article>
+                </div>
+                <section class="valoraciones">
+                    <h2>Valoraciones</h2>
+                    <div class="valoraciones-grid">
+                        <article class="valoracion">
+                            <div class="usuario-valoracion">
+                                <img src="../imagenes/usuario.png" alt="Usuario 1">
+                            </div>
+                            <div class="contenido-valoracion">
+                                <p>"Excelente servicio y productos de calidad. El monitor que compré llegó perfectamente empaquetado y funciona genial."</p>
+                                <div class="estrellas">★★★★★</div>
+                                <span class="nombre-usuario">Carlos M.</span>
+                            </div>
+                        </article>
+        
+                        <article class="valoracion">
+                            <div class="usuario-valoracion">
+                                <img src="../imagenes/usuario.png" alt="Usuario 2">
+                            </div>
+                            <div class="contenido-valoracion">
+                                <p>"Muy buena atención al cliente. Resolvieron todas mis dudas antes de la compra. Totalmente recomendado."</p>
+                                <div class="estrellas">★★★★★</div>
+                                <span class="nombre-usuario">María G.</span>
+                            </div>
+                        </article>
+        
+                        <article class="valoracion">
+                            <div class="usuario-valoracion">
+                                <img src="../imagenes/usuario.png" alt="Usuario 3">
+                            </div>
+                            <div class="contenido-valoracion">
+                                <p>"Precios competitivos y envío rápido. La calidad de los productos es excelente. Volveré a comprar."</p>
+                                <div class="estrellas">★★★★★</div>
+                                <span class="nombre-usuario">Roberto L.</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/WiredZoneLogo.png" alt="Inicio">
+                    </a>
+                </div>
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+            </div>
+
+            <div class="direccion">
+                <p>TechCore Av Schultz Nº 30 Gijón, Asturias</p>
+            </div>
+        </footer>
+    
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogo - Techcore</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../imagenes/logoSinTexto.png" alt="Volver a la pagina de inicio">
+                    <span>TechCore</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <span class="separador">|</span>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <span class="separador">|</span>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <form action="/buscar" method="get" class="buscador">
+                <button type="submit">🔍</button>
+                <input type="search" name="buscar" placeholder="buscar">
+            </form>
+
+            <div class="usuario">
+                <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+                <a href="carrito.html">🛒 Mi cesta</a>
+            </div>
+        </header>
+
+        <main class="main-catalogo">
+            <aside class="sidebar">
+                <h2>Filtros</h2>
+                
+                <div class="filtro-buscador">
+                    <input type="search" placeholder="Buscar">
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Marcas</h3>
+                    <label><input type="checkbox"> Lenovo</label>
+                    <label><input type="checkbox"> Aorus</label>
+                    <label><input type="checkbox"> Asus</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> Monitores</label>
+                    <label><input type="checkbox"> Altavoces</label>
+                    <label><input type="checkbox"> Teclados</label>
+                    <label><input type="checkbox"> Ratones</label>
+                    <label><input type="checkbox"> Asistentes</label>
+                    <label><input type="checkbox"> Impresoras</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Precio</h3>
+                    <input type="range" min="50" max="2000" value="500">
+                    <div class="precio-valores">50 - €2000</div>
+                </div>
+            </aside>
+
+            <section class="catalogo">
+                <div class="catalogo-header">
+                    <h1>Catálogo de productos</h1>
+                    <div class="ordenar">
+                        <label for="orden">Ordenar:</label>
+                        <select id="orden">
+                            <option>Más relevante</option>
+                            <option>Precio: menor a mayor</option>
+                            <option>Precio: mayor a menor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="productos-grid">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-monitor1.html">
+                            <img src="../imagenes/monitor1.jpg" alt="Monitor 1">
+                            <h4>Monitor Lenovo L27q-27"</h4>
+                            <p class="precio">239€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-monitor2.html">
+                            <img src="../imagenes/monitor2.jpg" alt="Monitor 2">
+                            <h4>Monitor Lenovo ThinkVision P24q-40</h4>
+                            <p class="precio">266€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-monitor3.html">
+                            <img src="../imagenes/monitor3.jpg" alt="Monitor 3">
+                            <h4>Monitor Lenovo Legion 24-10 23.8"</h4>
+                            <p class="precio">399€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-monitor4.html">
+                            <img src="../imagenes/monitor4.jpg" alt="Aorus CV27Q">
+                            <h4>Aorus CV27Q</h4>
+                            <p class="precio">129€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-raton1.html">
+                            <img src="../imagenes/raton1.jpg" alt="Logitech G502">
+                            <h4>Logitech G502 HERO</h4>
+                            <p class="precio">59€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-raton2.html">
+                            <img src="../imagenes/raton2.jpg" alt="Razer DeathAdder V2">
+                            <h4>Razer DeathAdder V2</h4>
+                            <p class="precio">69€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-raton3.html">
+                            <img src="../imagenes/raton3.jpg" alt="Corsair Harpoon">
+                            <h4>Corsair Harpoon RGB</h4>
+                            <p class="precio">39€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-raton4.html">
+                            <img src="../imagenes/raton4.jpg" alt="SteelSeries Rival 3">
+                            <h4>SteelSeries Rival 3</h4>
+                            <p class="precio">34€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-altavoz1.html">
+                            <img src="../imagenes/altavoz1.jpg" alt="BL Flip 6">
+                            <h4>BL Flip 6</h4>
+                            <p class="precio">
+                                <span class="precio">129€</span>
+                            </p>
+                        </a>
+                    </article>
+
+                   <article class="producto">
+                        <a class="producto-link" href="detalle-asistente1.html">
+                            <img src="../imagenes/asistente1.jpg" alt="Amazon Echo (5ª gen)">
+                            <h4>Amazon Echo (5ª gen)</h4>
+                            <p class="precio">69€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-auricular2.html">
+                            <img src="../imagenes/auricular2.jpg" alt="Apple AirPods Pro (2.ª gen)">
+                            <h4>Apple AirPods Pro (2.ª gen)</h4>
+                            <p class="precio">
+                                <span class="oferta">209€</span>
+                                <span class="preciomenos"><s>229€</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-auricular1.html">
+                            <img src="../imagenes/auricular1.jpg" alt="Sony WF-1000XM4">
+                            <h4>Logitech G502 HERO</h4>
+                            <p class="precio">199€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-auricular2.html">
+                            <img src="../imagenes/impresora1.jpg" alt="Apple AirPods Pro (2.ª gen)">
+                            <h4>Apple AirPods Pro (2.ª gen)</h4>
+                            <p class="precio">
+                                <span class="oferta">220€</span>
+                                <span class="preciomenos"><s>249€</s></span>
+                            </p>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logojpg-removebg-preview.png" alt="Inicio">
+                    </a>
+                </div>
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+            </div>
+
+            <div class="direccion">
+                <p>TechCore Av Schultz Nº 23 Gijón, Asturias</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Fitbit Sense 2 - UrbanTech</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../imagenes/UrbanTechLogoSinNombreSinFondo.png" alt="Volver a la pagina de inicio">
+                <span>UrbanTech</span>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="detalle-container">
+            <div class="detalle-img">
+                <img src="../imagenes/reloj4.jpg" alt="Fitbit Sense 2">
+            </div>
+
+            <div class="detalle-info">
+                <h1>Fitbit Sense 2</h1>
+                <p class="precio">
+                    <span class="oferta">209€</span>
+                    <span class="preciomenos"><s>229€</s></span>
+                </p>
+                <p>Reloj con foco en bienestar (estrés, sueño, salud cardíaca) y buena autonomía.</p>
+
+                <h3>Especificaciones técnicas</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Característica</th>
+                        <th>Detalle</th>
+                    </tr>
+                    <tr>
+                        <td>Pantalla</td>
+                        <td>AMOLED</td>
+                    </tr>
+                    <tr>
+                        <td>Batería</td>
+                        <td>6+ días</td>
+                    </tr>
+                    <tr>
+                        <td>Sensores</td>
+                        <td>ECG (según región), HR, SpO2, skin temperature, GPS conectado (en algunos modos)</td>
+                    </tr>
+                    <tr>
+                        <td>Resistencia al agua</td>
+                        <td>50 m</td>
+                    </tr>
+                    <tr>
+                        <td>Conectividad</td>
+                        <td>Bluetooth, Wi-Fi</td>
+                    </tr>
+                </table>
+
+                <button class="add-cart">Añadir al carrito</button>
+                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+            </div>
+        </div>
+
+        <section class="similares">
+            <h3>Productos similares</h3>
+            <div class="similares-grid">
+                <a class="similar-item" href="detalle-reloj2.html">
+                    <img src="../imagenes/reloj2.jpg" alt="Samsung Galaxy Watch5">
+                    <div class="simil-name">Samsung Galaxy Watch5</div>
+                    <div class="precio">249€</div>
+                </a>
+
+                <a class="similar-item" href="detalle-reloj3.html">
+                    <img src="../imagenes/reloj3.jpg" alt="Garmin Venu 2">
+                    <div class="simil-name">Garmin Venu 2</div>
+                    <div class="precio">279€</div>
+                </a>
+
+                <a class="similar-item" href="detalle-reloj1.html">
+                    <img src="../imagenes/reloj1.jpg" alt="Apple Watch SE (2.ª gen)">
+                    <div class="simil-name">Apple Watch SE (2.ª gen)</div>
+                    <div class="precio">199€</div>
+                </a>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('click', function(e){
+                if(e.target && e.target.classList.contains('add-cart')){
+                    alert('Producto añadido al carrito');
+                }
+            });
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="../imagenes/UrbanTechLogoSinFondo.png" alt="Inicio">
+                </a>
+            </div>
+
+            <div class="footer-secciones">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+
+        <div class="direccion">
+            <p>TechCore Av Schultz Nº 7 Gijón, Asturias</p>
+        </div>
+    </footer>
+</body>
+</html>

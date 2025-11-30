@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Monitor Lenovo Legion 24-10 - TechCore</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <span>PCMaster</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="detalle-container">
+                <div class="detalle-img">
+                    <img src="../imagenes/Pc3.jpg" alt="PC Racing Pack Gaming (Ryzen 3200G / 480GB SSD)">
+                </div>
+
+                <div class="detalle-info">
+                    <h1>PC Racing Pack Gaming (Ryzen 3200G / 480 GB SSD)</h1>
+                    <div class="precio">€677</div>
+
+                    <p>
+                        PC gaming económico diseñado para ofrecer un rendimiento estable en juegos ligeros y tareas de uso diario.
+                        Ideal para quienes buscan un equipo accesible pero funcional, con arranque rápido gracias a su SSD de 480 GB.
+                    </p>
+
+                    <h3>Especificaciones técnicas</h3>
+
+                    <table class="specs-table">
+                        <tr>
+                            <th>Característica</th>
+                            <th>Detalle</th>
+                        </tr>
+                        <tr>
+                            <td>Procesador</td>
+                            <td>AMD Ryzen 3 3200G (4 núcleos / 4 hilos)</td>
+                        </tr>
+                        <tr>
+                            <td>Tarjeta gráfica</td>
+                            <td>Integrada Vega 8 Graphics</td>
+                        </tr>
+                        <tr>
+                            <td>Memoria RAM</td>
+                            <td>8 GB DDR4</td>
+                        </tr>
+                        <tr>
+                            <td>Almacenamiento</td>
+                            <td>480 GB SSD</td>
+                        </tr>
+                        <tr>
+                            <td>Placa base</td>
+                            <td>Chipset A320 / B450 (según versión)</td>
+                        </tr>
+                        <tr>
+                            <td>Fuente de alimentación</td>
+                            <td>550W estándar</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema operativo</td>
+                            <td>Windows 10 / 11 (opcional)</td>
+                        </tr>
+                    </table>
+
+                    <button class="add-cart">Añadir al carrito</button>
+                    <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                </div>
+            </div>
+
+
+            <!-- PRODUCTOS SIMILARES -->
+            <section class="similares">
+                <h3>Productos similares</h3>
+
+                <div class="similares-grid">
+
+                    <a class="similar-item" href="detalle-pc1.html">
+                        <img src="../imagenes/Pc1.jpg" alt="MrDalekJD PC Primus">
+                        <div class="simil-name">MrDalekJD PC Primus</div>
+                        <div class="precio">€1239</div>
+                    </a>
+
+                    <a class="similar-item" href="detalle-pc2.html">
+                        <img src="../imagenes/Pc2.png" alt="Thermaltake LCGS Vista R66 Gaming Desktop">
+                        <div class="simil-name">Thermaltake LCGS Vista R66 Gaming Desktop</div>
+                        <div class="precio">€461</div>
+                    </a>
+
+                    <a class="similar-item" href="detalle-pc4.html">
+                        <img src="../imagenes/Pc4.jpg" alt="PC NEO Gaming Ryzen 5 5500 + RTX 3050">
+                        <div class="simil-name">PC NEO Gaming Ryzen 5 5500 + RTX 3050</div>
+                        <div class="precio">€599</div>
+                    </a>
+
+                </div>
+            </section>
+
+        <script>
+            document.addEventListener('click', function(e){
+                if(e.target && e.target.classList.contains('add-cart')){
+                    alert('Producto añadido al carrito');
+                }
+            });
+        </script>
+    </main>
+
+        <footer>
+            <div class="footer-container">
+
+
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logoletras.png" alt="Inicio">
+                    </a>
+                </div>
+
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+
+            </div>
+
+
+            <div class="direccion">
+                <p>PCMaster · Av. de la Costa Nº 184, Gijón, Asturias</p>
+            </div>
+    </footer>
+</body>
+</html>

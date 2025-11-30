@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>BL Flip 6 - UrbanTech</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../imagenes/UrbanTechLogoSinNombreSinFondo.png" alt="Volver a la pagina de inicio">
+                <span>UrbanTech</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+    </header>
+    <main>
+        <div class="detalle-container">
+            <div class="detalle-img">
+                <img src="../imagenes/altavoz1.jpg" alt="BL Flip 6">
+            </div>
+            <div class="detalle-info">
+                <h1>BL Flip 6</h1>
+                <p class="precio">
+                    129€
+                </p>
+                <p>Altavoz Bluetooth portátil resistente al agua con buen sonido para exteriores.</p>
+
+                <h3>Especificaciones técnicas</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Característica</th>
+                        <th>Detalle</th>
+                    </tr>
+                    <tr>
+                        <td>Tipo</td>
+                        <td>Altavoz Bluetooth portátil mono (o stereo con party boost)</td>
+                    </tr>
+                    <tr>
+                        <td>Potencia</td>
+                        <td>30W RMS</td>
+                    </tr>
+                    <tr>
+                        <td>Batería</td>
+                        <td>Hasta 12 horas de reproducción</td>
+                    </tr>
+                    <tr>
+                        <td>Conectividad</td>
+                        <td>Bluetooth 5.1, USB-C para carga</td>
+                    </tr>
+                    <tr>
+                        <td>Resistencia</td>
+                        <td>Resistente al agua</td>
+                    </tr>
+                    <tr>
+                        <td>Puertos</td>
+                        <td>USB‑C para carga</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensiones</td>
+                        <td>181 x 69 x 74 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Peso (aprox.)</td>
+                        <td>505 g</td>
+                    </tr>
+                </table>
+
+                <button class="add-cart">Añadir al carrito</button>
+                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+            </div>
+        </div>
+
+        <section class="similares">
+            <h3>Productos similares</h3>
+            <div class="similares-grid">
+                <a class="similar-item" href="detalle-altavoz2.html">
+                    <img src="../imagenes/altavoz2.jpg" alt="Bose SoundLink Revolve+ II">
+                    <div class="simil-name">Bose SoundLink Revolve+ II</div>
+                    <p class="precio">
+                        <span class="oferta">249€</span>
+                        <span class="preciomenos"><s>299€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-altavoz3.html">
+                    <img src="../imagenes/altavoz3.jpg" alt="Marshall Stanmore II">
+                    <div class="simil-name">Marshall Stanmore II</div>
+                    <p class="precio">
+                        <span class="oferta">300€</span>
+                        <span class="preciomenos"><s>349€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-altavoz4.html">
+                    <img src="../imagenes/altavoz4.jpg" alt="Sony SRS-XB33">
+                    <div class="simil-name">Sony SRS-XB33</div>
+                    <p class="precio">149€</p>
+                </a>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('click', function(e){
+                if(e.target && e.target.classList.contains('add-cart')){
+                    alert('Producto añadido al carrito');
+                }
+            });
+        </script>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="../imagenes/UrbanTechLogoSinFondo.png" alt="Inicio"></a>
+            </div>
+            <div class="footer-secciones"><div class="footer-nav"><ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+            </ul></div></div>
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+        <div class="direccion"><p>TechCore Av Schultz Nº 7 Gijón, Asturias</p></div>
+    </footer>
+</body>
+</html>
