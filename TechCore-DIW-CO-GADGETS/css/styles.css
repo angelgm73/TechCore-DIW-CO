@@ -61,7 +61,7 @@ header {
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
 }
 
 .main-nav ul {
@@ -130,7 +130,7 @@ footer {
 }
 
 .footer-logo img {
-    height: 150px; 
+    height: 120px; 
 }
 
 .footer-secciones {
@@ -234,7 +234,7 @@ footer {
     margin: 0;
     font-size: 1.3rem;
     font-weight: bold;
-    color: #AF00FF;
+    color: #ffa500;
     background-color: #5AA4E8;
 }
 
@@ -457,7 +457,7 @@ footer {
 
 
 .detalle-info .precio {
-    color: #AF00FF;
+    color: #ffa500;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -506,7 +506,7 @@ footer {
 
 
 .add-cart {
-    background-color: #AF00FF;
+    background-color: #ffa500;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -519,12 +519,12 @@ footer {
 
 
 .add-cart:hover {
-    background-color: #7800af;
+    background-color: #cc8400;
 }
 
 
 .detalle-back {
-    color: #AF00FF;
+    color: #ffa500;
     text-decoration: underline;
 }
 
@@ -573,7 +573,7 @@ footer {
 
 .similar-item .precio {
     padding: 0 15px 15px;
-    color: #AF00FF;
+    color: #ffa500;
     font-weight: bold;
     font-size: 1.2rem;
     background-color: #5AA4E8;
@@ -749,7 +749,7 @@ footer {
 .boton-registro{
     padding: 10px 20px;
     color: #FFFFFF;
-    background-color: #AF00FF;
+    background-color: #ffa500;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -759,7 +759,7 @@ footer {
 }
 
 .boton-registro:hover{
-    background-color: #7800af;
+    background-color: #cc8400;
 }
 
 .boton-usuario {
@@ -824,7 +824,7 @@ footer {
 .columna-contacto{
     flex: 1;
     padding: 20px;
-    border: 1px solid #AF00FF;
+    border: 1px solid #ffa500;
     border-radius: 8px;
     color: #FFFFFF
 }
@@ -863,7 +863,7 @@ footer {
     flex: 1;
     margin: 0;
     padding: 30px;
-    border: 1px solid #AF00FF;
+    border: 1px solid #ffa500;
     border-radius: 10px;
 }
 
@@ -888,7 +888,7 @@ footer {
 }
 
 .formulario-contacto button {
-    background-color: #AF00FF;
+    background-color: #ffa500;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -900,7 +900,7 @@ footer {
 }
 
 .formulario-contacto button:hover {
-    background-color: #7800af;
+    background-color: #cc8400;
 }
 
 
@@ -924,14 +924,14 @@ footer {
     max-width: 600px;
     margin: 0 auto;
     padding: 15px;
-    background-color: #AF00FF;
+    background-color: #ffa500;
     color: #FFFFFF;
     font-size: 2rem;
     font-weight: bold;
 }
 
 .contenido-quienes-somos h2 {
-    color: #AF00FF;
+    color: #ffa500;
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 1.5rem;
@@ -955,7 +955,7 @@ footer {
 
 .boton-privacidad{
     padding: 10px 20px;
-    background-color: #AF00FF;
+    background-color: #ffa500;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -965,7 +965,7 @@ footer {
 }
 
 .boton-privacidad:hover{
-    background-color: #7800af;
+    background-color: #cc8400;
 }
 
 .boton-privacidad a{
@@ -986,7 +986,7 @@ footer {
     max-width: 600px;
     margin: 0 auto;
     padding: 15px;
-    background-color: #AF00FF;
+    background-color: #ffa500;
     color: #FFFFFF;
 }
 
@@ -998,7 +998,7 @@ footer {
 }
 
 .contenido-privacidad h2{
-    color: #AF00FF;
+    color: #ffa500;
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 1.7rem;
