@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogo - Techcore</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <span>PCMaster</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+        <main class="main-catalogo">
+            <aside class="sidebar">
+                <h2>Filtros</h2>
+                
+                <div class="filtro-buscador">
+                    <input type="search" placeholder="Buscar">
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Marcas</h3>
+                    <label><input type="checkbox"> Dell</label>
+                    <label><input type="checkbox"> HP</label>
+                    <label><input type="checkbox"> Lenovo</label>
+                    <label><input type="checkbox"> Samsung</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> PCs Montados</label>
+                    <label><input type="checkbox"> Portátiles</label>
+                    <label><input type="checkbox"> Piezas sueltas</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Precio</h3>
+                    <input type="range" min="150" max="2000" value="250">
+                    <div class="precio-valores">150 - €2000</div>
+                </div>
+            </aside>
+
+            <section class="catalogo">
+                <div class="catalogo-header">
+                    <h1>Catálogo de productos</h1>
+                    <div class="ordenar">
+                        <label for="orden">Ordenar:</label>
+                        <select id="orden">
+                            <option>Más relevante</option>
+                            <option>Precio: menor a mayor</option>
+                            <option>Precio: mayor a menor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="productos-grid">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-pc1.html">
+                            <img src="../imagenes/Pc1.jpg" alt="PC1">
+                            <h4>MrDalekJD PC Primus</h4>
+                            <p class="precio">€1239</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                    <a class="producto-link" href="detalle-pc2.html">
+                        <img src="../imagenes/Pc2.png" alt="PC2">
+                        <h4>Thermaltake LCGS Vista R66 Gaming Desktop</h4>
+                        <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                        <p class="precio">€461</p>
+                    </a>
+                    </article>
+
+                    <article class="producto">
+                    <a class="producto-link" href="detalle-pc3.html">
+                        <img src="../imagenes/Pc3.jpg" alt="PC3">
+                        <h4>PC Racing Pack Gaming (Ryzen 3200G / 480 GB SSD)</h4>
+                        <p class="precio">€677</p>
+                    </a>
+                </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-pc4.html">
+                            <img src="../imagenes/Pc4.jpg" alt="PC4">
+                            <h4>PC NEO Gaming Ryzen 5 5500 + RTX 3050</h4>
+                            <p class="precio">
+                                <span class="oferta">1029€</span>
+                                <span class="preciomenos"><s>€1200</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-portatil1.html">
+                            <img src="../imagenes/Portatil1.jpg" alt="HP 15-fd1020ns 15.6 Full HD">
+                            <h4>HP 15-fd1020ns 15.6″ Full HD</h4>
+
+                            <p class="precio">
+                                <span class="oferta">€799</span>
+                                <span class="preciomenos"><s>€899</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-portatil2.html">
+                            <img src="../imagenes/Portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
+                            <h4>Lenovo LOQ 15.6″ Gaming</h4>
+                            <p class="precio">999€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-portatil3.html">
+                            <img src="../imagenes/Portatil3.jpg" alt="ASUS Zenbook 14 OLED">
+                            <h4>ASUS Zenbook 14 OLED</h4>
+                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                            <p class="precio">1.199€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-portatil4.html">
+                            <img src="../imagenes/Portatil4.jpg" alt="Lenovo IdeaPad Slim 3 15.6">
+                            <h4>Lenovo IdeaPad Slim 3 15.6″</h4>
+                            <p class="precio">479€</p>
+                        </a>
+                    </article>
+
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta1.jpg" alt="Intel Core i5-13400F">
+                            <h4>Intel Core i5-13400F</h4>
+                            <p class="precio">
+                                <span class="oferta">182€</span>
+                                <span class="preciomenos"><s>€200</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta2.jpg" alt="Gigabyte Aorus Z790 Elite X WiFi7">
+                            <h4>Gigabyte Aorus Z790 Elite X WiFi7</h4>
+                            <p class="precio">355€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta3.jpg" alt="MSI GeForce RTX 3050 Ventus 2X 8GB">
+                            <h4>MSI GeForce RTX 3050 Ventus 2X 8GB</h4>
+                            <p class="precio">200€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta4.jpg" alt="Corsair RM650e 650W Modular">
+                            <h4>Corsair RM650e 650W Modular</h4>
+                            <p class="precio">91€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta5.jpg" alt="Corsair RS120 ARGB Ventilador">
+                            <h4>Corsair RS120 ARGB Ventilador</h4>
+                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                            <p class="precio">18€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta6.jpg" alt="Kingston NV3 1TB NVMe SSD">
+                            <h4>Kingston NV3 1TB NVMe SSD</h4>
+                            <p class="precio">
+                                <span class="oferta">83€</span>
+                                <span class="preciomenos"><s>99€</s></span>
+                            </p>
+
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta7.jpg" alt="MSI Pro H610M-E">
+                            <h4>MSI Pro H610M-E</h4>
+                            <p class="precio">61€</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link">
+                            <img src="../imagenes/psuelta8.jpg" alt="WD Black SN850P 1TB NVMe SSD">
+                            <h4>WD Black SN850P 1TB NVMe SSD</h4>
+                            <p class="precio">119€</p>
+                        </a>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+
+
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logoletras.png" alt="Inicio">
+                    </a>
+                </div>
+
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+
+            </div>
+
+
+            <div class="direccion">
+                <p>PCMaster · Av. de la Costa Nº 184, Gijón, Asturias</p>
+            </div>
+    </footer>
+    </body>
+</html>

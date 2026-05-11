@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>SteelSeries Rival 3 - TechCore</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <span>PCMaster</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="detalle-container">
+
+        <!-- IMAGEN DEL PRODUCTO -->
+        <div class="detalle-img">
+            <img src="../imagenes/Portatil4.jpg" alt="Lenovo IdeaPad Slim 3 15.6">
+        </div>
+
+        <!-- INFORMACIÓN DEL PRODUCTO -->
+        <div class="detalle-info">
+            <h1>Lenovo IdeaPad Slim 3 15.6″</h1>
+            <div class="precio">479€</div>
+
+            <p>
+                El Lenovo IdeaPad Slim 3 es un portátil ligero y eficiente, perfecto para estudiantes,
+                trabajo de oficina y uso diario. Ofrece un rendimiento fiable, buena autonomía y una 
+                pantalla de 15.6″ Full HD ideal para estudiar, navegar y consumir contenido multimedia.
+            </p>
+
+            <h3>Especificaciones técnicas</h3>
+            <table class="specs-table">
+                <tr>
+                    <th>Característica</th>
+                    <th>Detalle</th>
+                </tr>
+                <tr>
+                    <td>Pantalla</td>
+                    <td>15.6″ Full HD (1920x1080)</td>
+                </tr>
+                <tr>
+                    <td>Procesador</td>
+                    <td>AMD Ryzen 5 5500U / Intel i5 (según versión)</td>
+                </tr>
+                <tr>
+                    <td>Memoria RAM</td>
+                    <td>8 GB DDR4</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>512 GB SSD NVMe</td>
+                </tr>
+                <tr>
+                    <td>Gráficos</td>
+                    <td>Integrados AMD Radeon / Intel UHD</td>
+                </tr>
+                <tr>
+                    <td>Autonomía</td>
+                    <td>Hasta 9 horas</td>
+                </tr>
+                <tr>
+                    <td>Conectividad</td>
+                    <td>USB-C, USB-A, HDMI, WiFi 6, Bluetooth</td>
+                </tr>
+                <tr>
+                    <td>Peso</td>
+                    <td>1.65 kg</td>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 11</td>
+                </tr>
+            </table>
+
+            <button class="add-cart">Añadir al carrito</button>
+            <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+        </div>
+    </div>
+
+
+
+    <section class="similares">
+        <h3>Productos similares</h3>
+
+        <div class="similares-grid">
+
+
+            <a class="similar-item" href="detalle-portatil1.html">
+                <img src="../imagenes/Portatil1.jpg" alt="HP 15-fd1020ns 15.6 Full HD">
+                <div class="simil-name">HP 15-fd1020ns 15.6″ Full HD</div>
+                <div class="precio">799€</div>
+            </a>
+
+
+            <a class="similar-item" href="detalle-portatil2.html">
+                <img src="../imagenes/Portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
+                <div class="simil-name">Lenovo LOQ 15.6″ Gaming</div>
+                <div class="precio">899€</div>
+            </a>
+
+
+            <a class="similar-item" href="detalle-portatil3.html">
+                <img src="../imagenes/Portatil3.jpg" alt="ASUS Zenbook 14 OLED">
+                <div class="simil-name">ASUS Zenbook 14 OLED</div>
+                <div class="precio">1.199€</div>
+            </a>
+
+        </div>
+    </section>
+
+        <script>
+            document.addEventListener('click', function(e){
+                if(e.target && e.target.classList.contains('add-cart')){
+                    alert('Producto añadido al carrito');
+                }
+            });
+        </script>
+    </main>
+
+            <footer>
+            <div class="footer-container">
+
+
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logoletras.png" alt="Inicio">
+                    </a>
+                </div>
+
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+
+            </div>
+
+
+            <div class="direccion">
+                <p>PCMaster · Av. de la Costa Nº 184, Gijón, Asturias</p>
+            </div>
+    </footer>
+</body>
+</html>

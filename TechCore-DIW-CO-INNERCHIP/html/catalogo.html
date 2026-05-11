@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogo - InnerChip</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <span>InnerChip</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+
+    </header>
+
+        <main class="main-catalogo">
+            <aside class="sidebar">
+                <h2>Filtros</h2>
+
+                <div class="filtro-buscador">
+                    <input type="search" placeholder="Buscar componente...">
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Marcas</h3>
+                    <label><input type="checkbox"> Intel</label>
+                    <label><input type="checkbox"> AMD</label>
+                    <label><input type="checkbox"> NVIDIA</label>
+                    <label><input type="checkbox"> ASUS</label>
+                    <label><input type="checkbox"> MSI</label>
+                    <label><input type="checkbox"> Gigabyte</label>
+                    <label><input type="checkbox"> Corsair</label>
+                    <label><input type="checkbox"> Kingston</label>
+                    <label><input type="checkbox"> Samsung</label>
+                    <label><input type="checkbox"> Western Digital</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> Procesadores (CPU)</label>
+                    <label><input type="checkbox"> Tarjetas Gráficas (GPU)</label>
+                    <label><input type="checkbox"> Placas Base</label>
+                    <label><input type="checkbox"> Memoria RAM</label>
+                    <label><input type="checkbox"> Almacenamiento (SSD/HDD)</label>
+                    <label><input type="checkbox"> Fuentes de Alimentación</label>
+                    <label><input type="checkbox"> Refrigeración</label>
+                    <label><input type="checkbox"> Cajas/Torres</label>
+                    <label><input type="checkbox"> Ventiladores ARGB</label>
+                </div>
+
+                <div class="filtro-section">
+                    <h3>Precio</h3>
+                    <input type="range" min="20" max="2000" value="200">
+                    <div class="precio-valores">20€ - 2000€</div>
+                </div>
+            </aside>
+
+
+            <section class="catalogo">
+                <div class="catalogo-header">
+                    <h1>Catálogo de productos</h1>
+                    <div class="ordenar">
+                        <label for="orden">Ordenar:</label>
+                        <select id="orden">
+                            <option>Más relevante</option>
+                            <option>Precio: menor a mayor</option>
+                            <option>Precio: mayor a menor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="productos-grid">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-cpu1.html">
+                            <img src="../imagenes/cpu1.jpg" alt="Intel Core i9-14900K">
+                            <h4>Intel Core i9-14900K</h4>
+                            <p class="precio">€589</p>
+                        </a>
+                    </article>
+
+
+                    
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-cpu2.html">
+                            <img src="../imagenes/cpu2.jpg" alt="AMD Ryzen 9 7950X">
+                            <h4>AMD Ryzen 9 7950X</h4>
+                            <p class="precio">€569</p>
+                        </a>
+                    </article>
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-cpu3.html">
+                            <img src="../imagenes/cpu3.jpg" alt="Intel Core i5-13600KF">
+                            <h4>Intel Core i5-13600KF</h4>
+                            <p class="precio">€289</p>
+                        </a>
+                    </article>
+
+
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-cpu4.html">
+                            <img src="../imagenes/cpu4.jpg" alt="AMD Ryzen 5 7600">
+                            <h4>AMD Ryzen 5 7600</h4>
+                            <p class="precio">
+                                <span class="oferta">€219</span>
+                                <span class="preciomenos"><s>€250</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu1.html">
+                            <img src="../imagenes/gpu1.jpg" alt="NVIDIA GeForce RTX 4070 SUPER">
+                            <h4>NVIDIA GeForce RTX 4070 SUPER</h4>
+                            <p class="precio">
+                                <span class="oferta">€649</span>
+                                <span class="preciomenos"><s>€729</s></span>
+                            </p>
+                        </a>
+                    </article>
+
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu2.html">
+                            <img src="../imagenes/gpu2.jpg" alt="AMD Radeon RX 7800 XT">
+                            <h4>AMD Radeon RX 7800 XT</h4>
+                            <p class="precio">€599</p>
+                        </a>
+                    </article>
+
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu3.html">
+                            <img src="../imagenes/gpu3.jpg" alt="NVIDIA GeForce RTX 4060 Ti">
+                            <h4>NVIDIA GeForce RTX 4060 Ti</h4>
+                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                            <p class="precio">€429</p>
+                        </a>
+                    </article>
+
+
+
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu4.html">
+                            <img src="../imagenes/gpu4.jpg" alt="AMD Radeon RX 6650 XT">
+                            <h4>AMD Radeon RX 6650 XT</h4>
+                            <p class="precio">€299</p>
+                        </a>
+                    </article>
+
+
+
+
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta1.jpg" alt="AMD Ryzen 7 5700X">
+                    <h4>AMD Ryzen 7 5700X</h4>
+                    <p class="precio">
+                        <span class="oferta">189€</span>
+                        <span class="preciomenos"><s>219€</s></span>
+                    </p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta2.jpg" alt="ASUS TUF Gaming B550-PLUS">
+                    <h4>ASUS TUF Gaming B550-PLUS</h4>
+                    <p class="precio">149€</p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta3.jpg" alt="Corsair Vengeance RGB Pro 16GB DDR4 3600MHz">
+                    <h4>Corsair Vengeance RGB Pro 16GB DDR4 3600MHz</h4>
+                    <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                    <p class="precio">72€</p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta4.jpg" alt="Seasonic Focus GX-750 80+ Gold">
+                    <h4>Seasonic Focus GX-750 80+ Gold</h4>
+                    <p class="precio">118€</p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta5.jpg" alt="Noctua NH-D15 Premium Cooler">
+                    <h4>Noctua NH-D15 Premium Cooler</h4>
+                    <p class="precio">
+                        <span class="oferta">89€</span>
+                        <span class="preciomenos"><s>105€</s></span>
+                    </p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta6.jpg" alt="Crucial P5 Plus 500GB NVMe SSD">
+                    <h4>Crucial P5 Plus 500GB NVMe SSD</h4>
+                    <p class="precio">64€</p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta7.jpg" alt="DeepCool FC120 ARGB Triple Pack">
+                    <h4>DeepCool FC120 ARGB Triple Pack</h4>
+                    <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
+                    <p class="precio">32€</p>
+                </a>
+            </article>
+
+            <article class="producto">
+                <a class="producto-link">
+                    <img src="../imagenes/psuelta8.jpg" alt="Be Quiet! Pure Rock 2 Black">
+                    <h4>Be Quiet! Pure Rock 2 Black</h4>
+                    <p class="precio">39€</p>
+                </a>
+            </article>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+
+
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="../imagenes/logoletras.png" alt="Inicio">
+                    </a>
+                </div>
+
+
+                <div class="footer-secciones">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-redes">
+                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                </div>
+
+            </div>
+
+
+            <div class="direccion">
+                <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
+            </div>
+    </footer>
+    </body>
+</html>
