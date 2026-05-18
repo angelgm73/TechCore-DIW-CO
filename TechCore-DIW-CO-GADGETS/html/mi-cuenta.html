@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Cuenta - UrbanTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="custom-header">
         <div class="logo">
             <a href="index.html">
-                <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/LogoConNombre.png" alt="UrbanTech Logo">
                 <span>UrbanTech</span>
             </a>
         </div>
@@ -18,16 +19,16 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
-        <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+        <form action="/buscar" method="get" class="buscador" role="search">
+            <button type="submit" aria-label="Ejecutar búsqueda">🔍</button>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="Buscar..." aria-label="Buscar en el sitio web">
         </form>
 
         <div class="usuario">
@@ -36,51 +37,59 @@
         </div>
     </header>
     
-    <main>
-        <section class="main">
-            <h1 class="titulo-usuario">Iniciar sesión</h1>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5">
+                <section class="bg-white p-4 rounded shadow-sm border">
+                    <h1 class="h3 text-center mb-4 text-dark font-weight-bold">Iniciar sesión</h1>
 
-            <div class="usuario-caja">
-                <form action="#" class="form-usuario">
-                    <label for="username" class="label-usuario">Nombre de usuario</label>
-                    <input type="text" id="username" class="input-usuario">
+                    <form action="#" class="form-usuario">
+                        <div class="mb-3">
+                            <label for="username" class="form-label text-dark fw-semibold">Nombre de usuario</label>
+                            <input type="text" id="username" class="form-control" placeholder="Introduce tu usuario" required>
+                        </div>
 
-                    <label for="password" class="label-usuario">Contraseña</label>
-                    <input type="password" id="password" class="input-usuario">
+                        <div class="mb-4">
+                            <label for="password" class="form-label text-dark fw-semibold">Contraseña</label>
+                            <input type="password" id="password" class="form-control" placeholder="Introduce tu contraseña" required>
+                        </div>
 
-                    <button type="submit" class="boton-registro">Iniciar sesión</button>
-                </form>
+                        <button type="submit" class="btn btn-primary w-100 py-2 mb-4 fw-bold custom-btn-login">
+                            Iniciar sesión
+                        </button>
+                    </form>
 
-                <div class="registro-usuario">
-                    <p>¿Aún no tienes una cuenta?</p>
-                    <button class="boton-usuario">Regístrate</button>
-                </div>
+                    <div class="p-3 rounded text-center custom-register-box">
+                        <p class="mb-2 text-dark">¿Aún no tienes una cuenta?</p>
+                        <button class="btn btn-outline-dark w-100 fw-semibold">Regístrate</button>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
     
-    <footer>
+    <footer class="custom-footer">
         <div class="footer-container">
             <div class="footer-logo">
                 <a href="index.html">
-                    <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
+                    <img src="../imagenes/LogoSinNombre.png" alt="Volver al inicio">
                 </a>
             </div>
 
             <div class="footer-secciones">
-                <div class="footer-nav">
+                <nav class="footer-nav">
                     <ul>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
                         <li><a href="politica-privacidad.html">Política de privacidad</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="footer-redes">
-                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="Visitar nuestro X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Visitar nuestro Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Visitar nuestro Instagram" width="30"></a>
             </div>
         </div>
 

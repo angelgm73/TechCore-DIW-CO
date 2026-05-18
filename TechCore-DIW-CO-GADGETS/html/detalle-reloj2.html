@@ -1,148 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="../css/styles.css">
-        <title>Samsung Galaxy Watch5 - UrbanTech</title>
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
-                    <span>UrbanTech</span>
-                </a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Samsung Galaxy Watch5 - UrbanTech</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
+                <span>UrbanTech</span>
+            </a>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="detalle-container">
+            <div class="detalle-img">
+                <img src="../imagenes/reloj2.jpg" alt="Samsung Galaxy Watch5">
             </div>
+            <div class="detalle-info">
+                <h1>Samsung Galaxy Watch5</h1>
+                <p class="precio">229€</p>
+                <p class="descripcion-producto">Monitoriza tu salud las 24 horas del día, incluso de noche. Con sensor BioActive tres en uno y un diseño resistente con cristal de zafiro.</p>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <form action="/buscar" method="get" class="buscador">
-                <button type="submit">🔍</button>
-                <input type="search" name="buscar" placeholder="buscar">
-            </form>
-
-            <div class="usuario">
-                <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-                <a href="carrito.html">🛒 Mi cesta</a>
-            </div>
-        </header>
-
-        <main>
-            <div class="detalle-container">
-                <div class="detalle-img">
-                    <img src="../imagenes/reloj2.jpg" alt="Samsung Galaxy Watch5">
-                </div>
-
-                <div class="detalle-info">
-                    <h1>Samsung Galaxy Watch5</h1>
-                    <div class="precio">249€</div>
-                    <p>Reloj con buena batería y enfoque en salud (sensores mejorados y seguimiento del sueño).</p>
-
-                    <h3>Especificaciones técnicas</h3>
-                    <table class="specs-table">
+                <h2>Especificaciones técnicas</h2>
+                <table class="specs-table">
+                    <thead>
                         <tr>
-                            <th>Característica</th>
-                            <th>Detalle</th>
+                            <th scope="col">Característica</th>
+                            <th scope="col">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Pantalla</th>
+                            <td>Pantalla Super AMOLED de 1,4 pulgadas (cristal de zafiro)</td>
                         </tr>
                         <tr>
-                            <td>Pantalla</td>
-                            <td>Super AMOLED 1.2–1.4"</td>
+                            <th scope="row">Procesador</th>
+                            <td>Exynos W920 Dual-Core a 1,18 GHz</td>
                         </tr>
                         <tr>
-                            <td>Panel</td>
-                            <td>Super AMOLED</td>
+                            <th scope="row">Conectividad</th>
+                            <td>Wi-Fi 2,4 y 5 GHz, Bluetooth 5.2 y NFC</td>
                         </tr>
                         <tr>
-                            <td>Sensores</td>
-                            <td>frecuencia cardíaca, SpO2, bioimpedancia; GPS integrado</td>
+                            <th scope="row">Autonomía</th>
+                            <td>Hasta 40 horas, con carga rápida (45% en 30 minutos)</td>
                         </tr>
                         <tr>
-                            <td>Compatibilidad</td>
-                            <td>Android</td>
+                            <th scope="row">Resistencia al agua</th>
+                            <td>5 ATM y certificación IP68 (resistente al polvo y agua)</td>
                         </tr>
                         <tr>
-                            <td>Batería</td>
-                            <td>284–410 mAh con carga rápida</td>
+                            <th scope="row">Sensores</th>
+                            <td>Sensor Samsung BioActive (frecuencia cardiaca, señal eléctrica cardiaca y análisis de impedancia bioeléctrica), acelerómetro, barómetro, giroscopio y sensor de luz</td>
                         </tr>
-                    </table>
+                        <tr>
+                            <th scope="row">Sistema operativo</th>
+                            <td>Wear OS Powered by Samsung (compatible con Android)</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <button class="add-cart">Añadir al carrito</button>
+                <button class="add-cart" type="button">Añadir al carrito</button>
+                <div>
                     <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
                 </div>
             </div>
+        </div>
 
-            <section class="similares">
-                <h3>Productos similares</h3>
-                <div class="similares-grid">
-                    <a class="similar-item" href="detalle-reloj1.html">
-                        <img src="../imagenes/reloj1.jpg" alt="Apple Watch SE (2.ª gen)">
-                        <div class="simil-name">Apple Watch SE (2.ª gen)</div>
-                        <div class="precio">199€</div>
-                    </a>
-
-                    <a class="similar-item" href="detalle-reloj3.html">
-                        <img src="../imagenes/reloj3.jpg" alt="Garmin Venu 2">
-                        <div class="simil-name">Garmin Venu 2</div>
-                        <div class="precio">279€</div>
-                    </a>
-
-                    <a class="similar-item" href="detalle-reloj4.html">
-                        <img src="../imagenes/reloj4.jpg" alt="Fitbit Sense 2">
-                        <div class="simil-name">Fitbit Sense 2</div>
-                        <p class="precio">
-                            <span class="oferta">209€</span>
-                            <span class="preciomenos"><s>229€</s></span>
-                        </p>
-                    </a>
-                </div>
-            </section>
-
-            <script>
-                document.addEventListener('click', function(e) {
-                    if(e.target && e.target.classList.contains('add-cart')) {
-                        alert('Producto añadido al carrito');
-                    }
-                });
-            </script>
-        </main>
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
-                    </a>
-                </div>
-
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
-                </div>
+        <section class="similares">
+            <h2>Productos similares</h2>
+            <div class="similares-grid">
+                <a class="similar-item" href="detalle-reloj1.html">
+                    <img src="../imagenes/reloj1.jpg" alt="Apple Watch SE (2.ª gen)">
+                    <div class="simil-name">Apple Watch SE (2.ª gen)</div>
+                    <p class="precio">279€</p>
+                </a>
+                <a class="similar-item" href="detalle-reloj3.html">
+                    <img src="../imagenes/reloj3.jpg" alt="Garmin Venu 2">
+                    <div class="simil-name">Garmin Venu 2</div>
+                    <p class="precio">
+                        <span class="oferta">299€</span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>349€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-reloj4.html">
+                    <img src="../imagenes/reloj4.jpg" alt="Fitbit Versa 4">
+                    <div class="simil-name">Fitbit Versa 4</div>
+                    <p class="precio">199€</p>
+                </a>
             </div>
+        </section>
+        
+        <script>
+            document.addEventListener('click', function(e) {
+                if (e.target && e.target.classList.contains('add-cart')) {
+                    alert('Producto añadido al carrito');
+                }
+            });
+        </script>
+    </main>
 
-            <div class="direccion">
-                <p>TechCore Av Schultz Nº 7 Gijón, Asturias</p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio UrbanTech"></a>
             </div>
-        </footer>
-    </body>
+            <div class="footer-secciones">
+                <nav class="footer-nav" aria-label="Enlaces de pie de página">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-redes">
+                <a href="https://x.com" aria-label="Visita nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visita nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visita nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
+            </div>
+        </div>
+        <div class="direccion">
+            <p>TechCore Av Schultz Nº 7 Gijón, Asturias</p>
+        </div>
+    </footer>
+</body>
 </html>

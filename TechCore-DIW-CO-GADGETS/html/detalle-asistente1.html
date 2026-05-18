@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Amazon Echo (5ª gen) - UrbanTech</title>
 </head>
@@ -10,24 +11,25 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
                 <span>UrbanTech</span>
             </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
@@ -39,50 +41,87 @@
     <main>
         <div class="detalle-container">
             <div class="detalle-img">
-                <img src="../imagenes/asistente1.jpg" alt="Amazon Echo (5ª gen)">
+                <img src="../imagenes/asistente1.jpg" alt="Amazon Echo (5ª generación)">
             </div>
-
             <div class="detalle-info">
                 <h1>Amazon Echo (5ª gen)</h1>
-                <div class="precio">69€</div>
-                <p>Altavoz inteligente con Alexa, control domótico, reproducción de música y rutinas.</p>
+                <p class="precio">
+                    <span class="oferta">109€</span>
+                    <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>119€</s></span>
+                </p>
+                <p class="descripcion-producto">Asistente virtual inteligente con sonido de alta fidelidad, integración completa con Alexa y control de hogar digital.</p>
 
-                <h3>Especificaciones técnicas</h3>
+                <h2>Especificaciones técnicas</h2>
                 <table class="specs-table">
-                    <tr>
-                        <th>Característica</th>
-                        <th>Detalle</th>
-                    </tr>
-                    <tr>
-                        <td>Altavoz</td>
-                        <td>Integrado, micrófonos de largo alcance</td>
-                    </tr>
-                    <tr>
-                        <td>Servicios</td>
-                        <td>Alexa, control domótico, reproducción de música, rutinas</td>
-                    </tr>
-                    <tr>
-                        <td>Conectividad</td>
-                        <td>Wi-Fi, Bluetooth</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Característica</th>
+                            <th scope="col">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tipo</th>
+                            <td>Asistente Virtual inteligente</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimensiones</th>
+                            <td>144 x 144 x 133 mm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Conectividad</th>
+                            <td>Wi-Fi de doble banda, Bluetooth y Zigbee integrado</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Compatibilidad</th>
+                            <td>Alexa, Android, iOS y dispositivos de hogar digital</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sonido</th>
+                            <td>Woofer de 3.0 pulgadas y tweeters duales de 0.8 pulgadas</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Privacidad</th>
+                            <td>Botón físico para apagar los micrófonos</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Peso (aprox.)</th>
+                            <td>970 g</td>
+                        </tr>
+                    </tbody>
                 </table>
 
-                <button class="add-cart">Añadir al carrito</button>
-                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                <button class="add-cart" type="button">Añadir al carrito</button>
+                <div>
+                    <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                </div>
             </div>
         </div>
 
         <section class="similares">
-            <h3>Productos similares</h3>
+            <h2>Productos similares</h2>
             <div class="similares-grid">
                 <a class="similar-item" href="detalle-asistente2.html">
                     <img src="../imagenes/asistente2.jpg" alt="Google Nest Audio">
                     <div class="simil-name">Google Nest Audio</div>
-                    <div class="precio">99€</div>
+                    <p class="precio">99€</p>
+                </a>
+                <a class="similar-item" href="detalle-asistente3.html">
+                    <img src="../imagenes/asistente3.jpg" alt="Apple HomePod mini">
+                    <div class="simil-name">Apple HomePod mini</div>
+                    <p class="precio">99€</p>
+                </a>
+                <a class="similar-item" href="detalle-asistente4.html">
+                    <img src="../imagenes/asistente4.jpg" alt="Amazon Echo Dot (5ª gen)">
+                    <div class="simil-name">Amazon Echo Dot (5ª gen)</div>
+                    <p class="precio">
+                        <span class="oferta">54€</span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>64€</s></span>
+                    </p>
                 </a>
             </div>
         </section>
-
+        
         <script>
             document.addEventListener('click', function(e){
                 if(e.target && e.target.classList.contains('add-cart')){
@@ -95,25 +134,23 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
-                </a>
+                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio UrbanTech"></a>
             </div>
 
             <div class="footer-secciones">
-                <div class="footer-nav">
+                <nav class="footer-nav" aria-label="Enlaces de pie de página">
                     <ul>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
                         <li><a href="politica-privacidad.html">Política de privacidad</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="footer-redes">
-                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <a href="https://x.com" aria-label="Visita nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visita nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visita nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
             </div>
         </div>
 

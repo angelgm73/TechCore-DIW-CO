@@ -1,168 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrito</title>
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body>
-        <header>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/embed/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
         <div class="logo">
             <a href="index.html">
-               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+               <img src="../imagenes/logo_sinletras.png" alt="Volver a la página de inicio de InnerChip">
                 <span>InnerChip</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <label for="input-buscar" class="visually-hidden">Buscar productos</label>
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <input type="search" id="input-buscar" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
             <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-            <a href="carrito.html">🛒 Mi cesta</a>
+            <span class="cesta-actual" aria-current="page">🛒 Mi cesta</span>
         </div>
-
     </header>
 
-        <main>
-            <section class="main">
-    <h1 class="titulo-carrito">Carrito</h1>
-    
-    <div class="contenedor-carrito">
-        <div class="lista-productos">
+    <main>
+        <section class="main">
+            <h1 class="titulo-carrito">Carrito</h1>
+            
+            <div class="contenedor-carrito">
+                <div class="lista-productos">
 
-
-            <div class="producto-item">
-                <div class="producto-img">
-                    <img src="../imagenes/psuelta1.jpg" alt="Intel Core i5-13400F">
-                </div>
-                <div class="producto-info">
-                    <p class="producto-nombre">Intel Core i5-13400F</p>
-                    <p class="producto-precio">182€</p>
-                    <div class="producto-cantidad">
-                        <label>Cantidad</label>
-                        <input type="number" value="1" min="1">
+                    <div class="producto-item">
+                        <div class="producto-img">
+                            <img src="../imagenes/psuelta1.jpg" alt="Intel Core i5-13400F">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Intel Core i5-13400F</p>
+                            <p class="producto-precio">182€</p>
+                            <div class="producto-cantidad">
+                                <label for="cant-prod-1">Cantidad</label>
+                                <input type="number" id="cant-prod-1" value="1" min="1">
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="producto-item">
+                        <div class="producto-img">
+                            <img src="../imagenes/portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Lenovo LOQ 15.6&quot; Gaming</p>
+                            <p class="producto-precio">899€</p>
+                            <div class="producto-cantidad">
+                                <label for="cant-prod-2">Cantidad</label>
+                                <input type="number" id="cant-prod-2" value="1" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-item">
+                        <div class="producto-img">
+                            <img src="../imagenes/gpu1.jpg" alt="NVIDIA GeForce RTX 4070 SUPER">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">NVIDIA GeForce RTX 4070 SUPER</p>
+                            <p class="producto-precio">649€</p>
+                            <div class="producto-cantidad">
+                                <label for="cant-prod-3">Cantidad</label>
+                                <input type="number" id="cant-prod-3" value="1" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-item">
+                        <div class="producto-img">
+                            <img src="../imagenes/psuelta6.jpg" alt="Crucial P5 Plus 500GB NVMe SSD">
+                        </div>
+                        <div class="producto-info">
+                            <p class="producto-nombre">Crucial P5 Plus 500GB NVMe SSD</p>
+                            <p class="producto-precio">64€</p>
+                            <div class="producto-cantidad">
+                                <label for="cant-prod-4">Cantidad</label>
+                                <input type="number" id="cant-prod-4" value="1" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="resumen-carrito">
+                    <h2 class="titulo-resumen">Resumen</h2>
+                    <hr>
+                    <div class="fila-resumen">
+                        <span>Subtotal</span>
+                        <span>1794€</span>
+                    </div>
+                    <div class="fila-resumen">
+                        <span>Coste de envío <span class="visually-hidden">Información</span></span>
+                        <span class="envio-gratis">Gratis</span>
+                    </div>
+                    <hr>
+                    <div class="fila-resumen total">
+                        <span>Total</span>
+                        <span>1794€</span>
+                    </div>
+                    <button class="boton-tramitar">Tramitar Pedido</button>
                 </div>
             </div>
+        </section>
+    </main>
 
-
-            <div class="producto-item">
-                <div class="producto-img">
-                    <img src="../imagenes/portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
-                </div>
-                <div class="producto-info">
-                    <p class="producto-nombre">Lenovo LOQ 15.6&quot; Gaming</p>
-                    <p class="producto-precio">899€</p>
-                    <div class="producto-cantidad">
-                        <label>Cantidad</label>
-                        <input type="number" value="1" min="1">
-                    </div>
-                </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="../imagenes/logoletras.png" alt="Volver al inicio">
+                </a>
             </div>
-
-
-            <div class="producto-item">
-                <div class="producto-img">
-                    <img src="../imagenes/gpu1.jpg" alt="NVIDIA GeForce RTX 4070 SUPER">
-                </div>
-                <div class="producto-info">
-                    <p class="producto-nombre">NVIDIA GeForce RTX 4070 SUPER</p>
-                    <p class="producto-precio">649€</p>
-                    <div class="producto-cantidad">
-                        <label>Cantidad</label>
-                        <input type="number" value="1" min="1">
-                    </div>
-                </div>
+            <div class="footer-secciones">
+                <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </nav>
             </div>
-
-
-            <div class="producto-item">
-                <div class="producto-img">
-                    <img src="../imagenes/psuelta6.jpg" alt="Crucial P5 Plus 500GB NVMe SSD">
-                </div>
-                <div class="producto-info">
-                    <p class="producto-nombre">Crucial P5 Plus 500GB NVMe SSD</p>
-                    <p class="producto-precio">64€</p>
-                    <div class="producto-cantidad">
-                        <label>Cantidad</label>
-                        <input type="number" value="1" min="1">
-                    </div>
-                </div>
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="Ir a nuestro X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Ir a nuestro Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Ir a nuestro Instagram" width="30"></a>
             </div>
-
         </div>
-
-        <div class="resumen-carrito">
-            <h4>Resumen</h4>
-            <hr>
-            <div class="fila-resumen">
-                <span>Subtotal</span>
-                <span>1794€</span>
-            </div>
-            <div class="fila-resumen">
-                <span>Coste de envío ⓘ</span>
-                <span>Gratis</span>
-            </div>
-            <hr>
-            <div class="fila-resumen total">
-                <span>Total</span>
-                <span>1794€</span>
-            </div>
-            <button class="boton-tramitar">Tramitar Pedido</button>
+        <div class="direccion">
+            <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
         </div>
-    </div>
-</section>
-
-        </main>
-
-        <footer>
-            <div class="footer-container">
-
-
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/logoletras.png" alt="Inicio">
-                    </a>
-                </div>
-
-
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
-                </div>
-
-            </div>
-
-
-            <div class="direccion">
-                <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
-            </div>
     </footer>
-
-    </body>
+</body>
 </html>

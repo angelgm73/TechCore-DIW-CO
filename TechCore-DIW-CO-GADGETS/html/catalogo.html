@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Catalogo - UrbanTech</title>
+        <title>Catálogo - UrbanTech</title>
         <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
         <header>
             <div class="logo">
                 <a href="index.html">
-                    <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                    <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
                     <span>UrbanTech</span>
                 </a>
             </div>
 
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navegación principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <span class="separador">|</span>
+                    <li class="separador" aria-hidden="true">|</li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li class="separador" aria-hidden="true">|</li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
 
-            <form action="/buscar" method="get" class="buscador">
-                <button type="submit">🔍</button>
-                <input type="search" name="buscar" placeholder="buscar">
+            <form action="/buscar" method="get" class="buscador" role="search">
+                <label for="buscar-input" class="visually-hidden">Buscar productos</label>
+                <button type="submit" aria-label="Ejecutar búsqueda">🔍</button>
+                <input type="search" id="buscar-input" name="buscar" placeholder="buscar">
             </form>
 
             <div class="usuario">
@@ -41,7 +42,8 @@
                 <h2>Filtros</h2>
                 
                 <div class="filtro-buscador">
-                    <input type="search" placeholder="Buscar">
+                    <label for="filtro-buscar-input" class="visually-hidden">Filtrar por texto</label>
+                    <input type="search" id="filtro-buscar-input" placeholder="Buscar">
                 </div>
 
                 <div class="filtro-section">
@@ -62,8 +64,6 @@
                     <label><input type="checkbox"> HyperX</label>
                     <label><input type="checkbox"> WD</label>
                     <label><input type="checkbox"> Seagate</label>
-                    <label><input type="checkbox"> Samsung</label>
-                    <label><input type="checkbox"> Crucial</label>
                 </div>
 
                 <div class="filtro-section">
@@ -77,8 +77,8 @@
                 </div>
 
                 <div class="filtro-section">
-                    <h3>Precio</h3>
-                    <input type="range" min="50" max="2000" value="500">
+                    <label for="rango-precio" class="filtro-precio-label">Precio</label>
+                    <input type="range" id="rango-precio" min="50" max="2000" value="500">
                     <div class="precio-valores">50 - €2000</div>
                 </div>
             </aside>
@@ -87,7 +87,7 @@
                 <div class="catalogo-header">
                     <h1>Catálogo de productos</h1>
                     <div class="ordenar">
-                        <label for="orden">Ordenar:</label>
+                        <label for="orden">Ordenar por:</label>
                         <select id="orden">
                             <option>Más relevante</option>
                             <option>Precio: menor a mayor</option>
@@ -99,168 +99,236 @@
                 <div class="productos-grid">
                     <article class="producto">
                         <a class="producto-link" href="detalle-reloj1.html">
-                            <img src="../imagenes/reloj1.jpg" alt="Apple Watch SE (2.ª gen)">
-                            <h4>Apple Watch SE (2.ª gen)</h4>
-                            <p class="precio">199€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/reloj1.jpg" alt="Apple Watch SE (2.ª gen)">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Apple Watch SE (2.ª gen)</h4>
+                                <p class="precio">199€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-reloj2.html">
-                            <img src="../imagenes/reloj2.jpg" alt="Samsung Galaxy Watch 5">
-                            <h4>Samsung Galaxy Watch 5</h4>
-                            <p class="precio">249€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/reloj2.jpg" alt="Samsung Galaxy Watch 5">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Samsung Galaxy Watch 5</h4>
+                                <p class="precio">249€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-reloj3.html">
-                            <img src="../imagenes/reloj3.jpg" alt="Garmin Venu 2">
-                            <h4>Garmin Venu 2</h4>
-                            <p class="precio">279€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/reloj3.jpg" alt="Garmin Venu 2">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Garmin Venu 2</h4>
+                                <p class="precio">279€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-reloj4.html">
-                            <img src="../imagenes/reloj4.jpg" alt="Fitbit Sense 2">
-                            <h4>Fitbit Sense 2</h4>
-                            <p class="precio">
-                                <span class="oferta">209€</span>
-                                <span class="preciomenos"><s>229€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/reloj4.jpg" alt="Fitbit Sense 2">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Fitbit Sense 2</h4>
+                                <p class="precio">
+                                    <span class="oferta">209€</span>
+                                    <span class="preciomenos"><s>229€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-auricular1.html">
-                            <img src="../imagenes/auricular1.jpg" alt="Sony WF-1000XM4">
-                            <h4>Sony WF-1000XM4</h4>
-                            <p class="precio">199€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/auricular1.jpg" alt="Sony WF-1000XM4">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Sony WF-1000XM4</h4>
+                                <p class="precio">199€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-auricular2.html">
-                            <img src="../imagenes/auricular2.jpg" alt="Apple AirPods Pro (2.ª gen)">
-                            <h4>Apple AirPods Pro (2.ª gen)</h4>
-                            <p class="precio">
-                                <span class="oferta">209€</span>
-                                <span class="preciomenos"><s>299€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/auricular2.jpg" alt="Apple AirPods Pro (2.ª gen)">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Apple AirPods Pro (2.ª gen)</h4>
+                                <p class="precio">
+                                    <span class="oferta">209€</span>
+                                    <span class="preciomenos"><s>299€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-asistente1.html">
-                            <img src="../imagenes/asistente1.jpg" alt="Amazon Echo (5ª gen)">
-                            <h4>Amazon Echo (5ª gen)</h4>
-                            <p class="precio">69€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/asistente1.jpg" alt="Amazon Echo (5ª gen)">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Amazon Echo (5ª gen)</h4>
+                                <p class="precio">69€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-asistente2.html">
-                            <img src="../imagenes/asistente2.jpg" alt="Google Nest Audio (2.ª gen)">
-                            <h4>Google Nest Audio (2.ª gen)</h4>
-                            <p class="precio">
-                                99€
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/asistente2.jpg" alt="Google Nest Audio (2.ª gen)">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Google Nest Audio (2.ª gen)</h4>
+                                <p class="precio">99€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-bateria1.html">
-                            <img src="../imagenes/bateria1.jpg" alt="Anker PowerCore III 20000 PD">
-                            <h4>Anker PowerCore III 20000 PD</h4>
-                            <p class="precio">59€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/bateria1.jpg" alt="Anker PowerCore III 20000 PD">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Anker PowerCore III 20000 PD</h4>
+                                <p class="precio">59€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-bateria2.html">
-                            <img src="../imagenes/bateria2.jpg" alt="Xiaomi Mi Power Bank 3 Pro 20000mAh">
-                            <h4>Xiaomi Mi Power Bank 3 Pro 20000mAh</h4>
-                            <p class="precio">49€</p>
-                        </a>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/bateria2.jpg" alt="Xiaomi Mi Power Bank 3 Pro 20000mAh">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Xiaomi Mi Power Bank 3 Pro 20000mAh</h4>
+                                <p class="precio">49€</p>
+                            </div>
+                        </a> 
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-camara1.html">
-                            <img src="../imagenes/camara1.jpg" alt="Sony Alpha A6400">
-                            <h4>Sony Alpha A6400</h4>
-                            <p class="precio">
-                                <span class="oferta">799€</span>
-                                <span class="preciomenos"><s>899€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/camara1.jpg" alt="Sony Alpha A6400">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Sony Alpha A6400</h4>
+                                <p class="precio">
+                                    <span class="oferta">799€</span>
+                                    <span class="preciomenos"><s>899€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-camara2.html">
-                            <img src="../imagenes/camara2.jpg" alt="Canon EOS RP">
-                            <h4>Canon EOS RP</h4>
-                            <p class="precio">999€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/camara2.jpg" alt="Canon EOS RP">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Canon EOS RP</h4>
+                                <p class="precio">999€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-camara3.html">
-                            <img src="../imagenes/camara3.jpg" alt="GoPro HERO11 Black">
-                            <h4>GoPro HERO11 Black</h4>
-                            <p class="precio">
-                                <span class="oferta">400€</span>
-                                <span class="preciomenos"><s>449€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/camara3.jpg" alt="GoPro HERO11 Black">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>GoPro HERO11 Black</h4>
+                                <p class="precio">
+                                    <span class="oferta">400€</span>
+                                    <span class="preciomenos"><s>449€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-camara4.html">
-                            <img src="../imagenes/camara4.jpg" alt="DJI Pocket 2">
-                            <h4>DJI Pocket 2</h4>
-                            <p class="precio">369€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/camara4.jpg" alt="DJI Pocket 2">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>DJI Pocket 2</h4>
+                                <p class="precio">369€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-altavoz1.html">
-                            <img src="../imagenes/altavoz1.jpg" alt="JBL Flip 6">
-                            <h4>JBL Flip 6</h4>
-                            <p class="precio">129€</p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/altavoz1.jpg" alt="JBL Flip 6">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>JBL Flip 6</h4>
+                                <p class="precio">129€</p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-altavoz2.html">
-                            <img src="../imagenes/altavoz2.jpg" alt="Bose SoundLink Revolve+ II">
-                            <h4>Bose SoundLink Revolve+ II</h4>
-                            <p class="precio">
-                                <span class="oferta">249€</span>
-                                <span class="preciomenos"><s>299€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/altavoz2.jpg" alt="Bose SoundLink Revolve+ II">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Bose SoundLink Revolve+ II</h4>
+                                <p class="precio">
+                                    <span class="oferta">249€</span>
+                                    <span class="preciomenos"><s>299€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
                         <a class="producto-link" href="detalle-altavoz3.html">
-                            <img src="../imagenes/altavoz3.jpg" alt="Marshall Stanmore II">
-                            <h4>Marshall Stanmore II</h4>
-                            <p class="precio">
-                                <span class="oferta">300€</span>
-                                <span class="preciomenos"><s>349€</s></span>
-                            </p>
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/altavoz3.jpg" alt="Marshall Stanmore II">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Marshall Stanmore II</h4>
+                                <p class="precio">
+                                    <span class="oferta">300€</span>
+                                    <span class="preciomenos"><s>349€</s></span>
+                                </p>
+                            </div>
                         </a>
                     </article>
 
                     <article class="producto">
-                        <a class="producto-link" href="detalle-altavoz4.html">
-                            <img src="../imagenes/altavoz4.jpg" alt="Sony SRS-XB33">
-                            <h4>Sony SRS-XB33</h4>
-                            <p class="precio">
-                                149€
-                            </p>
-                        </a>
+                        <a class="producto-link" href="detalle-bateria2.html">
+                            <div class="producto-img-wrapper">
+                                <img src="../imagenes/bateria2.jpg" alt="Xiaomi Mi Power Bank 3 Pro 20000mAh">
+                            </div>
+                            <div class="producto-info-content">
+                                <h4>Xiaomi Mi Power Bank 3 Pro 20000mAh</h4>
+                                <p class="precio">49€</p>
+                            </div>
+                        </a> 
                     </article>
                 </div>
             </section>
@@ -270,24 +338,24 @@
             <div class="footer-container">
                 <div class="footer-logo">
                     <a href="index.html">
-                        <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
+                        <img src="../imagenes/LogoSinNombre.png" alt="Logo de UrbanTech - Ir al inicio">
                     </a>
                 </div>
 
                 <div class="footer-secciones">
-                    <div class="footer-nav">
+                    <nav class="footer-nav" aria-label="Enlaces legales y de ayuda">
                         <ul>
                             <li><a href="contacto.html">Contacto</a></li>
                             <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
                             <li><a href="politica-privacidad.html">Política de privacidad</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
 
                 <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                    <a href="https://x.com" aria-label="Visitar nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                    <a href="https://facebook.com" aria-label="Visitar nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                    <a href="https://instagram.com" aria-label="Visitar nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
                 </div>
             </div>
 

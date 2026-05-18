@@ -1,171 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos</title>
+    <title>Quiénes Somos - InnerChip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/logo_sinletras.png" alt="">
                 <span>InnerChip</span>
             </a>
         </div>
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
             <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
             <a href="carrito.html">🛒 Mi cesta</a>
         </div>
-
     </header>
 
-    <main>
-    <section class="main">
-        <h1 class="titulo-quienes-somos">¿Quiénes somos?</h1>
-
-        <div class="contenido-quienes-somos">
-
-            <div class="seccion-info">
-                <h2>¿Quiénes somos?</h2>
-                <p class="intro-texto">
-                    Somos InnerChip, una empresa especializada en componentes internos y soluciones técnicas
-                    para equipos de alto rendimiento. Nos enfocamos en ofrecer procesadores, placas base,
-                    tarjetas gráficas, memorias, sistemas de refrigeración y almacenamiento de primera calidad.
-                    Nuestro objetivo es ayudar tanto a profesionales como a entusiastas a construir, mejorar
-                    y optimizar sus ordenadores con confianza y fiabilidad.
-                </p>
+    <main class="py-5">
+        <div class="container max-width-container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="titulo-quienes-somos d-inline-block">¿Quiénes somos?</h1>
+                </div>
             </div>
 
-            <div class="seccion-info">
-                <h2>Nuestra Misión</h2>
-                <p>
-                    En InnerChip trabajamos para acercar hardware avanzado a todos los usuarios, proporcionando
-                    componentes de calidad, asesoramiento experto y una experiencia de compra clara y segura.
-                    Nuestra misión es potenciar el rendimiento, la estabilidad y la vida útil de los equipos
-                    mediante productos seleccionados cuidadosamente y soporte técnico especializado.
-                </p>
-            </div>
-
-            <div class="seccion-info">
-                <h2>Nuestra Visión</h2>
-                <p>
-                    Aspiramos a ser un referente nacional en el sector del hardware interno, ofreciendo
-                    soluciones modernas, seguras y eficientes para todo tipo de usuarios: gamers,
-                    creadores de contenido, empresas, desarrolladores y técnicos. Queremos que InnerChip
-                    sea sinónimo de confianza, durabilidad y rendimiento.
-                </p>
-            </div>
-
-            <div class="seccion-info">
-                <h2>Nuestros Valores</h2>
-                <ul class="lista-valores">
-                    <li><strong>Transparencia:</strong> Explicamos cada componente con detalle para que sepas qué compras y por qué es adecuado.</li>
-                    <li><strong>Calidad:</strong> Solo ofrecemos hardware fiable, probado y de marcas reconocidas.</li>
-                    <li><strong>Innovación:</strong> Seguimos las últimas tecnologías para mantener nuestro catálogo a la vanguardia.</li>
-                    <li><strong>Compromiso:</strong> Nuestro equipo acompaña al cliente antes, durante y después de su compra.</li>
-                </ul>
-            </div>
-
-            <div class="seccion-info">
-                <h2>Nuestra Historia</h2>
-                <p>
-                    InnerChip nació como un proyecto dedicado exclusivamente al hardware interno, con la idea
-                    de ofrecer una tienda especializada que entendiera a los entusiastas de la informática.
-                    Con el tiempo, ampliamos nuestro catálogo, mejoramos nuestros recursos técnicos y creamos
-                    una comunidad basada en la confianza, la calidad y el soporte profesional.
-                </p>
-            </div>
-
-            <div class="seccion-info">
-                <h2>Nuestro compromiso con la sostenibilidad</h2>
-                <p>
-                    Creemos en un futuro tecnológico responsable. Por ello colaboramos con fabricantes que
-                    aplican procesos ecoamigables, incentivamos el reciclaje de componentes y promovemos la
-                    reutilización de hardware cuando es posible. Queremos que el avance tecnológico conviva
-                    con el respeto al medio ambiente.
-                </p>
-            </div>
-
-            <div class="seccion-info">
-                <h2>Dónde encontrarnos</h2>
-                <p>
-                    Nuestra sede se encuentra en Calle Marqués de San Esteban Nº 76, Gijón, un punto céntrico
-                    y bien comunicado para garantizar un acceso cómodo a nuestros clientes.
-                    <br><br>
-
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.891807448336!2d-5.676195123947978!3d43.54181217113252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367cee4dd14527%3A0x2ae145d913086c1!2sC.%20Marqu%C3%A9s%20de%20San%20Esteban%2C%2076%2C%2033201%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2es!4v1763924444000!5m2!1ses!2es" 
-                        width="600"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </p>
-            </div>
-
-        </div>
-
-        <button class="boton-privacidad">
-            <a href="politica-privacidad.html">Política de privacidad</a>
-        </button>
-
-    </section>
-</main>
-
-
-        <footer>
-            <div class="footer-container">
-
-
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/logoletras.png" alt="Inicio">
-                    </a>
+            <div class="row contenido-quienes-somos">
+                
+                <div class="col-12 mb-4 seccion-info">
+                    <p class="intro-texto lead fs-5">
+                        Somos InnerChip, una empresa especializada en componentes internos y soluciones técnicas
+                        para equipos de alto rendimiento. Nos enfocamos en ofrecer procesadores, placas base,
+                        tarjetas gráficas, memorias, sistemas de refrigeración y almacenamiento de primera calidad.
+                        Nuestro objetivo es ayudar tanto a profesionales como a entusiastas a construir, mejorar
+                        y optimizar sus ordenadores con confianza y fiabilidad.
+                    </p>
                 </div>
 
+                <div class="col-md-6 mb-4 seccion-info">
+                    <h2>Nuestra Misión</h2>
+                    <p>
+                        En InnerChip trabajamos para acercar hardware avanzado a todos los usuarios, proporcionando
+                        componentes de calidad, asesoramiento experto y una experiencia de compra clara y segura.
+                        Nuestra misión es potenciar el rendimiento, la estabilidad y la vida útil de los equipos
+                        mediante productos seleccionados cuidadosamente y soporte técnico especializado.
+                    </p>
+                </div>
 
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
+                <div class="col-md-6 mb-4 seccion-info">
+                    <h2>Nuestra Visión</h2>
+                    <p>
+                        Aspiramos a ser un referente nacional en el sector del hardware interno, ofreciendo
+                        soluciones modernas, seguras y eficientes para todo tipo de usuarios: gamers,
+                        creadores de contenido, empresas, desarrolladores y técnicos. Queremos que InnerChip
+                        sea sinónimo de confianza, durabilidad y rendimiento.
+                    </p>
+                </div>
+
+                <div class="col-md-6 mb-4 seccion-info">
+                    <h2>Nuestros Valores</h2>
+                    <ul class="lista-valores">
+                        <li><strong>Transparencia:</strong> Explicamos cada componente con detalle para que sepas qué compras y por qué es adecuado.</li>
+                        <li><strong>Calidad:</strong> Solo ofrecemos hardware fiable, probado y de marcas reconocidas.</li>
+                        <li><strong>Innovación:</strong> Seguimos las últimas tecnologías para mantener nuestro catálogo a la vanguardia.</li>
+                        <li><strong>Compromiso:</strong> Nuestro equipo acompaña al cliente antes, durante y después de su compra.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-4 seccion-info">
+                    <h2>Nuestra Historia</h2>
+                    <p>
+                        InnerChip nació como un proyecto dedicado exclusivamente al hardware interno, con la idea
+                        de ofrecer una tienda especializada que entendiera a los entusiastas de la informática.
+                        Con el tiempo, ampliamos nuestro catálogo, mejoramos nuestros recursos técnicos y creamos
+                        una comunidad basada en la confianza, la calidad y el soporte profesional.
+                    </p>
+                </div>
+
+                <div class="col-12 mb-5 seccion-info">
+                    <h2>Nuestro compromiso con la sostenibilidad</h2>
+                    <p>
+                        Creemos en un futuro tecnológico responsable. Por ello colaboramos con fabricantes que
+                        aplican procesos ecoamigables, incentivamos el reciclaje de componentes y promovemos la
+                        reutilización de hardware cuando es posible. Queremos que el avance tecnológico conviva
+                        con el respeto al medio ambiente.
+                    </p>
+                </div>
+
+                <div class="col-12 mb-4 seccion-info text-center">
+                    <h2>Dónde encontrarnos</h2>
+                    <p class="mb-4">
+                        Nuestra sede se encuentra en Calle Marqués de San Esteban Nº 76, Gijón, un punto céntrico
+                        y bien comunicado para garantizar un acceso cómodo a nuestros clientes.
+                    </p>
+                    <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px; border: 2px solid #00E6FF; border-radius: 10px; overflow: hidden;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.891807448336!2d-5.676195123947978!3d43.54181217113252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367cee4dd14527%3A0x2ae145d913086c1!2sC.%20Marqu%C3%A9s%20de%20San%20Esteban%2C%2076%2C%2033201%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2es!4v1763924444000!5m2!1ses!2es" 
+                            title="Ubicación de la tienda de informática InnerChip en Gijón"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button class="boton-privacidad">
+                        <a href="politica-privacidad.html">Política de privacidad</a>
+                    </button>
                 </div>
+            </div>
+        </div>
+    </main>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="../imagenes/logoletras.png" alt="InnerChip Inicio">
+                </a>
             </div>
 
-
-            <div class="direccion">
-                <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
+            <div class="footer-secciones">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="footer-redes">
+                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+            </div>
+        </div>
+
+        <div class="direccion">
+            <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
+        </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

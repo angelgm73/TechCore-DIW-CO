@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Sony SRS-XB33 - UrbanTech</title>
 </head>
@@ -10,28 +11,32 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
                 <span>UrbanTech</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
         </form>
+        
         <div class="usuario">
             <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
             <a href="carrito.html">🛒 Mi cesta</a>
         </div>
     </header>
+
     <main>
         <div class="detalle-container">
             <div class="detalle-img">
@@ -39,71 +44,74 @@
             </div>
             <div class="detalle-info">
                 <h1>Sony SRS-XB33</h1>
-                <p class="precio">
-                    149€
-                </p>
-                <p>Altavoz portátil resistente con extra bass y luz de fiesta integrada.</p>
+                <p class="precio">149€</p>
+                <p class="descripcion-producto">Altavoz Bluetooth potente con graves reforzados (Extra Bass), luces integradas y alta durabilidad, ideal para fiestas e interiores.</p>
 
-                <h3>Especificaciones técnicas</h3>
+                <h2>Especificaciones técnicas</h2>
                 <table class="specs-table">
-                    <tr>
-                        <th>Característica</th>
-                        <th>Detalle</th>
-                    </tr>
-                    <tr>
-                        <td>Tipo</td>
-                        <td>Altavoz Bluetooth portátil con Extra Bass y luces integradas</td>
-                    </tr>
-                    <tr>
-                        <td>Potencia</td>
-                        <td>Woofer + radiadores pasivos</td>
-                    </tr>
-                    <tr>
-                        <td>Batería</td>
-                        <td>Hasta 24 horas (modo variable, sin luces)</td>
-                    </tr>
-                    <tr>
-                        <td>Conectividad</td>
-                        <td>Bluetooth, party connect para emparejar múltiples unidades</td>
-                    </tr>
-                    <tr>
-                        <td>Resistencia</td>
-                        <td>Resistente al agua</td>
-                    </tr>
-                    <tr>
-                        <td>Puertos</td>
-                        <td>USB‑C para carga</td>
-                    </tr>
-                    <tr>
-                        <td>Dimensiones</td>
-                        <td>261 x 105 x 111 mm</td>
-                    </tr>
-                    <tr>
-                        <td>Peso (aprox.)</td>
-                        <td>1.1 kg</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Característica</th>
+                            <th scope="col">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tipo</th>
+                            <td>Altavoz Bluetooth portátil Extra Bass</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Potencia</th>
+                            <td>Unidad de altavoz X-Balanced + radiadores pasivos</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Batería</th>
+                            <td>Hasta 24 horas (luces apagadas)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Conectividad</th>
+                            <td>Bluetooth 5.0, NFC, Party Connect</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Resistencia</th>
+                            <td>IP67 (resistente al agua, al polvo y lavable)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Puertos</th>
+                            <td>USB‑C para carga, salida USB‑A (Power Bank)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimensiones</th>
+                            <td>Aprox. 246 x 97 x 106 mm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Peso (aprox.)</th>
+                            <td>1100 g</td>
+                        </tr>
+                    </tbody>
                 </table>
 
-                <button class="add-cart">Añadir al carrito</button>
-                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                <button class="add-cart" type="button">Añadir al carrito</button>
+                <div>
+                    <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                </div>
             </div>
         </div>
+
         <section class="similares">
-            <h3>Productos similares</h3>
+            <h2>Productos similares</h2>
             <div class="similares-grid">
                 <a class="similar-item" href="detalle-altavoz1.html">
                     <img src="../imagenes/altavoz1.jpg" alt="BL Flip 6">
                     <div class="simil-name">BL Flip 6</div>
-                    <p class="precio">
-                        129€
-                    </p>
+                    <p class="precio">129€</p>
                 </a>
                 <a class="similar-item" href="detalle-altavoz2.html">
                     <img src="../imagenes/altavoz2.jpg" alt="Bose SoundLink Revolve+ II">
                     <div class="simil-name">Bose SoundLink Revolve+ II</div>
                     <p class="precio">
                         <span class="oferta">249€</span>
-                        <span class="preciomenos"><s>299€</s></span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>299€</s></span>
                     </p>
                 </a>
                 <a class="similar-item" href="detalle-altavoz3.html">
@@ -111,29 +119,35 @@
                     <div class="simil-name">Marshall Stanmore II</div>
                     <p class="precio">
                         <span class="oferta">300€</span>
-                        <span class="preciomenos"><s>349€</s></span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>349€</s></span>
                     </p>
                 </a>
             </div>
         </section>
+        
         <script>
             document.addEventListener('click', function(e){ if(e.target && e.target.classList.contains('add-cart')){ alert('Producto añadido al carrito'); } });
         </script>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio"></a>
+                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio UrbanTech"></a>
             </div>
-            <div class="footer-secciones"><div class="footer-nav"><ul>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-            </ul></div></div>
+            <div class="footer-secciones">
+                <nav class="footer-nav" aria-label="Enlaces de pie de página">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="footer-redes">
-                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <a href="https://x.com" aria-label="Visita nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visita nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visita nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
             </div>
         </div>
         <div class="direccion"><p>TechCore Av Schultz Nº 7 Gijón, Asturias</p></div>

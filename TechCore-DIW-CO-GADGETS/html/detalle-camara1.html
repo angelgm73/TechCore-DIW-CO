@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Sony Alpha A6400 - UrbanTech</title>
 </head>
@@ -10,24 +11,25 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
                 <span>UrbanTech</span>
             </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
@@ -39,86 +41,91 @@
     <main>
         <div class="detalle-container">
             <div class="detalle-img">
-                <img src="../imagenes/camara1.jpg" alt="Sony Alpha A6400 (mirrorless APS-C)">
+                <img src="../imagenes/camara1.jpg" alt="Sony Alpha A6400">
             </div>
-
             <div class="detalle-info">
                 <h1>Sony Alpha A6400</h1>
                 <p class="precio">
-                    <span class="oferta">799€</span>
-                    <span class="preciomenos"><s>899€</s></span>
+                    <span class="oferta">899€</span>
+                    <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>999€</s></span>
                 </p>
-                <p>Cámara sin espejo APS-C muy valorada para foto y vídeo con autofocus rápido.</p>
+                <p class="descripcion-producto">Cámara EVIL (sin espejo) con sensor APS-C, enfoque automático ultrarrápido y grabación de vídeo 4K, perfecta para creadores de contenido y fotógrafos aficionados avanzados.</p>
 
-                <h3>Especificaciones técnicas</h3>
+                <h2>Especificaciones técnicas</h2>
                 <table class="specs-table">
-                    <tr>
-                        <th>Característica</th>
-                        <th>Detalle</th>
-                    </tr>
-                    <tr>
-                        <td>Sensor</td>
-                        <td>APS-C 24.2MP CMOS</td>
-                    </tr>
-                    <tr>
-                        <td>ISO</td>                        
-                        <td>100-32000 (expandible a 102400)</td>
-                    </tr>
-                    <tr>
-                        <td>Vídeo</td>
-                        <td>4K 30fps, Full HD 120fps</td>
-                    </tr>
-                    <tr>
-                        <td>Ranura para tarjetas</td>
-                        <td>SD, microSD</td>
-                    </tr>
-                    <tr>
-                        <td>Batería</td>
-                        <td>EN-EL25</td>
-                    </tr>
-                    <tr>
-                        <td>Formatos soportados</td>
-                        <td>JPEG, RAW, MP4</td>
-                    </tr>
-                    <tr>
-                        <td>Peso</td>
-                        <td>404 g</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Característica</th>
+                            <th scope="col">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tipo de cámara</th>
+                            <td>Cámara sin espejo (Mirrorless) con objetivos intercambiables</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sensor</th>
+                            <td>APS-C Exmor CMOS de 24.2 megapíxeles</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Procesador</th>
+                            <td>BIONZ X de última generación</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Enfoque (AF)</th>
+                            <td>425 puntos de AF por detección de fases, enfoque en 0.02 seg, Real-time Eye AF</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vídeo</th>
+                            <td>Grabación interna 4K HDR (HLG) sin lectura de píxeles y cámara lenta Full HD a 120 fps</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pantalla</th>
+                            <td>Pantalla LCD táctil inclinable 180° ideal para vlogging</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Conectividad</th>
+                            <td>Wi-Fi, NFC y Bluetooth integrados</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Peso (aprox.)</th>
+                            <td>403 g (solo el cuerpo con batería y tarjeta)</td>
+                        </tr>
+                    </tbody>
                 </table>
 
-                <button class="add-cart">Añadir al carrito</button>
-                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                <button class="add-cart" type="button">Añadir al carrito</button>
+                <div>
+                    <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                </div>
             </div>
         </div>
 
         <section class="similares">
-            <h3>Productos similares</h3>
+            <h2>Productos similares</h2>
             <div class="similares-grid">
                 <a class="similar-item" href="detalle-camara2.html">
-                    <img src="../imagenes/camara2.jpg" alt="Canon EOS RP">
-                    <div class="simil-name">Canon EOS RP</div>
-                    <div class="precio">999€</div>
+                    <img src="../imagenes/camara2.jpg" alt="Fujifilm X-T30 II">
+                    <div class="simil-name">Fujifilm X-T30 II</div>
+                    <p class="precio">949€</p>
                 </a>
-
                 <a class="similar-item" href="detalle-camara3.html">
-                    <img src="../imagenes/camara3.jpg" alt="GoPro HERO11 Black">
-                    <div class="simil-name">GoPro HERO11 Black</div>
+                    <img src="../imagenes/camara3.jpg" alt="Canon EOS M50 Mark II">
+                    <div class="simil-name">Canon EOS M50 Mark II</div>
                     <p class="precio">
-                        <span class="oferta">400€</span>
-                        <span class="preciomenos"><s>449€</s></span>
+                        <span class="oferta">649€</span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>699€</s></span>
                     </p>
                 </a>
-
                 <a class="similar-item" href="detalle-camara4.html">
-                    <img src="../imagenes/camara4.jpg" alt="DJI Pocket 2 (compacta con gimbal integrado)">
-                    <div class="simil-name">DJI Pocket 2</div>
-                    <p class="precio">
-                        <span>369€</span>
-                    </p>
+                    <img src="../imagenes/camara4.jpg" alt="Nikon Z50">
+                    <div class="simil-name">Nikon Z50</div>
+                    <p class="precio">879€</p>
                 </a>
             </div>
         </section>
-
+        
         <script>
             document.addEventListener('click', function(e){
                 if(e.target && e.target.classList.contains('add-cart')){
@@ -131,25 +138,23 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
-                </a>
+                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio UrbanTech"></a>
             </div>
 
             <div class="footer-secciones">
-                <div class="footer-nav">
+                <nav class="footer-nav" aria-label="Enlaces de pie de página">
                     <ul>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
                         <li><a href="politica-privacidad.html">Política de privacidad</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="footer-redes">
-                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <a href="https://x.com" aria-label="Visita nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visita nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visita nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
             </div>
         </div>
 
