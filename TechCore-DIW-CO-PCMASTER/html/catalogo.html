@@ -19,60 +19,69 @@
     </head>
     <body class="bg-cream">
         <header
-            class="navbar navbar-expand-lg navbar-light bg-cream border-bottom py-3">
+            class="navbar navbar-expand-lg navbar-light bg-cream border-bottom-blue py-3">
             <div class="container">
-                <button id="burger-menu"
-                    class="navbar-toggler me-2 border-light"
-                    type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal">
+                <button
+                    id="burger-menu"
+                    class="navbar-toggler me-2 border-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <a class="navbar-brand d-flex align-items-center gap-2"
-                    href="index.html">
-                    <img src="../imagenes/logoletras.png" alt="Inicio"
-                        height="36">
+                    aria-label="PcMaster - Inicio">
+                    <img src="../imagenes/logoletras.png"
+                        alt="Inicio" height="36">
                     <span class="fw-bold text-primary"
-                        style="font-size: 2rem;">PcMaster</span>
+                        style="font-size: 2rem">PcMaster</span>
                 </a>
 
                 <div class="collapse navbar-collapse main-nav"
                     id="menuPrincipal">
                     <ul
                         class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"
-                                style="color: #0056b3; font-weight: 500;">Inicio</a>
-                        </li>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="index.html">Inicio</a></li>
                         <span class="separador d-none d-lg-inline mx-2"
-                            style="color: #ccc;">|</span>
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalogo.html"
-                                style="color: #0056b3; font-weight: 500;">Catalogo</a>
-                        </li>
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="catalogo.html">Catalogo</a></li>
                         <span class="separador d-none d-lg-inline mx-2"
-                            style="color: #ccc;">|</span>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html"
-                                style="color: #0056b3; font-weight: 500;">Contacto</a>
-                        </li>
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="contacto.html">Contacto</a></li>
                     </ul>
 
-                    <form action="/buscar" method="get"
-                        class="d-flex my-3 my-lg-0 me-lg-3" role="search">
-                        <input class="form-control me-2" type="search"
-                            name="buscar" placeholder="buscar"
-                            style="border-radius: 20px; border: 1px solid #999;">
+                    <form action="/buscar"
+                        method="get"
+                        class="d-flex my-3 my-lg-0 me-lg-3"
+                        role="search">
+                        <input
+                            id="buscador-principal"
+                            class="form-control me-2"
+                            type="search"
+                            name="buscar"
+                            placeholder="buscar"
+                            aria-label="Buscar"
+                            style="border-radius: 20px; border: 1px solid #222222" />
                         <button class="btn" type="submit">🔍</button>
                     </form>
 
                     <div class="usuario d-flex flex-column flex-lg-row gap-3">
                         <a href="mi-cuenta.html"
-                            class="text-decoration-none text-primary">👤 Mi
+                            class="text-decoration-none text-black">👤 Mi
                             cuenta</a>
                         <a href="carrito.html"
-                            class="text-decoration-none text-primary">🛒 Mi
-                            cesta</a>
+                            class="text-decoration-none text-black">🛒
+                            Mi cesta</a>
                     </div>
                 </div>
             </div>
@@ -211,7 +220,7 @@
                                             <h2 class="h6">MrDalekJD PC
                                                 Primus</h2>
                                             <p
-                                                class="precio fw-bold text-primary">1239€</p>
+                                                class="precio fw-bold text-black">1239€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -227,10 +236,10 @@
                                         <div class="card-body">
                                             <h2 class="h6">Thermaltake LCGS
                                                 Vista R66 Gaming Desktop</h2>
-                                            <h6 class="text-danger">¡ULTIMAS
-                                                UNIDADES!</h6>
+                                            <h3 class="text-danger">¡ULTIMAS
+                                                UNIDADES!</h3>
                                             <p
-                                                class="precio fw-bold text-primary">461€</p>
+                                                class="precio fw-bold text-black">461€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -247,7 +256,7 @@
                                             <h2 class="h6">PC Racing Pack Gaming
                                                 (Ryzen 3200G / 480 GB SSD)</h2>
                                             <p
-                                                class="precio fw-bold text-primary">677€
+                                                class="precio fw-bold text-black">677€
                                             </p>
                                         </div>
                                     </div>
@@ -307,7 +316,7 @@
                                             <h2 class="h6">Lenovo LOQ 15.6″
                                                 Gaming</h2>
                                             <p
-                                                class="precio fw-bold text-primary">999€</p>
+                                                class="precio fw-bold text-black">999€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -324,10 +333,10 @@
                                         <div class="card-body">
                                             <h2 class="h6">ASUS Zenbook 14
                                                 OLED</h2>
-                                            <h6 class="text-danger">¡ULTIMAS
-                                                UNIDADES!</h6>
+                                            <h3 class="text-danger">¡ULTIMAS
+                                                UNIDADES!</h3>
                                             <p
-                                                class="precio fw-bold text-primary">1.199€
+                                                class="precio fw-bold text-black">1.199€
                                             </p>
                                         </div>
                                     </div>
@@ -345,7 +354,7 @@
                                             <h2 class="h6">Lenovo IdeaPad Slim 3
                                                 15.6″</h2>
                                             <p
-                                                class="precio fw-bold text-primary">479€
+                                                class="precio fw-bold text-black">479€
                                             </p>
                                         </div>
                                     </div>
@@ -384,7 +393,7 @@
                                             <h2 class="h6">Gigabyte Aorus Z790
                                                 Elite X WiFi7</h2>
                                             <p
-                                                class="precio fw-bold text-primary">355€
+                                                class="precio fw-bold text-black">355€
                                             </p>
                                         </div>
                                     </div>
@@ -401,7 +410,7 @@
                                             <h2 class="h6">MSI GeForce RTX 3050
                                                 Ventus 2X 8GB</h2>
                                             <p
-                                                class="precio fw-bold text-primary">
+                                                class="precio fw-bold text-black">
                                                 200€
                                             </p>
                                         </div>
@@ -419,7 +428,7 @@
                                             <h2 class="h6">Corsair RM650e 650W
                                                 Modular</h2>
                                             <p
-                                                class="precio fw-bold text-primary">91€
+                                                class="precio fw-bold text-black">91€
                                             </p>
                                         </div>
                                     </div>
@@ -463,12 +472,14 @@
                         <div
                             class="d-flex justify-content-center justify-content-lg-end gap-3">
                             <a href="https://x.com"><img src="../imagenes/x.png"
-                                    alt width="24"></a>
+                                    alt="X" width="24"></a>
                             <a href="https://facebook.com"><img
-                                    src="../imagenes/facebook.png" alt
+                                    src="../imagenes/facebook.png"
+                                    alt="Facebook"
                                     width="24"></a>
                             <a href="https://instagram.com"><img
-                                    src="../imagenes/instagram.png" alt
+                                    src="../imagenes/instagram.png"
+                                    alt="Instagram"
                                     width="24"></a>
                         </div>
                     </div>
