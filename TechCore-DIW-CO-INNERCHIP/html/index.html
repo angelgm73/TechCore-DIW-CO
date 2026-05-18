@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Inicio</title>
 </head>
@@ -10,240 +11,247 @@
     <header>
         <div class="logo">
             <a href="index.html">
-               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
+               <img src="../imagenes/logo_sinletras.png" alt="InnerChip - Volver a la página de inicio">
                 <span>InnerChip</span>
             </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <label for="buscar-input" class="visually-hidden">Buscar productos en la tienda</label>
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <input type="search" id="buscar-input" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
             <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
             <a href="carrito.html">🛒 Mi cesta</a>
         </div>
-
     </header>
 
     <main>
-        <section class="principal">
-            <h1>Ofertas</h1>
+        <h1 class="visually-hidden">Tienda de Componentes InnerChip</h1>
 
-            <div class="productos-grid">
+        <section class="principal container-fluid px-0">
+            <h2 class="seccion-titulo">Ofertas</h2>
 
-                <article class="producto">
-                    <a class="producto-link" href="detalle-cpu4.html">
-                        <img src="../imagenes/cpu4.jpg" alt="AMD Ryzen 5 7600">
-                        <h4>AMD Ryzen 5 7600</h4>
-                        <p class="precio">
-                            <span class="oferta">€219</span>
-                            <span class="preciomenos"><s>€250</s></span>
-                        </p>
-                    </a>
-                </article>
-
-                <article class="producto">
-                    <a class="producto-link" href="detalle-gpu1.html">
-                        <img src="../imagenes/gpu1.jpg" alt="NVIDIA GeForce RTX 4070 SUPER">
-                        <h4>NVIDIA GeForce RTX 4070 SUPER</h4>
-                        <p class="precio">
-                            <span class="oferta">€649</span>
-                            <span class="preciomenos"><s>€729</s></span>
-                        </p>
-                    </a>
-                </article>
-
-                <article class="producto">
-                    <a class="producto-link">
-                        <img src="../imagenes/psuelta1.jpg" alt="AMD Ryzen 7 5700X">
-                        <h4>AMD Ryzen 7 5700X</h4>
-                        <p class="precio">
-                            <span class="oferta">189€</span>
-                            <span class="preciomenos"><s>219€</s></span>
-                        </p>
-                    </a>
-                </article>
-
-                <article class="producto">
-                    <a class="producto-link">
-                        <img src="../imagenes/psuelta5.jpg" alt="Noctua NH-D15 Premium Cooler">
-                        <h4>Noctua NH-D15 Premium Cooler</h4>
-                        <p class="precio">
-                            <span class="oferta">89€</span>
-                            <span class="preciomenos"><s>105€</s></span>
-                        </p>
-                    </a>
-                </article>
-
-            </div>
-
-
-                <h1>Últimas unidades</h1>
-
-                <div class="productos-grid">
-
+            <div class="row g-4 m-3 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <article class="producto">
-                        <a class="producto-link" href="detalle-gpu3.html">
-                            <img src="../imagenes/gpu3.jpg" alt="NVIDIA GeForce RTX 4060 Ti">
-                            <h4>NVIDIA GeForce RTX 4060 Ti</h4>
-                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                            <p class="precioUltUni">€429</p>
+                        <a class="producto-link" href="detalle-cpu4.html">
+                            <img src="../imagenes/cpu4.jpg" alt="Procesador AMD Ryzen 5 7600">
+                            <h3>AMD Ryzen 5 7600</h3>
+                            <p class="precio">
+                                <span class="oferta">219€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>250€</s></span>
+                            </p>
                         </a>
                     </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="#">
-                            <img src="../imagenes/psuelta3.jpg" alt="Corsair Vengeance RGB Pro 16GB DDR4 3600MHz">
-                            <h4>Corsair Vengeance RGB Pro 16GB DDR4 3600MHz</h4>
-                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                            <p class="precioUltUni">72€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="#">
-                            <img src="../imagenes/psuelta7.jpg" alt="DeepCool FC120 ARGB Triple Pack">
-                            <h4>DeepCool FC120 ARGB Triple Pack</h4>
-                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                            <p class="precioUltUni">32€</p>
-                        </a>
-                    </article>
-
                 </div>
 
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu1.html">
+                            <img src="../imagenes/gpu1.jpg" alt="Tarjeta gráfica NVIDIA GeForce RTX 4070 SUPER">
+                            <h3>NVIDIA GeForce RTX 4070 SUPER</h3>
+                            <p class="precio">
+                                <span class="oferta">649€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>729€</s></span>
+                            </p>
+                        </a>
+                    </article>
+                </div>
 
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <div class="producto-content">
+                            <img src="../imagenes/psuelta1.jpg" alt="Procesador AMD Ryzen 7 5700X">
+                            <h3>AMD Ryzen 7 5700X</h3>
+                            <p class="precio">
+                                <span class="oferta">189€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>219€</s></span>
+                            </p>
+                        </div>
+                    </article>
+                </div>
 
-            <h1>Mejor calidad</h1>
-
-            <div class="productos-grid">
-
-
-                <article class="producto">
-                    <a class="producto-link" href="detalle-cpu1.html">
-                        <img src="../imagenes/cpu1.jpg" alt="Intel Core i9-14900K">
-                        <h4>Intel Core i9-14900K</h4>
-                        <p class="precio">€589</p>
-                    </a>
-                </article>
-
-
-                <article class="producto">
-                    <a class="producto-link" href="detalle-gpu1.html">
-                        <img src="../imagenes/gpu1.jpg" alt="NVIDIA GeForce RTX 4070 SUPER">
-                        <h4>NVIDIA GeForce RTX 4070 SUPER</h4>
-                        <p class="precio">
-                            <span class="oferta">€649</span>
-                            <span class="preciomenos"><s>€729</s></span>
-                        </p>
-                    </a>
-                </article>
-
-
-                <article class="producto">
-                    <a class="producto-link" href="#">
-                        <img src="../imagenes/psuelta5.jpg" alt="Noctua NH-D15 Premium Cooler">
-                        <h4>Noctua NH-D15 Premium Cooler</h4>
-                        <p class="precio">
-                            <span class="oferta">89€</span>
-                            <span class="preciomenos"><s>105€</s></span>
-                        </p>
-                    </a>
-                </article>
-
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <div class="producto-content">
+                            <img src="../imagenes/psuelta5.jpg" alt="Disipador Noctua NH-D15 Premium Cooler">
+                            <h3>Noctua NH-D15 Premium Cooler</h3>
+                            <p class="precio">
+                                <span class="oferta">89€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>105€</s></span>
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
 
+            <h2 class="seccion-titulo">Últimas unidades</h2>
 
-                <section class="valoraciones">
-                    <h2>Valoraciones</h2>
-                    <div class="valoraciones-grid">
+            <div class="row g-4 m-3 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu3.html">
+                            <img src="../imagenes/gpu3.jpg" alt="Tarjeta gráfica NVIDIA GeForce RTX 4060 Ti">
+                            <h3>NVIDIA GeForce RTX 4060 Ti</h3>
+                            <span class="ult-unidades">¡ÚLTIMAS UNIDADES!</span>
+                            <p class="precioUltUni">429€</p>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <div class="producto-content">
+                            <img src="../imagenes/psuelta3.jpg" alt="Memoria RAM Corsair Vengeance RGB Pro 16GB DDR4 3600MHz">
+                            <h3>Corsair Vengeance RGB Pro 16GB DDR4 3600MHz</h3>
+                            <span class="ult-unidades">¡ÚLTIMAS UNIDADES!</span>
+                            <p class="precioUltUni">72€</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <div class="producto-content">
+                            <img src="../imagenes/psuelta7.jpg" alt="Ventiladores DeepCool FC120 ARGB Triple Pack">
+                            <h3>DeepCool FC120 ARGB Triple Pack</h3>
+                            <span class="ult-unidades">¡ÚLTIMAS UNIDADES!</span>
+                            <p class="precioUltUni">32€</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <h2 class="seccion-titulo">Mejor calidad</h2>
+
+            <div class="row g-4 m-3 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-cpu1.html">
+                            <img src="../imagenes/cpu1.jpg" alt="Procesador Intel Core i9-14900K">
+                            <h3>Intel Core i9-14900K</h3>
+                            <p class="precio">589€</p>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <a class="producto-link" href="detalle-gpu1.html">
+                            <img src="../imagenes/gpu1.jpg" alt="Tarjeta gráfica NVIDIA GeForce RTX 4070 SUPER">
+                            <h3>NVIDIA GeForce RTX 4070 SUPER</h3>
+                            <p class="precio">
+                                <span class="oferta">649€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>729€</s></span>
+                            </p>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <article class="producto">
+                        <div class="producto-content">
+                            <img src="../imagenes/psuelta5.jpg" alt="Disipador Noctua NH-D15 Premium Cooler">
+                            <h3>Noctua NH-D15 Premium Cooler</h3>
+                            <p class="precio">
+                                <span class="oferta">89€</span>
+                                <span class="preciomenos"><span class="visually-hidden">Precio anterior:</span><s>105€</s></span>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <section class="valoraciones">
+                <h2 class="seccion-titulo">Valoraciones</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-4">
                         <article class="valoracion">
                             <div class="usuario-valoracion">
-                                <img src="../imagenes/usuario.png" alt="Usuario 1">
+                                <img src="../imagenes/usuario.png" alt="Avatar de Laura Méndez">
                             </div>
                             <div class="contenido-valoracion">
                                 <p>"Buen montaje, cableado ordenado, llegada del PC sin daños — ideal si prefieres comprar un PC montado sin complicarte el ensamblaje."</p>
-                                <div class="estrellas">★★★★★</div>
+                                <div class="estrellas" aria-label="5 estrellas de 5">★★★★★</div>
                                 <span class="nombre-usuario">Laura Méndez</span>
                             </div>
                         </article>
-        
+                    </div>
+    
+                    <div class="col-12 col-md-4">
                         <article class="valoracion">
                             <div class="usuario-valoracion">
-                                <img src="../imagenes/usuario.png" alt="Usuario 2">
+                                <img src="../imagenes/usuario.png" alt="Avatar de Carlos Gómez">
                             </div>
                             <div class="contenido-valoracion">
-                                <p>"Experiencia consistente y fiable, ademas de sin incidencias. Buen trato al cliente, envíos rápidos y soluciones adecuadas."</p>
-                                <div class="estrellas">★★★★★</div>
-                                <span class="nombre-usuario">Laura Méndez</span>
+                                <p>"Experiencia consistente y fiable, además de sin incidencias. Buen trato al cliente, envíos rápidos y soluciones adecuadas."</p>
+                                <div class="estrellas" aria-label="5 estrellas de 5">★★★★★</div>
+                                <span class="nombre-usuario">Carlos Gómez</span>
                             </div>
                         </article>
-        
+                    </div>
+    
+                    <div class="col-12 col-md-4">
                         <article class="valoracion">
                             <div class="usuario-valoracion">
-                                <img src="../imagenes/usuario.png" alt="Usuario 3">
+                                <img src="../imagenes/usuario.png" alt="Avatar de Álvaro Ruiz">
                             </div>
                             <div class="contenido-valoracion">
                                 <p>“El PC llegó montado perfectamente y funcionando a la primera. Muy buen rendimiento y envío rápido. Totalmente recomendable.”</p>
-                                <div class="estrellas">★★★★★</div>
+                                <div class="estrellas" aria-label="5 estrellas de 5">★★★★★</div>
                                 <span class="nombre-usuario">Álvaro Ruiz</span>
                             </div>
                         </article>
                     </div>
-                </section>
-
+                </div>
+            </section>
         </section>
-
     </main>
 
-        <footer>
-            <div class="footer-container">
-
-
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/logoletras.png" alt="Inicio">
-                    </a>
-                </div>
-
-
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
-                </div>
-
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="../imagenes/logoletras.png" alt="Logotipo InnerChip Inicio">
+                </a>
             </div>
 
-
-            <div class="direccion">
-                <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
+            <div class="footer-secciones">
+                <nav class="footer-nav" aria-label="Enlaces legales y de contacto">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </nav>
             </div>
+
+            <div class="footer-redes">
+                <a href="https://x.com" aria-label="Visitar nuestro perfil de X (Twitter)"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visitar nuestro perfil de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visitar nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
+            </div>
+        </div>
+
+        <div class="direccion">
+            <p>InnerChip · Calle Marqués de San Esteban Nº 76, Gijón, Asturias</p>
+        </div>
     </footer>
-    <!--enlace para el script de JavaScript-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/script.js"></script>
-    
 </body>
 </html>

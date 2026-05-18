@@ -4,6 +4,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
 
+/* ========================================================== */
+/* PALETA DE VARIABLES DE ALTO CONTRASTE CYBERPUNK (NUEVO)     */
+/* ========================================================== */
+:root {
+    --cyber-bg-dark: #000000;
+    --cyber-bg-card: #0c0c0e;
+    --neon-cyan: #00E6FF;
+    --neon-green: #00FF9D;
+    --text-high-contrast: #E8FFFF;
+    --text-muted-contrast: #A0C0D0; /* Pasa WAVE holgadamente en fondo oscuro */
+}
+
 /* ==================================== */
 /* ESTILOS GLOBALES Y BASE              */
 /* ==================================== */
@@ -15,12 +27,11 @@
     font-family: 'Inter', sans-serif; /* Se mantiene, ya es futurista */
 }
 
-.preciomenos
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #000000; /* Fondo oscuro */
+    background-color: #000000; 
 }
 
 h1, h2, h3, h4 {
@@ -39,7 +50,7 @@ ul {
 main {
     flex: 1;
     padding: 40px;
-    background-color: #4E4E4E; /* Tarjeta gris titanio */
+    background-color: #0c0c0e; /* Fondo súper oscuro para alto contraste */
 }
 
 
@@ -53,9 +64,9 @@ header {
     align-items: center;
     justify-content: flex-start;
     padding: 15px 30px;
-    border-bottom: 1px solid #00E6FF; /* Línea cian */
+    border-bottom: 1px solid #00E6FF; 
     gap: 20px;
-    background-color: #4E4E4E; /* Tarjeta gris titanio */
+    background-color: #0c0c0e; /* Fondo oscuro unificado */
 }
 
 .logo a {
@@ -76,7 +87,10 @@ header {
 
 .main-nav ul {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav a {
@@ -127,9 +141,9 @@ header {
 /* ==================================== */
 
 footer {
-    border-top: 1px solid #00E6FF; /* cian */
+    border-top: 1px solid #00E6FF; 
     padding: 30px 40px;
-    background-color: #4E4E4E; /* gris titanio */
+    background-color: #0c0c0e; /* Unificado con el header y main oscuro */
 }
 
 .footer-container {
@@ -193,58 +207,80 @@ footer {
 /* PÁGINA: INICIO                       */
 /* ==================================== */
 
-.productos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    padding: 0;
-    margin: 3%;
+.seccion-titulo {
+    color: #E8FFFF;
+    margin: 40px 0 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid #00FF9D; /* Detalle neón lateral */
+    padding-left: 15px;
 }
 
 .producto {
-    background-color: #4E4E4E; /* tarjeta gris */
-    border: 1px solid #00E6FF; /* borde cian */
+    background-color: #16161a; 
+    border: 1px solid #00E6FF; 
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     max-width: 350px;
+    height: 100%; /* Obliga a estirar la tarjeta al alto máximo de la fila */
 }
 
-.producto-link {
+.producto-link,
+.producto-content {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: inherit;
     height: 100%;
+    flex-grow: 1; /* Permite que el contenido interno se expanda de forma simétrica */
 }
 
 .producto img {
     width: 100%;
-    height: 220px;
-    object-fit: contain;
+    height: 220px;         /* Altura idéntica fija */
+    object-fit: cover;     /* Expande y centra las fotos ignorando los márgenes negros desiguales */
     border-bottom: 1px solid #00E6FF;
-    background-color: #000000; /* fondo oscuro */
+    background-color: #000000; 
     padding: 10px;
 }
 
-.producto h4 {
+.producto h3 {
     padding: 15px 15px 10px;
     margin: 0;
     font-size: 1.1rem;
-    color: #E8FFFF; /* texto blanco suave */
+    color: #E8FFFF; 
     line-height: 1.4;
-    flex-grow: 1;
-    background-color: #4E4E4E;
+    flex-grow: 1;          /* Absorbe el espacio vacío sobrante para equilibrar tarjetas cortas */
+    background-color: #16161a;
 }
 
-.producto .precio {
+.producto .precio, 
+.precioUltUni {
     padding: 0 15px 15px;
-    margin: 0;
+    margin: auto 0 0 0 !important; /* Fuerza al contenedor a engancharse al fondo */
     font-size: 1.3rem;
     font-weight: bold;
-    color: #00FF9D; /* verde neón */
-    background-color: #4E4E4E;
+    color: #00FF9D; 
+    background-color: #16161a;
+}
+
+.ult-unidades {
+    display: inline-block;
+    color: #000000;
+    background-color: #00FF9D; 
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 0 15px 10px 15px;
+    width: fit-content;
 }
 
 .valoraciones {
@@ -254,7 +290,7 @@ footer {
 }
 
 .valoraciones h2 {
-    color: #E8FFFF; /* texto blanco suave */
+    color: #E8FFFF; 
     margin-bottom: 30px;
     font-size: 2rem;
     text-align: center;
@@ -267,13 +303,12 @@ footer {
 }
 
 .valoracion {
-    background-color: #4E4E4E; /* tarjeta gris */
+    background-color: #16161a; 
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    flex: 1;
-    max-width: 300px;
-    border: 1px solid #00E6FF; /* borde cian */
+    height: 100%;
+    border: 1px solid #00E6FF; 
 }
 
 .usuario-valoracion img {
@@ -281,6 +316,7 @@ footer {
     height: 50px;
     border-radius: 50%;
     margin-bottom: 15px;
+    filter: brightness(0) invert(1); 
 }
 
 .contenido-valoracion p {
@@ -291,7 +327,7 @@ footer {
 }
 
 .estrellas {
-    color: #00FF9D; /* verde neón en lugar de amarillo */
+    color: #00FF9D; 
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -303,145 +339,138 @@ footer {
 }
 
 .preciomenos {
-    color: #00E6FF; /* cian */
+    color: #00E6FF; 
     font-size: smaller;
 }
 
 .oferta {
-    color: #00FF9D; /* verde neón */
-}
-
-.precioUltUni {
-    padding: 0 15px 15px;
-    margin: 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #00FF9D; /* verde neón */
-    background-color: #4E4E4E;
+    color: #00FF9D; 
 }
 
 
 
+/* ========================================================== */
+/* PÁGINA: CATÁLOGO (ARREGLOS ACCESIBILIDAD Y NEÓN CYBER)     */
+/* ========================================================== */
 
-/* ==================================== */
-/* PÁGINA: CATÁLOGO (FILTROS Y GRILLA)  */
-/* ==================================== */
-
-.main-catalogo{
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+/* Bordes y Divisiones Cyberpunk */
+.border-cyber {
+    border: 2px solid var(--neon-cyan) !important;
+    box-shadow: 0 0 12px rgba(0, 230, 255, 0.25);
 }
 
-.sidebar{
-    flex: 0 0 250px;
-    background-color: #4E4E4E; /* gris titanio */
-    padding: 20px;
-    border: 1px solid #00E6FF; /* cian */
-    border-radius: 8px;
-    height: fit-content;
+.border-bottom-cyber {
+    border-bottom: 2px solid var(--neon-cyan) !important;
 }
 
-.sidebar h2{
-    margin-bottom: 20px;
-    color: #00FF9D; /* verde neón */
-    font-size: 1.3rem;
-    border-bottom: 2px solid #00FF9D; /* verde */
-    padding-bottom: 10px;
+/* Efectos de texto Neón */
+.text-neon-cyan {
+    color: var(--neon-cyan) !important;
+    text-shadow: 0 0 8px rgba(0, 230, 255, 0.4);
 }
 
-.filtro-buscador {
-    margin-bottom: 20px;
+.text-neon-green {
+    color: var(--neon-green) !important;
+    text-shadow: 0 0 8px rgba(0, 255, 157, 0.4);
 }
 
-.filtro-buscador input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #00E6FF; /* cian */
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #000000;
-    color: #E8FFFF;
+/* Sidebar de Filtros */
+.sidebar-filtros {
+    background-color: var(--cyber-bg-dark);
 }
 
-.filtro-section {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #00E6FF; /* cian */
+/* Solución a Errores de Contraste en Inputs, Placeholders y Selects */
+.custom-input, .custom-select {
+    background-color: var(--cyber-bg-dark) !important;
+    color: var(--text-high-contrast) !important;
+    border: 1px solid var(--neon-cyan) !important;
 }
 
-.filtro-section h3 {
-    margin-bottom: 15px;
-    color: #00FF9D; /* verde */
-    font-size: 1rem;
-    font-weight: 600;
+.custom-input:focus, .custom-select:focus {
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.5) !important;
 }
 
-.filtro-section label{
-    display: block;
-    margin-bottom: 10px;
-    color: #E8FFFF; /* blanco suave */
+/* Forzar contraste en los marcadores de posición (WAVE Alert) */
+.custom-input::placeholder {
+    color: var(--text-muted-contrast) !important;
+    opacity: 1; 
+}
+
+/* Contraste en las opciones internas del desplegable */
+.custom-select option {
+    background-color: var(--cyber-bg-card);
+    color: var(--text-high-contrast);
+}
+
+/* Checkboxes Cyberpunk y Accesibles */
+.custom-checkbox {
+    background-color: var(--cyber-bg-dark) !important;
+    border: 1px solid var(--neon-cyan) !important;
     cursor: pointer;
-    padding: 5px 0;
 }
 
-.precio-valores{
-    text-align: center;
-    color: #00E6FF; /* cian */
+.custom-checkbox:checked {
+    background-color: var(--neon-green) !important;
+    border-color: var(--neon-green) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
 }
 
-.catalogo{
-    flex: 1;
-    min-width: 0;
+.custom-checkbox:focus {
+    box-shadow: 0 0 8px rgba(0, 230, 255, 0.6) !important;
 }
 
-.catalogo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #00E6FF; /* cian */
+/* Estilo de Tarjetas de Producto */
+.tarjeta-producto {
+    background-color: var(--cyber-bg-dark);
+    border: 1px solid #1c1c24;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.catalogo-header h1 {
-    color: #E8FFFF;
-    font-size: 2rem;
-    margin: 0;
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.3);
 }
 
-.ordenar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.ordenar label{
-    font-weight: 500;
-    color: #00FF9D; /* verde */
-}
-
-.ordenar select {
-    padding: 8px 12px;
-    border: 1px solid #00E6FF; /* cian */
-    border-radius: 5px;
-    font-size: 1rem;
+/* NUEVO: Forzar que las imágenes del catálogo se agranden y cuadren perfectamente */
+.tarjeta-producto img {
+    width: 100%;
+    height: 220px;       /* Altura exacta fija para igualarla a las otras fotos */
+    object-fit: cover;   /* Estira y expande la imagen eliminando los márgenes negros invisibles */
     background-color: #000000;
-    color: #E8FFFF;
 }
 
-.ult-unidades {
-    color: #00FF9D; /* verde en vez de naranja */
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: bold;
+/* Enlaces bloque limpios */
+.producto-link-bloque {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Accesibilidad al navegar con teclado (Foco de pestaña visible) */
+.producto-link-bloque:focus-visible {
+    outline: 2px solid var(--neon-green);
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+.producto-titulo {
+    font-size: 1.15rem;
+    transition: color 0.2s ease;
+}
+
+.producto-link-bloque:hover .producto-titulo {
+    color: var(--neon-cyan) !important;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
     letter-spacing: 0.5px;
-    margin-bottom: 10px;
 }
-
 
 
 
@@ -465,7 +494,7 @@ footer {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     border-radius: 8px;
     background-color: #000000;
 }
@@ -476,20 +505,20 @@ footer {
 }
 
 .detalle-info h1 {
-    color: #00E6FF; /* cian */
+    color: #00E6FF; 
     margin-bottom: 15px;
     font-size: 2rem;
 }
 
 .detalle-info .precio {
-    color: #00FF9D; /* verde neón */
+    color: #00FF9D; 
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .detalle-info p {
-    color: #E8FFFF; /* blanco suave */
+    color: #E8FFFF; 
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -510,18 +539,18 @@ footer {
 .specs-table td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #00E6FF; /* cian */
-    color: #E8FFFF; /* texto */
+    border: 1px solid #00E6FF; 
+    color: #E8FFFF; 
 }
 
 .specs-table th {
-    background-color: #4E4E4E; /* gris titanio */
+    background-color: #4E4E4E; 
     font-weight: bold;
 }
 
 .add-cart {
-    background-color: #00FF9D; /* verde neón */
-    color: #000000; /* contraste */
+    background-color: #00FF9D; 
+    color: #000000; 
     border: none;
     padding: 15px 30px;
     border-radius: 5px;
@@ -532,12 +561,12 @@ footer {
 }
 
 .add-cart:hover {
-    background-color: #00E6FF; /* hover brillante estilo OLED */
+    background-color: #00E6FF; 
     color: #000000;
 }
 
 .detalle-back {
-    color: #00E6FF; /* cian */
+    color: #00E6FF; 
     text-decoration: underline;
 }
 
@@ -562,10 +591,10 @@ footer {
     flex: 1;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     border-radius: 8px;
     overflow: hidden;
-    background-color: #4E4E4E; /* tarjeta gris */
+    background-color: #4E4E4E; 
 }
 
 .similar-item img {
@@ -582,7 +611,7 @@ footer {
 
 .similar-item .precio {
     padding: 0 15px 15px;
-    color: #00FF9D; /* verde */
+    color: #00FF9D; 
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -591,11 +620,12 @@ footer {
 
 
 /* ==================================== */
-/* PÁGINA: CARRITO                      */
+/* PÁGINA: CARRITO (REPARADA)           */
 /* ==================================== */
 
-.titulo-carrito{
+.titulo-carrito {
     margin-bottom: 20px;
+    color: var(--text-high-contrast);
 }
 
 .contenedor-carrito {
@@ -604,96 +634,142 @@ footer {
     align-items: flex-start;
 }
 
+/* Cambiado #4E4E4E por #16161a para garantizar un contraste excelente con los neones */
 .lista-productos {
-    flex: 1;
-    border: 1px solid #00E6FF; /* cian */
+    flex: 2; /* Le damos más espacio relativo a la lista */
+    border: 1px solid var(--neon-cyan); 
     padding: 20px;
-    background-color: #4E4E4E; /* tarjeta gris */
+    background-color: #16161a; 
+    border-radius: 8px;
 }
 
-.producto-item{
+.producto-item {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 230, 255, 0.2);
+    padding: 20px 0;
 }
 
-.producto-img img{
+.producto-item:last-child {
+    border-bottom: none;
+}
+
+.producto-img {
+    flex: 0 0 120px; 
     width: 120px;
-    height: auto;
+    height: 120px;
+    background-color: #000000;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .producto-info {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    gap: 20px;
 }
 
+/* El nombre se queda a la izquierda */
 .producto-nombre {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 1.5;
-    color: #E8FFFF; /* blanco suave */
+    color: var(--text-high-contrast);
+    flex: 1; /* Absorbe el espacio del medio */
+}
+
+/* Agrupamos precio y cantidad a la derecha para que no se pisen jamás */
+.producto-precio-std {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0; /* Evita que se colapse */
 }
 
 .producto-precio {
-    color: #00FF9D; /* verde neón en vez de rojo */
+    color: var(--neon-cyan);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin: 0;
 }
 
-.producto-cantidad{
+.producto-cantidad {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
-    justify-content: flex-end;
 }
 
-.producto-cantidad input{
-    width: 50px;
+.producto-cantidad label {
+    color: var(--text-muted-contrast);
+    font-size: 0.9rem;
+}
+
+.producto-cantidad input {
+    width: 60px;
     padding: 5px;
     text-align: center;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid var(--neon-cyan); 
     background-color: #000000;
-    color: #E8FFFF;
-}
-
-.resumen-carrito {
-    flex: 1;
-    background-color: #4E4E4E; /* gris titanio */
-    padding: 20px;
+    color: var(--text-high-contrast);
     border-radius: 4px;
 }
 
-.resumen-carrito h4 {
+/* Resumen del Carrito */
+.resumen-carrito {
+    flex: 1;
+    background-color: #16161a; 
+    border: 1px solid var(--neon-cyan);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.titulo-resumen {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #E8FFFF; /* blanco suave */
+    color: var(--text-high-contrast); 
 }
 
 .resumen-carrito hr {
     border: 0;
-    border-top: 1px solid #00E6FF; /* cian */
+    border-top: 1px solid var(--neon-cyan); 
     margin: 15px 0;
 }
 
-.fila-resumen{
+.fila-resumen {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    color: #E8FFFF; /* blanco suave */
+    color: var(--text-high-contrast); 
+}
+
+.envio-gratis {
+    color: var(--neon-green);
+    font-weight: bold;
 }
 
 .fila-resumen.total {
     font-weight: bold;
     margin-top: 10px;
-    color: #00FF9D; /* verde neón */
+    color: var(--neon-green); 
+    font-size: 1.3rem;
 }
 
-.boton-tramitar{
+.boton-tramitar {
     width: 100%;
-    background-color: #00FF9D; /* verde neón */
+    background-color: var(--neon-green); 
     color: #000000;
     border: none;
     padding: 15px;
@@ -702,12 +778,23 @@ footer {
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
-.boton-tramitar:hover{
-    background-color: #00E6FF; /* cian brillante */
+.boton-tramitar:hover {
+    background-color: var(--neon-cyan); 
     color: #000000;
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Fix extra para el separador del header */
+.separador {
+    color: var(--neon-cyan);
+    padding: 0 5px;
+}
+.cesta-actual {
+    color: var(--neon-green);
+    font-weight: bold;
 }
 
 
@@ -717,33 +804,36 @@ footer {
 /* PÁGINA: MI CUENTA (INICIO DE SESIÓN) */
 /* ==================================== */
 
-.titulo-usuario{
+.titulo-usuario {
     text-align: center;
     border: none;
     border-radius: 0;
     margin: 0 0 20px 0;
     padding: 0;
-    color: #E8FFFF; /* blanco suave */
+    color: #E8FFFF; 
     font-size: 2rem;
     font-weight: bold;
 }
 
-.usuario-caja{
-    border: solid 1px #00E6FF; /* cian */
+.usuario-caja {
+    border: solid 1px #00E6FF; 
     padding: 2rem 2rem 0 2rem;
-    background-color: #4E4E4E; /* gris titanio */
+    /* CORRECCIÓN: Cambiado #4E4E4E por #16161a (tu fondo de tarjeta cyberpunk) */
+    /* Esto garantiza un contraste óptimo con los textos claros y los neones */
+    background-color: #16161a; 
     margin: 20px auto;
     max-width: 500px;
+    border-radius: 8px; /* Un toque sutil de redondeado que suaviza el contenedor */
     box-sizing: border-box;
 }
 
-.usuario-caja form{
+.usuario-caja form {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.label-usuario{
+.label-usuario {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     display: block;
@@ -751,10 +841,10 @@ footer {
     color: #E8FFFF;
 }
 
-.input-usuario{
+.input-usuario {
     padding: 0.6rem;
     margin-bottom: 1.2rem;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -762,46 +852,69 @@ footer {
     color: #E8FFFF;
 }
 
-.boton-registro{
+/* MEJORA: Añadido el foco para cuando se navega con el teclado (Accesibilidad) */
+.input-usuario:focus {
+    border-color: #00FF9D !important;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.5) !important;
+    outline: none;
+}
+
+.boton-registro {
     padding: 10px 20px;
-    color: #000000;
-    background-color: #00FF9D; /* verde neón */
+    /* CORRECCIÓN: Forzamos color negro para asegurar legibilidad AAA sobre el verde neón */
+    color: #000000 !important;
+    background-color: #00FF9D; 
     border: none;
     border-radius: 15px;
     cursor: pointer;
     margin: 20px auto;
     display: block;
     font-size: 15px;
+    font-weight: bold; /* Añadido para que el texto sea más legible */
+    transition: all 0.3s ease;
 }
 
-.boton-registro:hover{
-    background-color: #00E6FF; /* cian */
-    color: #000000;
+/* MEJORA: Añadido :focus para que mantenga el mismo efecto visual al usar el teclado */
+.boton-registro:hover,
+.boton-registro:focus {
+    background-color: #00E6FF; 
+    color: #000000 !important;
+    box-shadow: 0 0 12px #00E6FF;
+    outline: none;
 }
 
 .boton-usuario {
-    color: #000000;
+    /* CORRECCIÓN: Forzamos color negro para asegurar legibilidad AAA sobre el verde neón */
+    color: #000000 !important;
     padding: 0.5rem 1.2rem;
-    background-color: #00FF9D; /* verde neón */
-    border: 1px solid #00E6FF; /* cian */
+    background-color: #00FF9D; 
+    border: 1px solid #00E6FF; 
     border-radius: 4px;
     cursor: pointer;
     font-size: 15px;
+    font-weight: bold; /* Añadido para consistencia */
+    transition: all 0.3s ease;
 }
 
-.boton-usuario:hover{
+/* MEJORA: Añadido :focus para accesibilidad */
+.boton-usuario:hover,
+.boton-usuario:focus {
     background-color: #00E6FF;
-    color: #000000;
+    color: #000000 !important;
+    box-shadow: 0 0 12px #00E6FF;
+    outline: none;
 }
 
-.registro-usuario{
-    background-color: #4E4E4E; /* gris */
+.registro-usuario {
+    /* CORRECCIÓN: Cambiado #4E4E4E por transparente para que se integre con la caja oscura */
+    background-color: transparent; 
     margin: 0 -2rem;
     padding: 1.5rem 2rem;
-    text-align: left;
+    text-align: center; /* Centrado para que luzca mejor con los botones de Bootstrap */
+    border-top: 1px dashed rgba(0, 230, 255, 0.2); /* Separador sutil estilo cyber */
 }
 
-.registro-usuario p{
+.registro-usuario p {
     margin: 0 0 0.8rem 0;
     color: #E8FFFF; 
 }
@@ -809,116 +922,134 @@ footer {
 
 
 /* ==================================== */
-/* PÁGINA: CONTACTO                     */
+/* PÁGINA: CONTACTO (FINAL Y ACCESIBLE) */
 /* ==================================== */
 
-.titulo-contacto{
+.titulo-contacto {
     text-align: center;
-    color: #E8FFFF; /* blanco suave */
+    color: #E8FFFF; 
 }
 
-.mapa-contacto{
+.mapa-contacto {
     margin: 20px auto;
     text-align: center;
 }
 
-.mapa-contacto iframe{
-    width: 1100px;
-    height: 300px;
-    border: 2px solid #00E6FF; /* cian */
+/* Optimización para que el mapa sea responsivo en pantallas pequeñas sin romper las dimensiones originales */
+.mapa-contacto iframe {
+    max-width: 100%;
+    border: 2px solid #00E6FF; 
     border-radius: 10px;
 }
 
-.datos-contacto{
-    display: flex;
-    justify-content: space-around;
+.datos-contacto {
     margin: 40px auto;
-    max-width: 800px;
+    max-width: 1200px; /* Ampliado para dar juego al grid de Bootstrap */
     text-align: center;
-    gap: 80px;
 }
 
-.columna-contacto{
-    flex: 1;
+/* SOLUCIÓN DE CONTRASTE: Cambiado #4E4E4E por #16161a para legibilidad excelente con cian y verde neón */
+.columna-contacto {
     padding: 20px;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     border-radius: 8px;
-    background-color: #4E4E4E; /* gris */
+    background-color: #16161a; 
     color: #E8FFFF;
+    height: 100%; /* Permite que las tarjetas midan lo mismo en la fila de Bootstrap */
 }
 
-.seccion-contacto {
-    display: flex;
-    gap: 40px;
+/* Ajuste para los nuevos H2 semánticos de la información de contacto */
+.columna-contacto h2 {
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif !important;
+    color: #00FF9D; /* Verde neón para destacar el encabezado con buen contraste */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.max-width-container {
     max-width: 1200px;
-    margin: 40px auto;
-    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.preguntas-contacto{
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
+.preguntas-contacto {
+    padding: 20px 30px;
 }
 
-.preguntas-contacto h4 {
+/* Ajuste para el nuevo H3 semántico del formulario */
+.preguntas-contacto h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #E8FFFF; /* blanco suave */
+    color: #00E6FF; /* Cian neón */
 }
 
-.preguntas-contacto p{
+.preguntas-contacto p {
     margin-bottom: 15px;
     line-height: 1.6;
     color: #E8FFFF; 
 }
 
-.formulario-contacto{
-    flex: 1;
-    margin: 0;
+/* SOLUCIÓN DE CONTRASTE: Cambiado a fondo oscuro cyberpunk #16161a */
+.formulario-contacto {
     padding: 30px;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     border-radius: 10px;
-    background-color: #4E4E4E; /* gris */
+    background-color: #16161a; 
 }
 
-.formulario-contacto form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.label-contacto{
+.label-contacto {
     font-weight: 600;
-    color: #E8FFFF; /* blanco suave */
+    color: #E8FFFF; 
     margin-bottom: 5px;
+    display: inline-block;
 }
 
-.input-contacto {
+/* Integración limpia con los inputs estructurales de Bootstrap (.form-control) */
+.input-contacto.form-control {
     padding: 12px;
-    border: 1px solid #00E6FF; /* cian */
+    border: 1px solid #00E6FF; 
     border-radius: 5px;
     font-size: 1rem;
-    outline: none;
     background-color: #000000;
     color: #E8FFFF;
+    transition: all 0.3s ease;
 }
 
-.formulario-contacto button {
-    background-color: #00FF9D; /* verde neón */
+/* Ajuste del marcador de posición para cumplir con la ratio de contraste de WAVE */
+.input-contacto.form-control::placeholder {
+    color: #A0C0D0;
+    opacity: 0.7;
+}
+
+/* Efecto de enfoque (Focus) estilo Cyberpunk al interactuar con teclado o ratón */
+.input-contacto.form-control:focus {
+    background-color: #000000;
+    color: #E8FFFF;
+    border-color: #00FF9D !important;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+    outline: none;
+}
+
+/* Botón de envío adaptado como componente de Bootstrap */
+.boton-enviar-cyber {
+    background-color: #00FF9D; 
     color: #000000;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.formulario-contacto button:hover {
-    background-color: #00E6FF; /* cian */
+.boton-enviar-cyber:hover,
+.boton-enviar-cyber:focus {
+    background-color: #00E6FF; 
     color: #000000;
+    box-shadow: 0 0 12px #00E6FF;
+    outline: none;
 }
 
 
@@ -929,174 +1060,121 @@ footer {
 /* ==================================== */
 
 .contenido-quienes-somos {
-    max-width: 800px;
+    max-width: 1100px; /* Expandido para dar espacio a la estructura de dos columnas */
     margin: 0 auto;
-    padding: 40px 20px;
     line-height: 1.6;
-    color: #333;
+    color: #E8FFFF; 
 }
 
 .titulo-quienes-somos {
     text-align: center;
-    border: 4px solid black;
+    border: 4px solid #00E6FF; 
     border-radius: 10px;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: 15px;
-    background-color: #0056b3;
-    color: #ccc;
+    background-color: #00FF9D; 
+    color: #000000; 
     font-size: 2rem;
     font-weight: bold;
 }
 
-.contenido-quienes-somos h2 {
-    color: #0056b3;
-    margin-top: 30px;
+.seccion-info h2 {
+    color: #00E6FF; 
+    margin-top: 20px;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
-.contenido-quienes-somos p {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.lista-valores {
-    margin: 15px 0;
-    padding-left: 30px;
-}
-
-.lista-valores li {
-    list-style: disc;
-    margin-bottom: 8px;
-    color: #000;
-}
-
-.boton-privacidad{
-    padding: 10px 20px;
-    background-color: #0056b3;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin: 20px auto;
-    display: block;
-    font-size: 17px;
-}
-
-.boton-privacidad a{
-    color: white;
-    text-decoration: none;
-}
-
-
-
-/* ==================================== */
-/* PÁGINA: QUIÉNES SOMOS                */
-/* ==================================== */
-
-.contenido-quienes-somos {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    line-height: 1.6;
-    color: #E8FFFF; /* blanco suave */
-}
-
-.titulo-quienes-somos {
-    text-align: center;
-    border: 4px solid #00E6FF; /* cian */
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px;
-    background-color: #00FF9D; /* verde neón */
-    color: #000000; /* contraste */
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.contenido-quienes-somos h2 {
-    color: #00E6FF; /* cian */
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.contenido-quienes-somos p {
+.seccion-info p {
     margin-bottom: 15px;
     color: #E8FFFF;
 }
 
 .lista-valores {
     margin: 15px 0;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .lista-valores li {
-    list-style: disc;
+    list-style: cubic-bezier;
     margin-bottom: 8px;
-    color: #00FF9D; /* verde neón */
+    color: #E8FFFF; /* Cambiado a blanco para garantizar legibilidad AAA del texto de los ítems */
 }
 
-.boton-privacidad{
-    padding: 10px 20px;
-    background-color: #00E6FF; /* cian */
+.lista-valores li strong {
+    color: #00FF9D; /* Mantenemos el verde neón únicamente en los conceptos clave destacando de forma accesible */
+}
+
+.boton-privacidad {
+    padding: 10px 25px;
+    background-color: #00E6FF; 
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     cursor: pointer;
     margin: 20px auto;
-    display: block;
+    display: inline-block;
     font-size: 17px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.boton-privacidad a{
-    color: #000000; /* contraste */
+.boton-privacidad:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(0, 230, 255, 0.6);
+}
+
+.boton-privacidad a {
+    color: #000000; 
     text-decoration: none;
+    display: block;
 }
-
 
 
 /* ==================================== */
 /* PÁGINA: POLÍTICA DE PRIVACIDAD       */
 /* ==================================== */
 
-.titulo-privacidad{
+.titulo-privacidad {
     text-align: center;
-    border: 4px solid #00E6FF; /* cian */
+    border: 4px solid var(--neon-cyan); 
     border-radius: 10px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     padding: 15px;
-    background-color: #00FF9D; /* verde */
-    color: #000000;
+    background-color: var(--neon-green); 
+    color: #000000 !important; /* Forzado a negro para mantener un contraste de lectura óptimo (AAA) */
+    font-weight: bold;
 }
 
-.contenido-privacidad{
-    margin: 20px 0 20px 300px;
-    max-width: 800px;
-    line-height: 1.5;
-    color: #E8FFFF; /* blanco suave */
+.contenido-privacidad {
+    /* Eliminado el margin-left de 300px. El centrado exacto y limpio ahora se delega a las columnas de Bootstrap */
+    line-height: 1.6;
+    color: var(--text-high-contrast); 
 }
 
-.contenido-privacidad h2{
-    color: #00E6FF; /* cian */
-    margin-top: 30px;
+.contenido-privacidad h2 {
+    /* Modificado a verde neón para solucionar los 2 errores de ratio de contraste bajo de WAVE */
+    color: var(--neon-green) !important; 
+    margin-top: 35px;
     margin-bottom: 15px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
-.contenido-privacidad ul{
+.contenido-privacidad ul {
     margin: 15px 0;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
-.contenido-privacidad li{
-    list-style: disc;
-    margin-bottom: 8px;
-    color: #00FF9D; /* verde neón */
+.contenido-privacidad li {
+    list-style: square; /* Mantiene una estética de lista Cyberpunk coherente */
+    margin-bottom: 10px;
+    color: var(--text-high-contrast); /* El texto de los ítems permanece claro para facilitar la lectura asistida */
 }
 
 .contenido-privacidad p {
     margin-bottom: 15px;
-    color: #E8FFFF;
+    color: var(--text-high-contrast);
 }

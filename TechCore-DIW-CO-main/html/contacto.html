@@ -1,307 +1,205 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - TechCore</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <body>
-    <header
-      class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3"
-    >
-      <div class="container">
-        <button
-          id="burger-menu"
-          class="navbar-toggler me-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuPrincipal"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - UrbanTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Ajuste responsivo para el mapa de Google Maps */
+        .mapa-contenedor iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+        }
+        /* Recuadros optimizados con mejor fondo y bordes visibles */
+        .card-contacto {
+            background-color: #2a2f35 !important;
+            border: 1px solid #4f565f !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        /* Forzar visibilidad del placeholder en los inputs */
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
 
-        <a
-          class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
-        >
-          <img src="../imagenes/logoSinTexto.png" alt="Inicio" height="36" />
-          <span class="fw-bold text-dark" style="font-size: 2rem"
-            >TechCore</span
-          >
-        </a>
-
-        <div class="collapse navbar-collapse main-nav" id="menuPrincipal">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center"
-          >
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="index.html"
-                style="color: #0056b3; font-weight: 500"
-                >Inicio</a
-              >
-            </li>
-            <span class="separador d-none d-lg-inline mx-2" style="color: #ccc"
-              >|</span
-            >
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="catalogo.html"
-                style="color: #0056b3; font-weight: 500"
-                >Catalogo</a
-              >
-            </li>
-            <span class="separador d-none d-lg-inline mx-2" style="color: #ccc"
-              >|</span
-            >
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="contacto.html"
-                style="color: #0056b3; font-weight: 500"
-                >Contacto</a
-              >
-            </li>
-          </ul>
-
-          <form
-            action="/buscar"
-            method="get"
-            class="d-flex my-3 my-lg-0 me-lg-3"
-            role="search"
-          >
-            <input
-              class="form-control me-2"
-              type="search"
-              name="buscar"
-              placeholder="buscar"
-              style="border-radius: 20px; border: 1px solid #999"
-            />
-            <button class="btn" type="submit">🔍</button>
-          </form>
-
-          <div class="usuario d-flex flex-column flex-lg-row gap-3">
-            <a href="mi-cuenta.html" class="text-decoration-none text-dark"
-              >👤 Mi cuenta</a
-            >
-            <a href="carrito.html" class="text-decoration-none text-dark"
-              >🛒 Mi cesta</a
-            >
-          </div>
+    <header style="display: flex; align-items: center; justify-content: flex-start; padding: 15px 30px; border-bottom: 1px solid #FFFFFF !important; gap: 20px; background-color: #2C3E50 !important;">
+        <div class="logo">
+            <a href="index.html">
+               <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+               <span>UrbanTech</span>
+            </a>
         </div>
-      </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <span class="separador">|</span>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <span class="separador">|</span>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form action="/buscar" method="get" class="buscador">
+            <button type="submit">🔍</button>
+            <input type="search" name="buscar" placeholder="buscar">
+        </form>
+
+        <div class="usuario">
+            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
+            <a href="carrito.html">🛒 Mi cesta</a>
+        </div>
     </header>
 
-    <main class="py-5">
-      <section class="container">
-        <div class="text-center mb-4">
-          <h1 class="fw-bold">Nuestro contacto</h1>
-          <p class="text-muted mb-0">
-            Estamos aqui para ayudarte con lo que necesites.
-          </p>
-        </div>
+    <main class="container py-5">
+        
+        <h1 class="h2 fw-bold text-center mb-5 text-white">Nuestro contacto</h1>
 
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12 col-lg-7">
-            <div class="ratio ratio-4x3 rounded overflow-hidden border">
-              <iframe
-                title="Mapa de TechCore"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.523138725923!2d-5.6705525248979045!3d43.523234960828475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367cecdc5558bd%3A0xa680d90166b0a98e!2sAv.%20Schulz%2C%2023%2C%20Centro%2C%2033210%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2ses!4v1763916664200!5m2!1ses!2ses"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              >
-              </iframe>
+        <div class="row g-4 align-items-stretch mb-5">
+            <div class="col-12 col-lg-6 mapa-contenedor">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.156759913649!2d-5.667210523250775!3d43.53721805992361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c60494c6389%3A0x6124ead7c24ed72b!2sAv.%20Schulz%2C%207%2C%20Centro%2C%2033208%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2ses!4v1764432605728!5m2!1ses!2ses" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-          </div>
 
-          <div class="col-12 col-lg-5">
-            <div class="d-flex flex-column gap-3">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h3 class="h5 fw-bold">Horario</h3>
-                  <p class="mb-0">Lunes a viernes</p>
-                  <p class="mb-0">11:00 - 21:00</p>
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-between gap-3">
+                <div class="row g-3 h-100">
+                    <div class="col-12 col-sm-4">
+                        <div class="card-contacto p-3 rounded h-100 text-center">
+                            <h3 class="h6 fw-bold text-warning text-uppercase mb-3">Horario</h3>
+                            <p class="small mb-1 fw-bold text-white-50">Lunes a viernes</p>
+                            <p class="small mb-1 fw-bold text-white">09:00 - 13:00</p>
+                            <p class="small mb-0 fw-bold text-white">16:00 - 22:00</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card-contacto p-3 rounded h-100 text-center">
+                            <h3 class="h6 fw-bold text-warning text-uppercase mb-3">Contacto</h3>
+                            <p class="small mb-1 fw-bold text-white-50">Teléfono:</p>
+                            <p class="small mb-2 fw-bold text-white">+34 633 546 159</p>
+                            <p class="small mb-0 text-truncate fw-bold text-white" title="urbantech@yupomail.com">urbantech@yupomail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card-contacto p-3 rounded h-100 text-center">
+                            <h3 class="h6 fw-bold text-warning text-uppercase mb-3">Localización</h3>
+                            <p class="small mb-1 fw-bold text-white-50">Dirección:</p>
+                            <p class="small mb-1 fw-bold text-white">Av Schultz nº 7</p>
+                            <p class="small mb-0 fw-bold text-white">Gijón, Asturias</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h3 class="h5 fw-bold">Contacto</h3>
-                  <p class="mb-0">Telefono: +34 624 420 2301</p>
-                  <p class="mb-0">techcore@yupomail.com</p>
-                </div>
-              </div>
-
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h3 class="h5 fw-bold">Localizacion</h3>
-                  <p class="mb-0">Av. Schultz n. 23</p>
-                  <p class="mb-0">Gijon, Asturias</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
 
-        <hr class="my-5" />
+        <div class="row g-4 pt-4">
+            <div class="col-12 col-lg-5 d-flex flex-column justify-content-center">
+                <h2 class="h4 fw-bold mb-3 text-white">No dude en escribirnos</h2>
+                <p style="color: rgba(255, 255, 255, 0.85);">
+                    ¿Tiene alguna pregunta, sugerencia o comentario? ¿Has encontrado algún problema en nuestra web o quieres compartir tu opinión sobre nuestros productos?
+                </p>
+                <p class="fw-bold text-warning">Nos encantaría saber de ti.</p>
+                <p class="small" style="color: rgba(255, 255, 255, 0.75);">
+                    Rellena el formulario a continuación y nuestro equipo se pondrá en contacto contigo lo antes posible.
+                </p>
+            </div>
 
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-lg-5">
-            <h2 class="h4 fw-bold">No dude en escribirnos</h2>
-            <p class="text-muted">
-              Tiene alguna pregunta, sugerencia o comentario? Ha encontrado
-              algun problema en nuestra web o quiere compartir su opinion sobre
-              nuestros productos?
-            </p>
-            <p class="text-muted">Nos encantaria saber de ti.</p>
-            <p class="text-muted mb-0">
-              Rellena el formulario a continuacion y nuestro equipo se pondra en
-              contacto contigo lo antes posible.
-            </p>
-          </div>
+            <div class="col-12 col-lg-7">
+                <div class="card-contacto p-4 rounded">
+                    <form action="#">
+                        <div class="row g-3 mb-3">
+                            <div class="col-12 col-sm-6">
+                                <label class="form-label small fw-bold text-white">Nombre</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu nombre" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label class="form-label small fw-bold text-white">Apellido</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu apellido">
+                            </div>
+                        </div>
 
-          <div class="col-12 col-lg-7">
-            <form class="row g-3" action="#">
-              <div class="col-12 col-md-6">
-                <label class="form-label" for="nombre">Nombre</label>
-                <input
-                  class="form-control"
-                  id="nombre"
-                  type="text"
-                  placeholder="Escribe tu nombre"
-                  required
-                />
-              </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-12 col-sm-6">
+                                <label class="form-label small fw-bold text-white">Email</label>
+                                <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu email" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label class="form-label small fw-bold text-white">Teléfono</label>
+                                <input type="number" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu número">
+                            </div>
+                        </div>
 
-              <div class="col-12 col-md-6">
-                <label class="form-label" for="apellido">Apellido</label>
-                <input
-                  class="form-control"
-                  id="apellido"
-                  type="text"
-                  placeholder="Escribe tu apellido"
-                  required
-                />
-              </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold text-white">Mensaje</label>
+                            <textarea rows="4" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu mensaje o duda" required></textarea>
+                        </div>
 
-              <div class="col-12 col-md-6">
-                <label class="form-label" for="email">Email</label>
-                <input
-                  class="form-control"
-                  id="email"
-                  type="email"
-                  placeholder="Escribe tu email"
-                  required
-                />
-              </div>
-
-              <div class="col-12 col-md-6">
-                <label class="form-label" for="telefono">Telefono</label>
-                <input
-                  class="form-control"
-                  id="telefono"
-                  type="tel"
-                  placeholder="Escribe tu numero"
-                  required
-                />
-              </div>
-
-              <div class="col-12">
-                <label class="form-label" for="mensaje">Mensaje</label>
-                <textarea
-                  class="form-control"
-                  id="mensaje"
-                  rows="4"
-                  placeholder="Escribe tu mensaje o duda"
-                  required
-                ></textarea>
-              </div>
-
-              <div class="col-12">
-                <button class="btn btn-primary px-4" type="submit">
-                  Enviar mensaje
-                </button>
-              </div>
-            </form>
-          </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn text-white fw-bold px-4 shadow-sm" style="background-color: #ff6600;">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </section>
+
     </main>
 
-    <footer class="border-top bg-white mt-5 py-4">
-      <div class="container">
-        <div class="row align-items-center g-3">
-          <div class="col-12 col-lg-3 text-center text-lg-start">
-            <a href="index.html">
-              <img
-                src="../imagenes/logojpg-removebg-preview.png"
-                alt="Inicio"
-                height="60"
-              />
-            </a>
-          </div>
+    <footer class="text-light mt-5 py-4" style="background-color: #2C3E50 !important; border-top: 1px solid #FFFFFF !important;">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                
+                <div class="col-12 col-lg-3 text-center text-lg-start">
+                    <a href="index.html">
+                        <img src="../imagenes/LogoSinNombre.png" alt="Inicio" height="60">
+                    </a>
+                </div>
 
-          <div class="col-12 col-lg-6">
-            <nav>
-              <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link text-dark px-2" href="contacto.html"
-                    >Contacto</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark px-2" href="quienes-somos.html"
-                    >¿Quiénes somos?</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-dark px-2"
-                    href="politica-privacidad.html"
-                    >Política de privacidad</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
+                <div class="col-12 col-lg-6">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-2" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-2" href="quienes-somos.html">¿Quiénes somos?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light px-2" href="politica-privacidad.html">Política de privacidad</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-          <div class="col-12 col-lg-3 text-center text-lg-end">
-            <div
-              class="d-flex justify-content-center justify-content-lg-end gap-3"
-            >
-              <a href="https://x.com"
-                ><img src="../imagenes/x.png" alt="" width="24"
-              /></a>
-              <a href="https://facebook.com"
-                ><img src="../imagenes/facebook.png" alt="" width="24"
-              /></a>
-              <a href="https://instagram.com"
-                ><img src="../imagenes/instagram.png" alt="" width="24"
-              /></a>
+                <div class="col-12 col-lg-3 text-center text-lg-end">
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                        <a href="https://x.com">
+                            <img src="../imagenes/x.png" alt="X" width="30" style="filter: invert(1);">
+                        </a>
+                        <a href="https://facebook.com">
+                            <img src="../imagenes/facebook.png" alt="Facebook" width="30" style="filter: invert(1);">
+                        </a>
+                        <a href="https://instagram.com">
+                            <img src="../imagenes/instagram.png" alt="Instagram" width="30" style="filter: invert(1);">
+                        </a>
+                    </div>
+                </div>
+
             </div>
-          </div>
+
+            <div class="text-center small mt-4" style="color: rgba(255, 255, 255, 0.6);">
+                <p class="mb-0">TechCore Av Schultz Nº 7 Gijón, Asturias</p>
+            </div>
         </div>
-        <div class="text-center small text-muted mt-4">
-          TechCore Av Schultz No 23 Gijon, Asturias
-        </div>
-      </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
-  </body>
+</body>
 </html>

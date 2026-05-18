@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Apple AirPods Pro (2.ª gen) - UrbanTech</title>
 </head>
@@ -10,24 +11,25 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="../imagenes/LogoConNombre.png" alt="Volver a la pagina de inicio">
+                <img src="../imagenes/LogoConNombre.png" alt="Volver a la página de inicio">
                 <span>UrbanTech</span>
             </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
+                <li class="separador" aria-hidden="true">|</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
+            <button type="submit" aria-label="Buscar">🔍</button>
+            <label for="buscar-nav" class="visually-hidden">Buscar productos</label>
+            <input type="search" id="buscar-nav" name="buscar" placeholder="buscar">
         </form>
 
         <div class="usuario">
@@ -39,57 +41,87 @@
     <main>
         <div class="detalle-container">
             <div class="detalle-img">
-                <img src="../imagenes/auricular2.jpg" alt="Apple AirPods Pro (2.ª gen)">
+                <img src="../imagenes/auricular2.jpg" alt="Apple AirPods Pro (2.ª generación)">
             </div>
-
             <div class="detalle-info">
                 <h1>Apple AirPods Pro (2.ª gen)</h1>
-                <p class="precio">
-                    <span class="oferta">209€</span>
-                    <span class="preciomenos"><s>229€</s></span>
-                </p>
-                <p>Auriculares True Wireless con ANC y integración profunda con iOS, sonido espacial y buen rendimiento general.</p>
+                <p class="precio">279€</p>
+                <p class="descripcion-producto">Auriculares premium con cancelación activa de ruido mejorada, modo de sonido ambiente adaptativo y audio espacial personalizado.</p>
 
-                <h3>Especificaciones técnicas</h3>
+                <h2>Especificaciones técnicas</h2>
                 <table class="specs-table">
-                    <tr>
-                        <th>Característica</th>
-                        <th>Detalle</th>
-                    </tr>
-                    <tr>
-                        <td>Chip</td>
-                        <td>H2</td>
-                    </tr>
-                    <tr>
-                        <td>Batería</td>
-                        <td>6 horas (auriculares), 30 horas (con estuche)</td>
-                    </tr>
-                    <tr>
-                        <td>Carga</td>
-                        <td>MagSafe/Lightning</td>
-                    </tr>
-                    <tr>
-                        <td>Conectividad</td>
-                        <td>Bluetooth 5.3</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Característica</th>
+                            <th scope="col">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tipo</th>
+                            <td>In-ear totalmente inalámbricos (True Wireless)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Chip</th>
+                            <td>Apple H2 (auricular) y Apple U1 (estuche)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cancelación de ruido</th>
+                            <td>Cancelación activa activa y Audio Adaptativo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Autonomía</th>
+                            <td>Hasta 6 horas de reproducción (30 horas con estuche)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Resistencia</th>
+                            <td>IPX4 (auriculares y estuche MagSafe)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Carga</th>
+                            <td>Estuche MagSafe compatible con Apple Watch, Qi y USB‑C / Lightning</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Peso (por auricular)</th>
+                            <td>5,3 g</td>
+                        </tr>
+                    </tbody>
                 </table>
 
-                <button class="add-cart">Añadir al carrito</button>
-                <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                <button class="add-cart" type="button">Añadir al carrito</button>
+                <div>
+                    <a class="detalle-back" href="catalogo.html">← Volver al catálogo</a>
+                </div>
             </div>
         </div>
 
         <section class="similares">
-            <h3>Productos similares</h3>
+            <h2>Productos similares</h2>
             <div class="similares-grid">
                 <a class="similar-item" href="detalle-auricular1.html">
-                    <img src="../imagenes/auricular1.jpg" alt="Sony WH-1000XM5">
-                    <div class="simil-name">Sony WH-1000XM5</div>
-                    <div class="precio">199€</div>
+                    <img src="../imagenes/auricular1.jpg" alt="Sony WF-1000XM4">
+                    <div class="simil-name">Sony WF-1000XM4</div>
+                    <p class="precio">
+                        <span class="oferta">199€</span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>249€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-auricular3.html">
+                    <img src="../imagenes/auricular3.jpg" alt="Sennheiser Momentum TW 3">
+                    <div class="simil-name">Sennheiser Momentum TW 3</div>
+                    <p class="precio">
+                        <span class="oferta">229€</span>
+                        <span class="preciomenos"><span class="visually-hidden">Antes:</span><s>269€</s></span>
+                    </p>
+                </a>
+                <a class="similar-item" href="detalle-auricular4.html">
+                    <img src="../imagenes/auricular4.jpg" alt="Jabra Elite 7 Pro">
+                    <div class="simil-name">Jabra Elite 7 Pro</div>
+                    <p class="precio">179€</p>
                 </a>
             </div>
         </section>
-
+        
         <script>
             document.addEventListener('click', function(e){
                 if(e.target && e.target.classList.contains('add-cart')){
@@ -102,25 +134,23 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinNombre.png" alt="Inicio">
-                </a>
+                <a href="index.html"><img src="../imagenes/LogoSinNombre.png" alt="Inicio UrbanTech"></a>
             </div>
 
             <div class="footer-secciones">
-                <div class="footer-nav">
+                <nav class="footer-nav" aria-label="Enlaces de pie de página">
                     <ul>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
                         <li><a href="politica-privacidad.html">Política de privacidad</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="footer-redes">
-                <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <a href="https://x.com" aria-label="Visita nuestro perfil de X"><img src="../imagenes/x.png" alt="" width="30"></a>
+                <a href="https://facebook.com" aria-label="Visita nuestra página de Facebook"><img src="../imagenes/facebook.png" alt="" width="30"></a>
+                <a href="https://instagram.com" aria-label="Visita nuestro perfil de Instagram"><img src="../imagenes/instagram.png" alt="" width="30"></a>
             </div>
         </div>
 

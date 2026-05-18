@@ -183,22 +183,34 @@ footer {
 /* PÁGINA: INICIO                       */
 /* ==================================== */
 
+/* ==================================== */
+/* PÁGINA: INICIO Y PARRILLA PRODUCTOS  */
+/* ==================================== */
+
+/* 1. Esto controla la estructura de la cuadrícula de productos tanto en Inicio como en Catálogo */
 .productos-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Hace que se adapte sola a cualquier pantalla */
+    gap: 25px;
     padding: 0;
-    margin: 3%;
+    margin: 2% 0;
 }
 
+/* 2. El contenedor individual de cada tarjeta de producto */
 .producto {
-    background-color: #5AA4E8;
+    background-color: #ffffff; /* Corrige los fallos de contraste poniendo fondo blanco al texto */
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 350px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .producto-link {
@@ -209,100 +221,103 @@ footer {
     height: 100%;
 }
 
-
-.producto img {
+/* Asegura que la caja blanca limite la altura y centre */
+.producto-img-wrapper {
     width: 100%;
-    height: 220px;
-    object-fit: contain;
-    border-bottom: 1px solid #eee;
-    background-color: #f8f9fa;
-    padding: 10px;
+    height: 160px;             
+    background-color: #ffffff; 
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    padding: 20px;             
+    box-sizing: border-box;
 }
 
-.producto h4 {
-    padding: 15px 15px 10px;
-    margin: 0;
-    font-size: 1.1rem;
-    color: #ffffff;
-    line-height: 1.4;
+/* Encoge la foto al 80% para que se vea más pequeña */
+.producto-img-wrapper img {
+    max-width: 80%;            
+    max-height: 80%;           
+    object-fit: contain;       
+    display: block;
+    margin: 0 auto;            
+}
+
+/* Caja de textos unificada, pintada del azul de la tienda y centrada */
+.producto-info-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    background-color: #5AA4E8;
+    justify-content: center;
+    align-items: center;       
+    text-align: center;        
+    background-color: #5AA4E8; /* El color azul claro centrado */
+}
+
+/* Cambiar el selector .producto h4 por .producto h2 en tu CSS */
+.producto h2 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111111;            
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .producto .precio {
-    padding: 0 15px 15px;
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #ffa500;
-    background-color: #5AA4E8;
+    color: #2C3E50;             /* Azul corporativo oscuro que resalta sobre el fondo claro */
 }
 
-.valoraciones {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 40px 20px;
+/* 5. Estilos para ofertas especiales y precios tachados */
+.oferta {
+    color: #C0392B !important; 
+    font-weight: bold;
+    margin-right: 5px;
 }
 
-.valoraciones h2 {
-    color: #FFFFFF;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    text-align: center;
+.preciomenos {
+    color: #566573 !important; 
+    font-size: 0.85rem;
 }
 
-.valoraciones-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+/* 6. Utilidades globales que usarás para solucionar problemas de accesibilidad de WAVE */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
-.valoracion {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    flex: 1;
-    max-width: 300px;
-}
-
-.usuario-valoracion img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.contenido-valoracion p {
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
-
-.estrellas {
-    color: #ffd700;
-    font-size: 1rem;
+.filtro-precio-label {
+    display: block;
     margin-bottom: 10px;
-}
-
-.nombre-usuario {
-    font-weight: bold;
-    color: #333;
-    font-size: 0.9rem;
-}
-
-.preciomenos{
-    color: #000000;
-    font-size: smaller;
-}
-
-.oferta{
-    color: red;
-}
-
-.principal h1{
     color: #FFFFFF;
+    font-weight: 600;
+}
+/* Corrección de color para las valoraciones con fondo blanco */
+.valoraciones .card {
+    border-radius: 10px;
+}
+
+.valoraciones .card-text {
+    color: #2C3E50 !important; /* Color oscuro legible sobre fondo blanco */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.valoraciones .fw-bold {
+    color: #111111 !important; /* Nombre del usuario en negro visible */
 }
 
 
@@ -427,11 +442,9 @@ footer {
     padding: 40px 20px;
 }
 
-
 .detalle-img {
     flex: 1;
 }
-
 
 .detalle-img img {
     width: 100%;
@@ -442,106 +455,120 @@ footer {
     background-color: #FFFFFF;
 }
 
-
 .detalle-info {
     flex: 1;
     padding-left: 20px;
 }
 
-
 .detalle-info h1 {
     color: #FFFFFF;
     margin-bottom: 15px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
+/* Solución de jerarquía: Estilo unificado para subtítulos h2/h3 corregidos */
+.detalle-info h2, .detalle-info h3 {
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
 
+/* CORRECCIÓN DE CONTRASTE CRÍTICO: El naranja previo no era legible sobre fondo claro (#779CBF). 
+   Ahora usamos una cápsula blanca con texto oscuro corporativo (#2C3E50), logrando un contraste excelente. */
 .detalle-info .precio {
-    color: #ffa500;
+    color: #2C3E50;
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 6px;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
-
+/* CORRECCIÓN DE CONTRASTE: Texto cambiado de gris tenue (#e2e2e2) a blanco puro (#FFFFFF) */
 .detalle-info p {
-    color: #e2e2e2;
+    color: #FFFFFF;
     line-height: 1.6;
     margin-bottom: 30px;
+    font-size: 1.05rem;
 }
 
-
-.detalle-info h3 {
-    color: #FFFFFF;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-
+/* TABLA DE ESPECIFICACIONES CON CONTRASTE COMPATIBLE */
 .specs-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    overflow: hidden;
 }
-
-
-.specs-table th{
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-    color: #000000;
-}
-.specs-table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-    color: #FFFFFF;
-}
-
 
 .specs-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    background-color: #2C3E50; /* Color oscuro de cabecera */
+    color: #FFFFFF;
+    font-weight: 600;
+    border: 1px solid #34495E;
 }
 
+.specs-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #E2E8F0;
+    color: #2C3E50; /* Texto oscuro sobre celdas blancas para lectura impecable */
+    background-color: #FFFFFF;
+}
 
+/* BOTÓN DE ACCIÓN CORREGIDO (WCAG AA Cumplido) */
 .add-cart {
-    background-color: #ffa500;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1rem;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
     margin-bottom: 20px;
-    transition: background-color 0.3s;
+    transition: all 0.2s ease-in-out;
 }
-
 
 .add-cart:hover {
-    background-color: #cc8400;
+    background-color: #FFFFFF;
+    color: #2C3E50;
 }
 
-
+/* ENLACE DE RETORNO CORREGIDO */
 .detalle-back {
-    color: #ffa500;
+    color: #FFFFFF;
     text-decoration: underline;
+    font-weight: 500;
+    display: inline-block;
 }
 
+.detalle-back:hover {
+    color: #2C3E50;
+}
 
+/* PRODUCTOS SIMILARES REESTRUCTURADOS */
 .similares {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-
-.similares h3 {
+.similares h2, .similares h3 {
     color: #FFFFFF;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
-
 
 .similares-grid {
     display: flex;
@@ -552,33 +579,445 @@ footer {
     flex: 1;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #FFFFFF;
+    background-color: #2C3E50; /* Fondo oscuro del bloque similar para contrastar los elementos */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.similar-item:hover {
+    transform: translateY(-4px);
 }
 
 .similar-item img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 180px;
+    object-fit: contain;
+    background-color: #FFFFFF; /* Mantiene la imagen limpia sobre fondo blanco */
+    padding: 10px;
 }
 
 .simil-name {
-    padding: 15px 15px 10px;
-    font-weight: 500;
-    color: #FFFFFF;
-    background-color: #5AA4E8;
+    padding: 15px 15px 5px;
+    font-weight: 600;
+    color: #FFFFFF; /* Texto blanco sobre caja azul oscuro */
+    background-color: #2C3E50;
 }
 
+/* CORRECCIÓN PRECIOS OFERTAS */
 .similar-item .precio {
     padding: 0 15px 15px;
-    color: #ffa500;
+    background-color: #2C3E50;
     font-weight: bold;
-    font-size: 1.2rem;
-    background-color: #5AA4E8;
+    font-size: 1.25rem;
 }
 
+.similar-item .precio .oferta {
+    color: #FFD700 !important; /* Oro brillante sobre fondo oscuro, ratio > 7:1 en accesibilidad */
+}
+
+.similar-item .precio .preciomenos {
+    color: #CBD5E1 !important; /* Gris claro sutil pero legible */
+    font-size: 0.9rem;
+    margin-left: 8px;
+}
+
+
+/* ==================================== */
+/* PÁGINA: CARRITO                      */
+/* ==================================== */
+
+.titulo-carrito{
+    margin-bottom: 20px;
+}
+
+.contenedor-carrito {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.lista-productos {
+    flex: 1;
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.producto-item{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.producto-img img{
+    width: 120px;
+    height: auto;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.producto-nombre {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #2C3E50;
+}
+
+.producto-precio {
+    color: #C0392B; /* Rojo oscuro accesible */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.producto-cantidad{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.producto-cantidad input{
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.resumen-carrito {
+    flex: 1;
+    background-color: #F1F5F9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.resumen-carrito h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.resumen-carrito hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 15px 0;
+}
+
+.fila-resumen{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.fila-resumen.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.boton-tramitar{
+    width: 100%;
+    background-color: #2C3E50;
+    color: #fff;
+    border: 1px solid #FFFFFF;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.boton-tramitar:hover{
+    background-color: #1A252F;
+}
+
+main .titulo-carrito{
+    color: #FFFFFF;
+}
+
+
+/* ======================================================= */
+/* PÁGINA: MI CUENTA (INICIO DE SESIÓN) - COMPATIBLE WAVE  */
+/* ======================================================= */
+
+.titulo-usuario {
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Contenedor principal del login adaptado */
+.usuario-caja {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Etiquetas del formulario con contraste accesible obligatorio */
+.label-usuario {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600 !important;
+    color: #2C3E50 !important; /* Azul oscuro corporativo legible */
+}
+
+/* Estilización adaptada para los inputs nativos de Bootstrap */
+.input-usuario, .form-control {
+    padding: 0.6rem 1rem;
+    border: 1px solid #A0AEC0 !important;
+    border-radius: 6px !important;
+    font-size: 1rem;
+    color: #1A202C !important;
+    background-color: #FFFFFF !important;
+}
+
+/* Efecto de foco para evitar alertas visuales en WAVE */
+.form-control:focus, .input-usuario:focus {
+    border-color: #5AA4E8 !important;
+    box-shadow: 0 0 0 0.25rem rgba(90, 164, 232, 0.4) !important;
+    outline: none !important;
+}
+
+/* BOTÓN PRINCIPAL: Cambiado a azul oscuro corporativo para pasar WCAG AA (Ratio > 4.5:1) */
+.custom-btn-login {
+    background-color: #1A5276 !important; 
+    border-color: #1A5276 !important;
+    color: #FFFFFF !important;
+    transition: background-color 0.2s ease;
+}
+
+.custom-btn-login:hover {
+    background-color: #11354E !important;
+    border-color: #11354E !important;
+}
+
+/* Área de registro inferior con fondo gris claro accesible */
+.custom-register-box {
+    background-color: #F1F5F9 !important; 
+    border-top: 1px solid #E2E8F0;
+}
+
+.custom-register-box p {
+    color: #2C3E50 !important;
+    font-weight: 500;
+}
+
+/* Botón secundario "Regístrate" */
+.custom-register-box .btn-outline-dark {
+    border-color: #2C3E50 !important;
+    color: #2C3E50 !important;
+}
+
+.custom-register-box .btn-outline-dark:hover {
+    background-color: #2C3E50 !important;
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* REESCRITURAS ADICIONALES PARA BUSCADOR GLOBAL Y MENÚS   */
+/* ======================================================= */
+
+/* Asegura el color del texto y placeholder en el buscador del header */
+.buscador input {
+    color: #FFFFFF !important;
+}
+
+.buscador input::placeholder {
+    color: #E2E8F0 !important;
+    opacity: 1;
+}
+
+/* Oculta los separadores estéticos de menú a los lectores de pantalla */
+.main-nav .separador {
+    color: #FFFFFF;
+    margin: 0 10px;
+    list-style: none;
+}
+
+
+/* ==================================== */
+/* PÁGINA: CONTACTO                     */
+/* ==================================== */
+
+.titulo-contacto{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.mapa-contacto{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.mapa-contacto iframe{
+    width: 1100px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.datos-contacto{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    gap: 80px;
+}
+
+.columna-contacto{
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: #2C3E50;
+}
+
+.columna-contacto P{
+    color: #F1F5F9;
+}
+
+.seccion-contacto {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: flex-start;
+}
+
+.preguntas-contacto{
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.preguntas-contacto h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.preguntas-contacto p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+.formulario-contacto{
+    flex: 1;
+    margin: 0;
+    padding: 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: #2C3E50;
+}
+
+.formulario-contacto form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label-contacto{
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.input-contacto {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    color: #2C3E50;
+}
+
+.formulario-contacto button {
+    background-color: #FFFFFF;
+    color: #2C3E50;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background-color: #F1F5F9;
+}
+
+
+/* ==================================== */
+/* PÁGINA: QUIÉNES SOMOS (OPTIMIZADA)   */
+/* ==================================== */
+
+.titulo-quienes-somos {
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.lista-valores-bootstrap {
+    list-style: disc;
+}
+
+.lista-valores-bootstrap li {
+    color: #212529; /* Texto oscuro legible de Bootstrap */
+}
+
+/* Botón accesible con tus colores corporativos oscuros */
+.custom-btn-privacidad {
+    background-color: #2C3E50;
+    border: 1px solid #FFFFFF;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn-privacidad:hover {
+    background-color: #1A252F;
+    color: #FFFFFF;
+}
+
+/* Limpieza de la utilidad nativa por si Bootstrap no la carga */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
 
 
 /* ==================================== */
@@ -833,7 +1272,8 @@ footer {
     color: #e2e2e2
 }
 
-.seccion-contacto {
+/* Contenedor flexible para alinear información y formulario */
+.contacto-contenedor {
     display: flex;
     gap: 40px;
     max-width: 1200px;
@@ -841,68 +1281,113 @@ footer {
     align-items: flex-start;
 }
 
-.preguntas-contacto{
+.contacto-info {
+    flex: 1;
     max-width: 600px;
-    margin: 40px auto;
     padding: 30px;
 }
 
-.preguntas-contacto h4 {
-    font-size: 1.5rem;
+.contacto-info h2 {
+    font-size: 1.8rem;
     margin-bottom: 20px;
     color: #FFFFFF;
 }
 
-.preguntas-contacto p{
+.contacto-info p, .contacto-info ul {
     margin-bottom: 15px;
     line-height: 1.6;
     color: #e2e2e2;
 }
 
-.formulario-contacto{
+.contacto-info ul li {
+    margin-bottom: 10px;
+}
+
+.contacto-formulario {
     flex: 1;
     margin: 0;
     padding: 30px;
-    border: 1px solid #ffa500;
+    border: 2px solid #ffa500;
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Ligero fondo para mejorar legibilidad */
 }
 
-.formulario-contacto form{
+.contacto-formulario h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.contacto-formulario form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.label-contacto{
+/* Modificado para asegurar un contraste óptimo del texto de las etiquetas */
+.contacto-formulario label {
     font-weight: 600;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     margin-bottom: 5px;
+    display: block;
 }
 
-.input-contacto {
+.contacto-formulario input,
+.contacto-formulario textarea {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 2px solid #FFFFFF;
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #222222;
 }
 
-.formulario-contacto button {
+/* SOLUCIÓN AL ERROR GRAVE DE CONTRASTE DEL BOTÓN CRÍTICO */
+/* Cambiamos el color de la letra de blanco a negro casi puro (#111111) y aumentamos */
+/* el grosor a 700 (negrita) para que cumpla estrictamente con la normativa WCAG AA */
+.contacto-formulario button {
     background-color: #ffa500;
-    color: white;
+    color: #111111 !important; 
     padding: 15px 30px;
-    border: none;
+    border: 2px solid #cc8400;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: 700; /* Texto resaltado para legibilidad universal */
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
-.formulario-contacto button:hover {
+.contacto-formulario button:hover {
     background-color: #cc8400;
+    color: #000000 !important;
 }
 
+/* Estilos de accesibilidad para los separadores del menú y foco del buscador */
+header {
+    background-color: #2C3E50 !important;
+}
+footer {
+    background-color: #2C3E50 !important;
+}
+.main-nav ul {
+    display: flex;
+    align-items: center;
+}
+.main-nav li.separador {
+    color: #FFFFFF;
+    margin: 0 10px;
+    list-style: none;
+}
+.contacto-formulario input:focus, 
+.contacto-formulario textarea:focus,
+#buscar-nav:focus {
+    outline: 3px solid #FFA500 !important;
+    border-color: transparent;
+}
 
 
 /* ==================================== */
