@@ -19,11 +19,12 @@
                     class="navbar-toggler me-2 border-dark"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal">
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand d-flex align-items-center gap-2"
-                    href="index.html">
+                    aria-label="PcMaster - Inicio">
                     <img src="../imagenes/logoletras.png"
                         alt="Inicio" height="36">
                     <span class="fw-bold text-primary"
@@ -34,21 +35,21 @@
                     id="menuPrincipal">
                     <ul
                         class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
-                        <li class="nav-link"
-                            href="index.html"
-                            style="color: #0056b3; font-weight: 500"><a
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
                                 href="index.html">Inicio</a></li>
                         <span class="separador d-none d-lg-inline mx-2"
-                            style="color: #ccc">|</span>
-                        <li class="nav-link"
-                            href="index.html"
-                            style="color: #0056b3; font-weight: 500"><a
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
                                 href="catalogo.html">Catalogo</a></li>
                         <span class="separador d-none d-lg-inline mx-2"
-                            style="color: #ccc">|</span>
-                        <li class="nav-link"
-                            href="index.html"
-                            style="color: #0056b3; font-weight: 500"><a
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
                                 href="contacto.html">Contacto</a></li>
                     </ul>
 
@@ -57,20 +58,22 @@
                         class="d-flex my-3 my-lg-0 me-lg-3"
                         role="search">
                         <input
+                            id="buscador-principal"
                             class="form-control me-2"
                             type="search"
                             name="buscar"
                             placeholder="buscar"
+                            aria-label="Buscar"
                             style="border-radius: 20px; border: 1px solid #222222" />
                         <button class="btn" type="submit">🔍</button>
                     </form>
 
                     <div class="usuario d-flex flex-column flex-lg-row gap-3">
                         <a href="mi-cuenta.html"
-                            class="text-decoration-none text-primary">👤 Mi
+                            class="text-decoration-none text-black">👤 Mi
                             cuenta</a>
                         <a href="carrito.html"
-                            class="text-decoration-none text-primary">🛒
+                            class="text-decoration-none text-black">🛒
                             Mi cesta</a>
                     </div>
                 </div>
