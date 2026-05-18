@@ -1,320 +1,670 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Catalogo - WiredZone</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
         <link rel="stylesheet" href="../css/styles.css">
+        <style>
+        .catalogo-img {
+            height: 180px;
+            object-fit: contain;
+            width: 100%;
+        }
+    </style>
     </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinTexto.png" alt="Volver a la pagina de inicio">
-                    <span>WiredZone</span>
+    <body class="bg-grey">
+        <header
+            class="navbar navbar-expand-lg navbar-light bg-grey border-bottom-blue py-3">
+            <div class="container">
+                <button
+                    id="burger-menu"
+                    class="navbar-toggler me-2 border-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                    aria-label="WiredZone - Inicio">
+                    <img src="../imagenes/LogoSinTexto.png"
+                        alt="Logo de WiredZone" height="36">
+                    <span class="fw-bold text-light"
+                        style="font-size: 2rem">WiredZone</span>
                 </a>
-            </div>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+                <div class="collapse navbar-collapse main-nav"
+                    id="menuPrincipal">
+                    <ul
+                        class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="index.html">Inicio</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="catalogo.html">Catálogo</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
 
-            <form action="/buscar" method="get" class="buscador">
-                <button type="submit">🔍</button>
-                <input type="search" name="buscar" placeholder="buscar">
-            </form>
+                    <form action="/buscar"
+                        method="get"
+                        class="d-flex my-3 my-lg-0 me-lg-3"
+                        role="search">
+                        <label class="visually-hidden text-light"
+                            for="buscador-principal">Buscar</label>
+                        <input
+                            id="buscador-principal"
+                            class="form-control me-2 bg-light text-dark"
+                            type="search"
+                            name="buscar"
+                            placeholder="Buscar"
+                            aria-label="Buscar"
+                            style="border-radius: 20px; border: 1px solid #ccc" />
+                        <button class="btn btn-dark text-white" type="submit"
+                            aria-label="Buscar">🔍</button>
+                    </form>
 
-            <div class="usuario">
-                <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-                <a href="carrito.html">🛒 Mi cesta</a>
+                    <div class="usuario d-flex flex-column flex-lg-row gap-3">
+                        <a href="mi-cuenta.html"
+                            class="text-decoration-none text-light">👤 Mi
+                            cuenta</a>
+                        <a href="carrito.html"
+                            class="text-decoration-none text-light">🛒
+                            Mi cesta</a>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <main class="main-catalogo">
-            <aside class="sidebar">
-                <h2>Filtros</h2>
-                
-                <div class="filtro-buscador">
-                    <input type="search" placeholder="Buscar">
-                </div>
+        <main class="container py-5 bg-grey">
+            <h1 class="text-center text-light py-10">Catálogo</h1>
+            <div class="row g-4">
+                <aside class="col-12 col-lg-3" aria-labelledby="titulo-filtros">
+                    <div class="bg-black border rounded-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-between text-light">
+                            <h2 id="titulo-filtros" class="h5 mb-0">Filtros</h2>
+                            <button
+                                class="btn btn-sm btn-outline-light d-lg-none text-light"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#filtrosCollapse"
+                                aria-expanded="false"
+                                aria-controls="filtrosCollapse">
+                                Mostrar
+                            </button>
+                        </div>
 
-                <div class="filtro-section">
-                    <h3>Marcas</h3>
-                    <label><input type="checkbox"> Lenovo</label>
-                    <label><input type="checkbox"> Aorus</label>
-                    <label><input type="checkbox"> Asus</label>
-                    <label><input type="checkbox"> Logitech</label>
-                    <label><input type="checkbox"> Razer</label>
-                    <label><input type="checkbox"> Corsair</label>
-                    <label><input type="checkbox"> SteelSeries</label>
-                    <label><input type="checkbox"> Epson</label>
-                    <label><input type="checkbox"> HP</label>
-                    <label><input type="checkbox"> Brother</label>
-                    <label><input type="checkbox"> Canon</label>
-                    <label><input type="checkbox"> Samsung</label>
-                    <label><input type="checkbox"> Crucial</label>
-                    <label><input type="checkbox"> HyperX</label>
-                    <label><input type="checkbox"> WD</label>
-                    <label><input type="checkbox"> Seagate</label>
-                    <label><input type="checkbox"> Samsung</label>
-                    <label><input type="checkbox"> Crucial</label>
-                </div>
+                        <div id="filtrosCollapse"
+                            class="collapse d-lg-block mt-3">
+                            <div class="mb-3">
+                                <label for="filtro-buscar"
+                                    class="form-label text-light">Buscar</label>
+                                <input id="filtro-buscar" type="search"
+                                    class="form-control text-light"
+                                    placeholder="Buscar"
+                                    aria-label="Buscar en filtros">
+                            </div>
 
-                <div class="filtro-section">
-                    <h3>Categoría</h3>
-                    <label><input type="checkbox"> Monitores</label>
-                    <label><input type="checkbox"> Teclados</label>
-                    <label><input type="checkbox"> Ratones</label>
-                    <label><input type="checkbox"> Impresoras</label>
-                    <label><input type="checkbox"> Discos Duros</label>
-                    <label><input type="checkbox"> SSD</label>
-                </div>
+                            <fieldset class="mb-3">
+                                <legend class="h6 text-light">Marcas</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-lenovo">
+                                    <label class="form-check-label text-light"
+                                        for="marca-lenovo">Lenovo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-aorus">
+                                    <label class="form-check-label text-light"
+                                        for="marca-aorus">Aorus</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-asus">
+                                    <label class="form-check-label text-light"
+                                        for="marca-asus">Asus</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-logitech">
+                                    <label class="form-check-label text-light"
+                                        for="marca-logitech">Logitech</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-razer">
+                                    <label class="form-check-label text-light"
+                                        for="marca-razer">Razer</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-corsair">
+                                    <label class="form-check-label text-light"
+                                        for="marca-corsair">Corsair</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-steelseries">
+                                    <label class="form-check-label text-light"
+                                        for="marca-steelseries">SteelSeries</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-epson">
+                                    <label class="form-check-label text-light"
+                                        for="marca-epson">Epson</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-hp">
+                                    <label class="form-check-label text-light"
+                                        for="marca-hp">HP</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-brother">
+                                    <label class="form-check-label text-light"
+                                        for="marca-brother">Brother</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-canon">
+                                    <label class="form-check-label text-light"
+                                        for="marca-canon">Canon</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-samsung">
+                                    <label class="form-check-label text-light"
+                                        for="marca-samsung">Samsung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-crucial">
+                                    <label class="form-check-label text-light"
+                                        for="marca-crucial">Crucial</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-hyperx">
+                                    <label class="form-check-label text-light"
+                                        for="marca-hyperx">HyperX</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-wd">
+                                    <label class="form-check-label text-light"
+                                        for="marca-wd">WD</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-seagate">
+                                    <label class="form-check-label text-light"
+                                        for="marca-seagate">Seagate</label>
+                                </div>
+                            </fieldset>
 
-                <div class="filtro-section">
-                    <h3>Precio</h3>
-                    <input type="range" min="50" max="2000" value="500">
-                    <div class="precio-valores">50 - €2000</div>
-                </div>
-            </aside>
+                            <fieldset class="mb-3">
+                                <legend class="h6 text-light">Categoria</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-monitores">
+                                    <label class="form-check-label text-light"
+                                        for="cat-monitores">Monitores</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-teclados">
+                                    <label class="form-check-label text-light"
+                                        for="cat-teclados">Teclados</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-ssd">
+                                    <label class="form-check-label text-light"
+                                        for="cat-ssd">SSD</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-ratones">
+                                    <label class="form-check-label text-light"
+                                        for="cat-ratones">Ratones</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-discos">
+                                    <label class="form-check-label text-light"
+                                        for="cat-discos">Discos Duros</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-impresoras">
+                                    <label class="form-check-label text-light"
+                                        for="cat-impresoras">Impresoras</label>
+                                </div>
+                            </fieldset>
 
-            <section class="catalogo">
-                <div class="catalogo-header">
-                    <h1>Catálogo de productos</h1>
-                    <div class="ordenar">
-                        <label for="orden">Ordenar:</label>
-                        <select id="orden">
-                            <option>Más relevante</option>
-                            <option>Precio: menor a mayor</option>
-                            <option>Precio: mayor a menor</option>
-                        </select>
+                            <fieldset>
+                                <legend class="h6 text-light">Precio</legend>
+                                <label for="precio" id="label-precio"
+                                    class="form-label text-light">Rango de
+                                    precio</label>
+                                <input id="precio" type="range"
+                                    class="form-range text-light" min="50"
+                                    max="2000"
+                                    value="500"
+                                    aria-labelledby="label-precio">
+                                <div class="small text-light">50 -
+                                    2000
+                                    EUR</div>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
+                </aside>
 
-                <div class="productos-grid">
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-monitor1.html">
-                            <img src="../imagenes/monitor1.jpg" alt="Monitor 1">
-                            <h4>Dell UltraSharp U2720Q</h4>
-                            <p class="precio">399€</p>
-                        </a>
-                    </article>
+                <section class="col-12 col-lg-9"
+                    aria-labelledby="titulo-catalogo">
+                    <div class="bg-black border rounded-3 p-4">
+                        <div
+                            class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                            <h2 id="titulo-catalogo"
+                                class="h4 mb-0 text-light">Catalogo de
+                                productos</h2>
+                            <div class="d-flex align-items-center gap-2">
+                                <label for="orden"
+                                    class="form-label mb-0 text-light">Ordenar:</label>
+                                <select id="orden"
+                                    class="form-select text-dark"
+                                    aria-label="Ordenar catalogo">
+                                    <option class="text-dark">Mas
+                                        relevante</option>
+                                    <option class="text-dark">Precio: menor a
+                                        mayor</option>
+                                    <option class="text-dark">Precio: mayor a
+                                        menor</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-monitor2.html">
-                            <img src="../imagenes/monitor2.jpg" alt="Monitor 2">
-                            <h4>Monitor Lenovo ThinkVision P24q-40</h4>
-                            <p class="precio">266€</p>
-                        </a>
-                    </article>
+                        <div class="row g-4">
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-monitor1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/monitor1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Monitor 1">
+                                        <div class="card-body">
+                                            <h3 class="h6">Dell UltraSharp
+                                                U2720Q</h3>
+                                            <p
+                                                class="precio fw-bold">399€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-monitor3.html">
-                            <img src="../imagenes/monitor3.jpg" alt="Monitor 3">
-                            <h4>LG UltraGear 27GL850</h4>
-                            <p class="precio">329€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-monitor2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/monitor2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Monitor 2">
+                                        <div class="card-body">
+                                            <h3 class="h6">Monitor Lenovo
+                                                ThinkVision P24q-40</h3>
+                                            <p
+                                                class="precio fw-bold">266€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-monitor4.html">
-                            <img src="../imagenes/monitor4.jpg" alt="Aorus CV27Q">
-                            <h4>Aorus CV27Q</h4>
-                            <p class="precio">
-                                <span class="oferta">113€</span>
-                                <span class="preciomenos"><s>129€</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-monitor3.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/monitor3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Monitor 3">
+                                        <div class="card-body">
+                                            <h3 class="h6">LG UltraGear
+                                                27GL850</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">299€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>329€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-raton1.html">
-                            <img src="../imagenes/raton1.jpg" alt="Logitech G502">
-                            <h4>Logitech G502 HERO</h4>
-                            <p class="precio">59€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-raton1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/raton1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Logitech G502">
+                                        <div class="card-body">
+                                            <h3 class="h6">Logitech G502
+                                                HERO</h3>
+                                            <p
+                                                class="precio fw-bold">59€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-raton2.html">
-                            <img src="../imagenes/raton2.jpg" alt="Logitech MX Master 3">
-                            <h4>Logitech MX Master 3</h4>
-                            <p class="precio">
-                                <span class="oferta">90€</span>
-                                <span class="preciomenos"><s>99€</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-raton2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/raton2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Razer DeathAdder V2">
+                                        <div class="card-body">
+                                            <h3 class="h6">Logitech MX Master
+                                                3</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">90€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>99€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-raton3.html">
-                            <img src="../imagenes/raton3.jpg" alt="Glorious Model O">
-                            <h4>Glorious Model O</h4>
-                            <p class="precio">49€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-raton3.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/raton3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Corsair Harpoon">
+                                        <div class="card-body">
+                                            <h3 class="h6">Glorious Model O</h3>
+                                            <p
+                                                class="precio fw-bold">49€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-raton4.html">
-                            <img src="../imagenes/raton4.jpg" alt="SteelSeries Rival 3">
-                            <h4>SteelSeries Rival 3</h4>
-                            <p class="precio">
-                                <span class="oferta">28€</span>
-                                <span class="preciomenos"><s>34€</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-impresora1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/impresora1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Epson EcoTank ET-2850">
+                                        <div class="card-body">
+                                            <h3 class="h6">Epson EcoTank
+                                                ET-2850</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">220€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>249€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-impresora1.html">
-                            <img src="../imagenes/impresora1.jpg" alt="Epson EcoTank ET-2850">
-                            <h4>Epson EcoTank ET-2850</h4>
-                            <p class="precio">
-                                <span class="oferta">220€</span>
-                                <span class="preciomenos"><s>249€</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-impresora2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/impresora2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="HP OfficeJet Pro 9025e">
+                                        <div class="card-body">
+                                            <h3 class="h6">HP OfficeJet Pro
+                                                9025e</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">299€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>329€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-impresora2.html">
-                            <img src="../imagenes/impresora2.jpg" alt="HP OfficeJet Pro 9025e">
-                            <h4>HP OfficeJet Pro 9025e</h4>
-                            <p class="precio">
-                                <span class="oferta">299€</span>
-                                <span class="preciomenos"><s>329€</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-impresora3.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/impresora3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Apple AirPods Pro (2.ª gen)">
+                                        <div class="card-body">
+                                            <h3 class="h6">Brother
+                                                ADS-2700W</h3>
+                                            <p
+                                                class="precio fw-bold">199€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-impresora3.html">
-                            <img src="../imagenes/impresora3.jpg" alt="Brother ADS-2700W">
-                            <h4>Brother ADS-2700W</h4>
-                            <p class="precio">199€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-impresora4.html">
-                            <img src="../imagenes/impresora4.jpg" alt="Canon PIXMA TR4720">
-                            <h4>Canon PIXMA TR4720</h4>
-                            <p class="precio">119€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-teclado1.html">
-                            <img src="../imagenes/teclado1.jpg" alt="Logitech G Pro Keyboard">
-                            <h4>Logitech G Pro Keyboard</h4>
-                            <p class="precio">
-                                <span class="oferta">100€</span>
-                                <span class="preciomenos"><s>119€</s></span>
-                            </p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-teclado2.html">
-                            <img src="../imagenes/teclado2.jpg" alt="Keychron K2 (v2) — Wireless Mechanical Keyboard">
-                            <h4>Keychron K2 (v2) — Wireless Mechanical Keyboard</h4>
-                            <p class="precio">86€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-teclado3.html">
-                            <img src="../imagenes/teclado3.jpg" alt="Corsair K70 RGB">
-                            <h4>Corsair K70 RGB</h4>
-                            <p class="precio">
-                                <span class="oferta">120€</span>
-                                <span class="preciomenos"><s>149€</s></span>
-                            </p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-teclado4.html">
-                            <img src="../imagenes/teclado4.jpg" alt="HyperX Alloy FPS">
-                            <h4>HyperX Alloy FPS</h4>
-                            <p class="precio">79€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-discoduro1.html">
-                            <img src="../imagenes/discoduro1.jpg" alt="WD Elements Portable 2TB">
-                            <h4>WD Elements Portable 2TB</h4>
-                            <p class="precio">59€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-discoduro2.html">
-                            <img src="../imagenes/discoduro2.jpg" alt="Seagate Backup Plus Portable 4TB">
-                            <h4>Seagate Backup Plus Portable 4TB</h4>
-                            <p class="precio">
-                                <span class="oferta">85€</span>
-                                <span class="preciomenos"><s>99€</s></span>
-                            </p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-ssd1.html">
-                            <img src="../imagenes/ssd1.jpg" alt="Samsung Portable SSD T7 1TB">
-                            <h4>Samsung Portable SSD T7 1TB</h4>
-                            <p class="precio">129€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-ssd2.html">
-                            <img src="../imagenes/ssd2.jpg" alt="Crucial X8 Portable SSD 1TB">
-                            <h4>Crucial X8 Portable SSD 1TB</h4>
-                            <p class="precio">
-                                <span class="oferta">109€</span>
-                                <span class="preciomenos"><s>119€</s></span>
-                            </p>
-                        </a>
-                    </article>
-                </div>
-            </section>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-teclado1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/teclado1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Logitech G Pro Keyboard">
+                                        <div class="card-body">
+                                            <h3 class="h6">Logitech G Pro
+                                                Keyboard</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">100€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>119€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-teclado2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/teclado2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Keychron K2 (v2) — Wireless Mechanical Keyboard">
+                                        <div class="card-body">
+                                            <h3 class="h6">Keychron K2 (v2) —
+                                                Wireless Mechanical
+                                                Keyboard</h3>
+                                            <p
+                                                class="precio fw-bold">
+                                                86€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-teclado3.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/teclado3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Corsair K70 RGB">
+                                        <div class="card-body">
+                                            <h3 class="h6">Corsair K70 RGB</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">120€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>149€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-discoduro1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/discoduro1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="WD Elements Portable 2TB">
+                                        <div class="card-body">
+                                            <h3 class="h6">WD Elements Portable
+                                                2TB</h3>
+                                            <p
+                                                class="precio fw-bold">59€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-discoduro2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/discoduro2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Seagate Backup Plus Portable 4TB">
+                                        <div class="card-body">
+                                            <h3 class="h6">Seagate Backup Plus
+                                                Portable 4TB</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">85€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>99€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-ssd1.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/ssd1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Samsung Portable SSD T7 1TB">
+                                        <div class="card-body">
+                                            <h3 class="h6">Samsung Portable SSD
+                                                T7 1TB</h3>
+                                            <p
+                                                class="precio fw-bold">129€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-ssd2.html">
+                                    <div class="card h-100 bg-dark text-light">
+                                        <img src="../imagenes/ssd2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Crucial X8 Portable SSD 1TB">
+                                        <div class="card-body">
+                                            <h3 class="h6">Crucial X8 Portable
+                                                SSD 1TB</h3>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-warning fw-bold">100€</span>
+                                                <span
+                                                    class="preciomenos text-light opacity-75 small"><s>129€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/WiredZoneLogo.png" alt="Inicio">
-                    </a>
-                </div>
+        <footer class="border-top bg-black mt-5 py-4">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-12 col-lg-3 text-center text-lg-start">
+                        <a href="index.html" aria-label="WiredZone - Inicio">
+                            <img src="../imagenes/WiredZoneLogo.png"
+                                alt="Logo de WiredZone" height="60">
+                        </a>
+                    </div>
 
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
+                    <div class="col-12 col-lg-6">
+                        <nav>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="quienes-somos.html">¿Quiénes
+                                        somos?</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="politica-privacidad.html">Política
+                                        de privacidad</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-12 col-lg-3 text-center text-lg-end">
+                        <div
+                            class="d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="https://x.com"><img src="../imagenes/x.png"
+                                    alt="X" width="24"></a>
+                            <a href="https://facebook.com"><img
+                                    src="../imagenes/facebook.png"
+                                    alt="Facebook"
+                                    width="24"></a>
+                            <a href="https://instagram.com"><img
+                                    src="../imagenes/instagram.png"
+                                    alt="Instagram"
+                                    width="24"></a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <div class="text-center small text-light mt-4">
+                    WiredZone Av Schultz No 30 Gijon, Asturias
                 </div>
             </div>
-
-            <div class="direccion">
-                <p>TechCore Av Schultz Nº 30 Gijón, Asturias</p>
-            </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <script src="../js/script.js"></script>
     </body>
 </html>

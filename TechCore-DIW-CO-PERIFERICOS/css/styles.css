@@ -215,6 +215,7 @@ footer {
     padding: 10px;
 }
 
+.producto h3,
 .producto h4 {
     padding: 15px 15px 10px;
     margin: 0;
@@ -254,12 +255,12 @@ footer {
 }
 
 .valoracion {
-    background-color: #f8f9fa;
+    background-color: #404040;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     flex: 1;
-    max-width: 300px;
+    max-width: 300px;    
 }
 
 .usuario-valoracion img {
@@ -299,6 +300,10 @@ footer {
 
 .principal h1{
     color: #FFFFFF;
+}
+
+.precio{
+    color: #18CF00;
 }
 
 
@@ -408,6 +413,10 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     background-color: white;
+}
+
+.precio{
+    color: #18CF00;
 }
 
 

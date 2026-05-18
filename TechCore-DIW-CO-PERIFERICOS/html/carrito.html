@@ -1,112 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrito - WiredZone</title>
+        <title>Carrito - TechCore</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
         <link rel="stylesheet" href="../css/styles.css">
     </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinTexto.png" alt="Volver a la pagina de inicio">
-                    <span>WiredZone</span>
+    <body class="bg-gry">
+
+        <header
+            class="navbar navbar-expand-lg navbar-light bg-grey border-bottom-blue py-3">
+            <div class="container">
+                <button
+                    id="burger-menu"
+                    class="navbar-toggler me-2 border-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                    aria-label="WiredZone - Inicio">
+                    <img src="../imagenes/LogoSinTexto.png"
+                        alt="Logo de WiredZone" height="36">
+                    <span class="fw-bold text-light"
+                        style="font-size: 2rem">WiredZone</span>
                 </a>
-            </div>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+                <div class="collapse navbar-collapse main-nav"
+                    id="menuPrincipal">
+                    <ul
+                        class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="index.html">Inicio</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="catalogo.html">Catálogo</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
 
-            <form action="/buscar" method="get" class="buscador">
-                <button type="submit">🔍</button>
-                <input type="search" name="buscar" placeholder="buscar">
-            </form>
+                    <form action="/buscar"
+                        method="get"
+                        class="d-flex my-3 my-lg-0 me-lg-3"
+                        role="search">
+                        <label class="visually-hidden text-light"
+                            for="buscador-principal">Buscar</label>
+                        <input
+                            id="buscador-principal"
+                            class="form-control me-2 bg-light text-dark"
+                            type="search"
+                            name="buscar"
+                            placeholder="Buscar"
+                            aria-label="Buscar"
+                            style="border-radius: 20px; border: 1px solid #ccc" />
+                        <button class="btn btn-dark text-white" type="submit"
+                            aria-label="Buscar">🔍</button>
+                    </form>
 
-            <div class="usuario">
-                <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-                <a href="carrito.html">🛒 Mi cesta</a>
+                    <div class="usuario d-flex flex-column flex-lg-row gap-3">
+                        <a href="mi-cuenta.html"
+                            class="text-decoration-none text-light">👤 Mi
+                            cuenta</a>
+                        <a href="carrito.html"
+                            class="text-decoration-none text-light">🛒
+                            Mi cesta</a>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <main>
-            <section class="main">
-                <h1 class="titulo-carrito">Carrito</h1>
-                
-                <div class="contenedor-carrito">
-                    <div class="lista-productos">
-                        <div class="producto-item">
-                            <div class="producto-img">
-                                <img src="../imagenes/monitor1.jpg" alt="Monitor 1">
-                            </div>
-                            <div class="producto-info">
-                                <p class="producto-nombre">Monitor Lenovo L27q-27"</p>
-                                <p class="producto-precio">239€</p>
-                                <div class="producto-cantidad">
-                                    <label>Cantidad</label>
-                                    <input type="number" value="1" min="1">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <main class="container py-5">
+            <h1 class="fw-bold mb-4 text-light">Carrito</h1>
 
-                    <div class="resumen-carrito">
-                        <h4>Resumen</h4>
-                        <hr>
-                        <div class="fila-resumen">
-                            <span>Subtotal</span>
-                            <span>1200€</span>
+            <div class="row g-5">
+                <section class="col-12 col-lg-7">
+                    <div
+                        class="producto bg-black p-3 d-flex align-items-center position-relative"
+                        style="border: 1px solid #000; min-height: 180px;">
+
+                        <div class="me-4">
+                            <img src="../imagenes/monitor1.jpg"
+                                alt="Monitor Lenovo"
+                                style="width: 140px; height: auto;">
                         </div>
-                        <div class="fila-resumen">
-                            <span>Coste de envío ⓘ</span>
-                            <span>Gratis</span>
+
+                        <div class="flex-grow-1">
+                            <h2 class="h4 fw-normal mb-2 text-light"
+                                style="max-width: 250px; line-height: 1.2;">Monitor
+                                Lenovo L27q-27"</h2>
+                            <h2 class="h4 fw-bold text-warning">239€</h2>
                         </div>
-                        <hr>
-                        <div class="fila-resumen total">
-                            <span>Total</span>
-                            <span>1200€</span>
+
+                        <div
+                            class="position-absolute bottom-0 end-0 p-3 d-flex align-items-center gap-2">
+                            <label class="small text-light"
+                                for="cantidad-producto">Cantidad</label>
+                            <input id="cantidad-producto" type="number"
+                                value="1" min="1"
+                                style="width: 50px; border: 1px solid #000; text-align: center;">
                         </div>
-                        <button class="boton-tramitar">Tramitar Pedido</button>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                <aside class="col-12 col-lg-5">
+                    <div class="p-4"
+                        style="background-color: #e5e0e0; border-radius: 4px;">
+                        <h2 class="h4 fw-bold mb-4">Resumen</h2>
+                        <div class="border-top border-dark pt-3">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Subtotal</span>
+                                <span>1200€</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Coste de envío <span
+                                        style="cursor:help">ⓘ</span></span>
+                                <span>Gratis</span>
+                            </div>
+                            <div
+                                class="border-top border-dark pt-3 d-flex justify-content-between mb-4">
+                                <span class="fw-bold">Total</span>
+                                <span class="fw-bold">1200€</span>
+                            </div>
+                        </div>
+                        <button
+                            class="btn w-100 py-2 fw-bold text-black shadow-sm"
+                            style="background-color: #ff6600; border-radius: 20px; border: none;">
+                            Tramitar Pedido
+                        </button>
+                    </div>
+                </aside>
+            </div>
         </main>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/WiredZoneLogo.png" alt="Inicio">
-                    </a>
-                </div>
+        <footer class="border-top bg-black mt-5 py-4">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-12 col-lg-3 text-center text-lg-start">
+                        <a href="index.html" aria-label="WiredZone - Inicio">
+                            <img src="../imagenes/WiredZoneLogo.png"
+                                alt="Logo de WiredZone Abajo" height="60">
+                        </a>
+                    </div>
 
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
+                    <div class="col-12 col-lg-6">
+                        <nav>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="quienes-somos.html">¿Quiénes
+                                        somos?</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="politica-privacidad.html">Política
+                                        de privacidad</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-12 col-lg-3 text-center text-lg-end">
+                        <div
+                            class="d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="https://x.com"><img src="../imagenes/x.png"
+                                    alt="X" width="24"></a>
+                            <a href="https://facebook.com"><img
+                                    src="../imagenes/facebook.png"
+                                    alt="Facebook"
+                                    width="24"></a>
+                            <a href="https://instagram.com"><img
+                                    src="../imagenes/instagram.png"
+                                    alt="Instagram"
+                                    width="24"></a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <div class="text-center small text-light mt-4">
+                    WiredZone Av Schultz No 30 Gijon, Asturias
                 </div>
             </div>
-
-            <div class="direccion">
-                <p>TechCore Av Schultz Nº 30 Gijón, Asturias</p>
-            </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>

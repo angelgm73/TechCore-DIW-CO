@@ -1,143 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Contacto - WiredZone</title>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
     </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../imagenes/LogoSinTexto.png" alt="Volver a la pagina de inicio">
-                    <span>WiredZone</span>
+    <body class="bg-grey">
+        <header
+            class="navbar navbar-expand-lg navbar-light bg-grey border-bottom-blue py-3">
+            <div class="container">
+                <button
+                    id="burger-menu"
+                    class="navbar-toggler me-2 border-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                    aria-label="WiredZone - Inicio">
+                    <img src="../imagenes/LogoSinTexto.png"
+                        alt="Logo de WiredZone" height="36">
+                    <span class="fw-bold text-light"
+                        style="font-size: 2rem">WiredZone</span>
                 </a>
-            </div>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <span class="separador">|</span>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+                <div class="collapse navbar-collapse main-nav"
+                    id="menuPrincipal">
+                    <ul
+                        class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="index.html">Inicio</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="catalogo.html">Catálogo</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #ccc">|</span>
+                        <li class="nav-item"><a
+                                class="nav-link fw-semibold"
+                                style="color: #18CF00; font-weight: 500;"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
 
-            <form action="/buscar" method="get" class="buscador">
-                <button type="submit">🔍</button>
-                <input type="search" name="buscar" placeholder="buscar">
-            </form>
+                    <form action="/buscar"
+                        method="get"
+                        class="d-flex my-3 my-lg-0 me-lg-3"
+                        role="search">
+                        <label class="visually-hidden text-light"
+                            for="buscador-principal">Buscar</label>
+                        <input
+                            id="buscador-principal"
+                            class="form-control me-2 bg-light text-dark"
+                            type="search"
+                            name="buscar"
+                            placeholder="Buscar"
+                            aria-label="Buscar"
+                            style="border-radius: 20px; border: 1px solid #ccc" />
+                        <button class="btn btn-dark text-white" type="submit"
+                            aria-label="Buscar">🔍</button>
+                    </form>
 
-            <div class="usuario">
-                <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-                <a href="carrito.html">🛒 Mi cesta</a>
+                    <div class="usuario d-flex flex-column flex-lg-row gap-3">
+                        <a href="mi-cuenta.html"
+                            class="text-decoration-none text-light">👤 Mi
+                            cuenta</a>
+                        <a href="carrito.html"
+                            class="text-decoration-none text-light">🛒
+                            Mi cesta</a>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <main>
-            <section class="main">
-                <h1 class="titulo-contacto">Nuestro contacto</h1>
-
-                <div class="mapa-contacto">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7472.063049199614!2d-5.667942523082256!3d43.535463371107944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c8a98d7b1bf%3A0xc7bb45991f0111ce!2sAv.%20Schulz%2C%2030%2C%20Centro%2C%2033208%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2ses!4v1764376754841!5m2!1ses!2ses" 
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+        <main class="py-5">
+            <section class="container">
+                <div class="text-center mb-4">
+                    <h1 class="fw-bold text-light">Nuestro contacto</h1>
+                    <p class="text-light mb-0">
+                        Estamos aqui para ayudarte con lo que necesites.
+                    </p>
                 </div>
 
-                <div class="datos-contacto">
-                    <div class="columna-contacto">
-                        <h3>HORARIO</h3>
-                        <p>Lunes a viernes</p>
-                        <p>10:00 - 20:00</p>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-12 col-lg-7">
+                        <div
+                            class="ratio ratio-4x3 rounded overflow-hidden border">
+                            <iframe
+                                title="Mapa de TechCore"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.523138725923!2d-5.6705525248979045!3d43.523234960828475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367cecdc5558bd%3A0xa680d90166b0a98e!2sAv.%20Schulz%2C%2023%2C%20Centro%2C%2033210%20Gij%C3%B3n%2C%20Asturias!5e1!3m2!1ses!2ses!4v1763916664200!5m2!1ses!2ses"
+                                style="border: 0"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                     </div>
 
-                    <div class="columna-contacto">
-                        <h3>CONTACTO</h3>
-                        <p>Teléfono: +34 642 024 032</p>
-                        <p>wiredzone@yupomail.com</p>
-                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="card shadow-sm bg-black">
+                                <div class="card-body">
+                                    <h2
+                                        class="h5 fw-bold text-light">Horario</h2>
+                                    <p class="mb-0 text-light">Lunes a
+                                        viernes</p>
+                                    <p class="mb-0 text-light">11:00 - 21:00</p>
+                                </div>
+                            </div>
 
-                    <div class="columna-contacto">
-                        <h3>LOCALIZACIÓN</h3>
-                        <p>Av SCHULTZ nº 30</p>
-                        <p>GIJÓN, ASTURIAS</p>
+                            <div class="card shadow-sm bg-black">
+                                <div class="card-body">
+                                    <h2
+                                        class="h5 fw-bold text-light">Contacto</h2>
+                                    <p class="mb-0 text-light">Telefono: +34 624
+                                        420
+                                        2301</p>
+                                    <p
+                                        class="mb-0 text-light">techcore@yupomail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="card shadow-sm bg-black">
+                                <div class="card-body">
+                                    <h2
+                                        class="h5 fw-bold text-light">Localizacion</h2>
+                                    <p class="mb-0 text-light">Av. Schultz n.
+                                        23</p>
+                                    <p class="mb-0 text-light">Gijon,
+                                        Asturias</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <br><br>
+                <hr class="my-5" />
 
-                <div class="seccion-contacto">
-                    <div class="preguntas-contacto">
-                        <h4>No dude en escribirnos</h4>
-                        <p>
-                            ¿Tiene alguna pregunta, sugerencia o comentario?
-                            ¿Has encontrado algún problema en nuestra web o quieres compartir tu opinión sobre nuestros productos?
+                <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                        <h2 class="h4 fw-bold text-light">No dude en
+                            escribirnos</h2>
+                        <p class="text-light">
+                            Tiene alguna pregunta, sugerencia o comentario? Ha
+                            encontrado
+                            algun problema en nuestra web o quiere compartir su
+                            opinion sobre
+                            nuestros productos?
                         </p>
-                        <p>Nos encantaria saber de ti.</p>
-                        <p>
-                            Rellena el formulario a continuacion y nuestro equipo se pondrá en contacto contigo lo antes posible.
+                        <p class="text-light">Nos encantaria saber de ti.</p>
+                        <p class="text-light mb-0">
+                            Rellena el formulario a continuacion y nuestro
+                            equipo se pondra en
+                            contacto contigo lo antes posible.
                         </p>
                     </div>
 
-                    <div class="formulario-contacto">
-                        <form action="#">
-                            <label class="label-contacto">Nombre</label>
-                            <input type="text" placeholder="Escribe tu nombre" class="input-contacto">
+                    <div class="col-12 col-lg-7">
+                        <form class="row g-3" action="#">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label text-light"
+                                    for="nombre">Nombre</label>
+                                <input
+                                    class="form-control"
+                                    id="nombre"
+                                    name="nombre"
+                                    type="text"
+                                    placeholder="Escribe tu nombre"
+                                    aria-label="Nombre"
+                                    required />
+                            </div>
 
-                            <label class="label-contacto">Apellido</label>
-                            <input type="text" placeholder="Escribe tu apellido" class="input-contacto">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label text-light"
+                                    for="apellido">Apellido</label>
+                                <input
+                                    class="form-control"
+                                    id="apellido"
+                                    name="apellido"
+                                    type="text"
+                                    placeholder="Escribe tu apellido"
+                                    aria-label="Apellido"
+                                    required />
+                            </div>
 
-                            <label class="label-contacto">Email</label>
-                            <input type="email" placeholder="Escribe tu email" class="input-contacto">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label text-light"
+                                    for="email">Email</label>
+                                <input
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Escribe tu email"
+                                    aria-label="Email"
+                                    required />
+                            </div>
 
-                            <label class="label-contacto">Telefono</label>
-                            <input type="number" placeholder="Escribe tu numero" class="input-contacto">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label text-light"
+                                    for="telefono">Telefono</label>
+                                <input
+                                    class="form-control"
+                                    id="telefono"
+                                    name="telefono"
+                                    type="tel"
+                                    placeholder="Escribe tu numero"
+                                    aria-label="Telefono"
+                                    required />
+                            </div>
 
-                            <label class="label-contacto">Mensaje</label>
-                            <input type="text" placeholder="Escribe tu mensaje o duda" class="input-contacto">
+                            <div class="col-12">
+                                <label class="form-label text-light"
+                                    for="mensaje">Mensaje</label>
+                                <textarea
+                                    class="form-control"
+                                    id="mensaje"
+                                    name="mensaje"
+                                    rows="4"
+                                    placeholder="Escribe tu mensaje o duda"
+                                    aria-label="Mensaje"
+                                    required></textarea>
+                            </div>
 
-                            <button type="submit">Enviar mensaje</button>
+                            <div class="col-12">
+                                <button class="btn btn-success px-4"
+                                    type="submit">
+                                    Enviar mensaje
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/WiredZoneLogo.png" alt="Inicio">
-                    </a>
-                </div>
+        <footer class="border-top bg-black mt-5 py-4">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-12 col-lg-3 text-center text-lg-start">
+                        <a href="index.html" aria-label="WiredZone - Inicio">
+                            <img src="../imagenes/WiredZoneLogo.png"
+                                alt="Logo de WiredZone Abajo" height="60">
+                        </a>
+                    </div>
 
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
+                    <div class="col-12 col-lg-6">
+                        <nav>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="quienes-somos.html">¿Quiénes
+                                        somos?</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-light px-2"
+                                        href="politica-privacidad.html">Política
+                                        de privacidad</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-12 col-lg-3 text-center text-lg-end">
+                        <div
+                            class="d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="https://x.com"><img src="../imagenes/x.png"
+                                    alt="X" width="24"></a>
+                            <a href="https://facebook.com"><img
+                                    src="../imagenes/facebook.png"
+                                    alt="Facebook"
+                                    width="24"></a>
+                            <a href="https://instagram.com"><img
+                                    src="../imagenes/instagram.png"
+                                    alt="Instagram"
+                                    width="24"></a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <div class="text-center small text-light mt-4">
+                    WiredZone Av Schultz No 30 Gijon, Asturias
                 </div>
             </div>
-
-            <div class="direccion">
-                <p>TechCore Av Schultz Nº 30 Gijón, Asturias</p>
-            </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>

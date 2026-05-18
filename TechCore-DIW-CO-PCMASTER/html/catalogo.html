@@ -1,269 +1,503 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Catalogo - Techcore</title>
+        <title>Catalogo - PcMaster</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
         <link rel="stylesheet" href="../css/styles.css">
+        <style>
+        .catalogo-img {
+            height: 180px;
+            object-fit: contain;
+            width: 100%;
+        }
+    </style>
     </head>
-    <body>
-        <header>
-        <div class="logo">
-            <a href="index.html">
-               <img src="../imagenes/logo_sinletras.png" alt="Volver a la pagina de inicio">
-                <span>PCMaster</span>
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <span class="separador">|</span>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <span class="separador">|</span>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <body class="bg-cream">
 
-        <form action="/buscar" method="get" class="buscador">
-            <button type="submit">🔍</button>
-            <input type="search" name="buscar" placeholder="buscar">
-        </form>
+        <header
+            class="navbar navbar-expand-lg navbar-light bg-cream border-bottom-blue py-3">
+            <div class="container">
+                <button
+                    id="burger-menu"
+                    class="navbar-toggler me-2 border-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                    aria-label="PcMaster - Inicio">
+                    <img src="../imagenes/logoletras.png"
+                        alt="Inicio" height="36">
+                    <span class="fw-bold text-primary"
+                        style="font-size: 2rem">PcMaster</span>
+                </a>
 
-        <div class="usuario">
-            <a href="mi-cuenta.html" class="mi-cuenta">👤 Mi cuenta</a>
-            <a href="carrito.html">🛒 Mi cesta</a>
-        </div>
+                <div class="collapse navbar-collapse main-nav"
+                    id="menuPrincipal">
+                    <ul
+                        class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start align-items-lg-center">
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="index.html">Inicio</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="catalogo.html">Catalogo</a></li>
+                        <span class="separador d-none d-lg-inline mx-2"
+                            style="color: #000">|</span>
+                        <li class="nav-link text-black"
+                            href="index.html"><a
+                                class="text-dark"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
 
-    </header>
+                    <form action="/buscar"
+                        method="get"
+                        class="d-flex my-3 my-lg-0 me-lg-3"
+                        role="search">
+                        <input
+                            id="buscador-principal"
+                            class="form-control me-2"
+                            type="search"
+                            name="buscar"
+                            placeholder="buscar"
+                            aria-label="Buscar"
+                            style="border-radius: 20px; border: 1px solid #222222" />
+                        <button class="btn" type="submit">🔍</button>
+                    </form>
 
-        <main class="main-catalogo">
-            <aside class="sidebar">
-                <h2>Filtros</h2>
-                
-                <div class="filtro-buscador">
-                    <input type="search" placeholder="Buscar">
-                </div>
-
-                <div class="filtro-section">
-                    <h3>Marcas</h3>
-                    <label><input type="checkbox"> Dell</label>
-                    <label><input type="checkbox"> HP</label>
-                    <label><input type="checkbox"> Lenovo</label>
-                    <label><input type="checkbox"> Samsung</label>
-                </div>
-
-                <div class="filtro-section">
-                    <h3>Categoría</h3>
-                    <label><input type="checkbox"> PCs Montados</label>
-                    <label><input type="checkbox"> Portátiles</label>
-                    <label><input type="checkbox"> Piezas sueltas</label>
-                </div>
-
-                <div class="filtro-section">
-                    <h3>Precio</h3>
-                    <input type="range" min="150" max="2000" value="250">
-                    <div class="precio-valores">150 - €2000</div>
-                </div>
-            </aside>
-
-            <section class="catalogo">
-                <div class="catalogo-header">
-                    <h1>Catálogo de productos</h1>
-                    <div class="ordenar">
-                        <label for="orden">Ordenar:</label>
-                        <select id="orden">
-                            <option>Más relevante</option>
-                            <option>Precio: menor a mayor</option>
-                            <option>Precio: mayor a menor</option>
-                        </select>
+                    <div class="usuario d-flex flex-column flex-lg-row gap-3">
+                        <a href="mi-cuenta.html"
+                            class="text-decoration-none text-black">👤 Mi
+                            cuenta</a>
+                        <a href="carrito.html"
+                            class="text-decoration-none text-black">🛒
+                            Mi cesta</a>
                     </div>
                 </div>
+            </div>
+        </header>
 
-                <div class="productos-grid">
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-pc1.html">
-                            <img src="../imagenes/Pc1.jpg" alt="PC1">
-                            <h4>MrDalekJD PC Primus</h4>
-                            <p class="precio">€1239</p>
-                        </a>
-                    </article>
+        <main class="container py-5 bg-cream">
+            <div class="row g-4">
+                <aside class="col-12 col-lg-3" aria-labelledby="titulo-filtros">
+                    <div class="bg-light border rounded-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-between text-black">
+                            <h2 id="titulo-filtros" class="h5 mb-0">Filtros</h2>
+                            <button
+                                class="btn btn-sm btn-outline-primary d-lg-none"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#filtrosCollapse"
+                                aria-expanded="false"
+                                aria-controls="filtrosCollapse">
+                                Mostrar
+                            </button>
+                        </div>
 
-                    <article class="producto">
-                    <a class="producto-link" href="detalle-pc2.html">
-                        <img src="../imagenes/Pc2.png" alt="PC2">
-                        <h4>Thermaltake LCGS Vista R66 Gaming Desktop</h4>
-                        <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                        <p class="precio">€461</p>
-                    </a>
-                    </article>
+                        <div id="filtrosCollapse"
+                            class="collapse d-lg-block mt-3">
+                            <div class="mb-3">
+                                <label for="filtro-buscar"
+                                    class="form-label text-black">Buscar</label>
+                                <input id="filtro-buscar" type="search"
+                                    class="form-control text-black"
+                                    placeholder="Buscar">
+                            </div>
 
-                    <article class="producto">
-                    <a class="producto-link" href="detalle-pc3.html">
-                        <img src="../imagenes/Pc3.jpg" alt="PC3">
-                        <h4>PC Racing Pack Gaming (Ryzen 3200G / 480 GB SSD)</h4>
-                        <p class="precio">€677</p>
-                    </a>
-                </article>
+                            <fieldset class="mb-3">
+                                <legend class="h6 text-black">Marcas</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-dell">
+                                    <label class="form-check-label text-black"
+                                        for="marca-dell">Dell</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-hp">
+                                    <label class="form-check-label text-black"
+                                        for="marca-hp">HP</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-lenovo">
+                                    <label class="form-check-label text-black"
+                                        for="marca-lenovo">Lenovo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="marca-samsung">
+                                    <label class="form-check-label text-black"
+                                        for="marca-samsung">Samsung</label>
+                                </div>
+                            </fieldset>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-pc4.html">
-                            <img src="../imagenes/Pc4.jpg" alt="PC4">
-                            <h4>PC NEO Gaming Ryzen 5 5500 + RTX 3050</h4>
-                            <p class="precio">
-                                <span class="oferta">1029€</span>
-                                <span class="preciomenos"><s>€1200</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <fieldset class="mb-3">
+                                <legend class="h6 text-black">Categoria</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-pcmontados">
+                                    <label class="form-check-label text-black"
+                                        for="cat-pcmontados">PCs
+                                        Montados</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-portatiles">
+                                    <label class="form-check-label text-black"
+                                        for="cat-portatiles">Portátiles</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" id="cat-psueltas">
+                                    <label class="form-check-label text-black"
+                                        for="cat-psueltas">Piezas
+                                        sueltas</label>
+                                </div>
+                            </fieldset>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-portatil1.html">
-                            <img src="../imagenes/Portatil1.jpg" alt="HP 15-fd1020ns 15.6 Full HD">
-                            <h4>HP 15-fd1020ns 15.6″ Full HD</h4>
+                            <fieldset>
+                                <legend class="h6 text-black">Precio</legend>
+                                <label for="precio"
+                                    class="form-label text-black">Rango de
+                                    precio</label>
+                                <input id="precio" type="range"
+                                    class="form-range text-black" min="50"
+                                    max="2000"
+                                    value="500">
+                                <div class="small text-black">50 -
+                                    2000
+                                    EUR</div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </aside>
 
-                            <p class="precio">
-                                <span class="oferta">€799</span>
-                                <span class="preciomenos"><s>€899</s></span>
-                            </p>
-                        </a>
-                    </article>
+                <section class="col-12 col-lg-9"
+                    aria-labelledby="titulo-catalogo">
+                    <div class="bg-light border rounded-3 p-4">
+                        <div
+                            class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                            <h1 id="titulo-catalogo"
+                                class="h4 mb-0 text-black">Catalogo de
+                                productos</h1>
+                            <div class="d-flex align-items-center gap-2">
+                                <label for="orden"
+                                    class="form-label mb-0 text-black">Ordenar:</label>
+                                <select id="orden"
+                                    class="form-select text-black"
+                                    aria-label="Ordenar catalogo">
+                                    <option class="text-dark">Mas
+                                        relevante</option>
+                                    <option class="text-dark">Precio: menor a
+                                        mayor</option>
+                                    <option class="text-dark">Precio: mayor a
+                                        menor</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-portatil2.html">
-                            <img src="../imagenes/Portatil2.jpg" alt="Lenovo LOQ 15.6 Gaming">
-                            <h4>Lenovo LOQ 15.6″ Gaming</h4>
-                            <p class="precio">999€</p>
-                        </a>
-                    </article>
+                        <div class="row g-4">
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-pc1.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/Pc1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="PC 1">
+                                        <div class="card-body">
+                                            <h2 class="h6">MrDalekJD PC
+                                                Primus</h2>
+                                            <p
+                                                class="precio fw-bold text-black">1239€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-portatil3.html">
-                            <img src="../imagenes/Portatil3.jpg" alt="ASUS Zenbook 14 OLED">
-                            <h4>ASUS Zenbook 14 OLED</h4>
-                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                            <p class="precio">1.199€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-pc2.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/Pc2.png"
+                                            class="card-img-top catalogo-img"
+                                            alt="PC 2">
+                                        <div class="card-body">
+                                            <h2 class="h6">Thermaltake LCGS
+                                                Vista R66 Gaming Desktop</h2>
+                                            <h3 class="text-danger">¡ULTIMAS
+                                                UNIDADES!</h3>
+                                            <p
+                                                class="precio fw-bold text-black">461€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link" href="detalle-portatil4.html">
-                            <img src="../imagenes/Portatil4.jpg" alt="Lenovo IdeaPad Slim 3 15.6">
-                            <h4>Lenovo IdeaPad Slim 3 15.6″</h4>
-                            <p class="precio">479€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-pc3.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/Pc3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="PC 3">
+                                        <div class="card-body">
+                                            <h2 class="h6">PC Racing Pack Gaming
+                                                (Ryzen 3200G / 480 GB SSD)</h2>
+                                            <p
+                                                class="precio fw-bold text-black">677€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-pc4.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/Pc4.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="PC 4">
+                                        <div class="card-body">
+                                            <h2 class="h6">PC NEO Gaming Ryzen 5
+                                                5500 + RTX 3050</h2>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-danger fw-bold">1029€</span>
+                                                <span
+                                                    class="preciomenos text-blue small"><s>1200€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta1.jpg" alt="Intel Core i5-13400F">
-                            <h4>Intel Core i5-13400F</h4>
-                            <p class="precio">
-                                <span class="oferta">182€</span>
-                                <span class="preciomenos"><s>€200</s></span>
-                            </p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-portatil1.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/portatil1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="HP 15-fd1020ns 15.6″ Full HD">
+                                        <div class="card-body">
+                                            <h2 class="h6">HP 15-fd1020ns 15.6″
+                                                Full HD</h2>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-danger fw-bold">799€</span>
+                                                <span
+                                                    class="preciomenos text-blue small"><s>899€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta2.jpg" alt="Gigabyte Aorus Z790 Elite X WiFi7">
-                            <h4>Gigabyte Aorus Z790 Elite X WiFi7</h4>
-                            <p class="precio">355€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-portatil2.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/portatil2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Lenovo LOQ 15.6″ Gaming">
+                                        <div class="card-body">
+                                            <h2 class="h6">Lenovo LOQ 15.6″
+                                                Gaming</h2>
+                                            <p
+                                                class="precio fw-bold text-black">999€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta3.jpg" alt="MSI GeForce RTX 3050 Ventus 2X 8GB">
-                            <h4>MSI GeForce RTX 3050 Ventus 2X 8GB</h4>
-                            <p class="precio">200€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-portatil3.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/portatil3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="ASUS Zenbook 14
+                                                OLED">
+                                        <div class="card-body">
+                                            <h2 class="h6">ASUS Zenbook 14
+                                                OLED</h2>
+                                            <h3 class="text-danger">¡ULTIMAS
+                                                UNIDADES!</h3>
+                                            <p
+                                                class="precio fw-bold text-black">1.199€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta4.jpg" alt="Corsair RM650e 650W Modular">
-                            <h4>Corsair RM650e 650W Modular</h4>
-                            <p class="precio">91€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-portatil4.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/portatil4.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Lenovo IdeaPad Slim 3 15.6″">
+                                        <div class="card-body">
+                                            <h2 class="h6">Lenovo IdeaPad Slim 3
+                                                15.6″</h2>
+                                            <p
+                                                class="precio fw-bold text-black">479€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta5.jpg" alt="Corsair RS120 ARGB Ventilador">
-                            <h4>Corsair RS120 ARGB Ventilador</h4>
-                            <h6 class="ult-unidades">¡ULTIMAS UNIDADES!</h6>
-                            <p class="precio">18€</p>
-                        </a>
-                    </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-psuelta1.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/psuelta1.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Intel Core i5-13400F">
+                                        <div class="card-body">
+                                            <h2 class="h6">Intel Core
+                                                i5-13400F</h2>
+                                            <p class="precio fw-bold">
+                                                <span
+                                                    class="oferta text-danger fw-bold">182€</span>
+                                                <span
+                                                    class="preciomenos text-blue small"><s>200€</s></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
 
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta6.jpg" alt="Kingston NV3 1TB NVMe SSD">
-                            <h4>Kingston NV3 1TB NVMe SSD</h4>
-                            <p class="precio">
-                                <span class="oferta">83€</span>
-                                <span class="preciomenos"><s>99€</s></span>
-                            </p>
-
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta7.jpg" alt="MSI Pro H610M-E">
-                            <h4>MSI Pro H610M-E</h4>
-                            <p class="precio">61€</p>
-                        </a>
-                    </article>
-
-                    <article class="producto">
-                        <a class="producto-link">
-                            <img src="../imagenes/psuelta8.jpg" alt="WD Black SN850P 1TB NVMe SSD">
-                            <h4>WD Black SN850P 1TB NVMe SSD</h4>
-                            <p class="precio">119€</p>
-                        </a>
-                    </article>
-
-                </div>
-            </section>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-psuelta2.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/psuelta2.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Gigabyte Aorus Z790 Elite X WiFi7">
+                                        <div class="card-body">
+                                            <h2 class="h6">Gigabyte Aorus Z790
+                                                Elite X WiFi7</h2>
+                                            <p
+                                                class="precio fw-bold text-black">355€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-psuelta3.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/psuelta3.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="MSI GeForce RTX 3050 Ventus 2X 8GB">
+                                        <div class="card-body">
+                                            <h2 class="h6">MSI GeForce RTX 3050
+                                                Ventus 2X 8GB</h2>
+                                            <p
+                                                class="precio fw-bold text-black">
+                                                200€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4">
+                                <a class="text-decoration-none text-light"
+                                    href="detalle-psuelta4.html">
+                                    <div class="card h-100 bg-cream text-black">
+                                        <img src="../imagenes/psuelta4.jpg"
+                                            class="card-img-top catalogo-img"
+                                            alt="Corsair RM650e 650W Modular">
+                                        <div class="card-body">
+                                            <h2 class="h6">Corsair RM650e 650W
+                                                Modular</h2>
+                                            <p
+                                                class="precio fw-bold text-black">91€
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
 
-        <footer>
-            <div class="footer-container">
+        <footer class="border-top bg-cream mt-5 py-4">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-12 col-lg-3 text-center text-lg-start">
+                        <a href="index.html">
+                            <img src="../imagenes/logo_sinletras.png"
+                                alt="Inicio" height="60">
+                        </a>
+                    </div>
 
+                    <div class="col-12 col-lg-6">
+                        <nav>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a
+                                        class="nav-link text-dark px-2"
+                                        href="contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-dark px-2"
+                                        href="quienes-somos.html">¿Quiénes
+                                        somos?</a></li>
+                                <li class="nav-item"><a
+                                        class="nav-link text-dark px-2"
+                                        href="politica-privacidad.html">Política
+                                        de privacidad</a></li>
+                            </ul>
+                        </nav>
+                    </div>
 
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="../imagenes/logoletras.png" alt="Inicio">
-                    </a>
-                </div>
-
-
-                <div class="footer-secciones">
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                            <li><a href="politica-privacidad.html">Política de privacidad</a></li>
-                        </ul>
+                    <div class="col-12 col-lg-3 text-center text-lg-end">
+                        <div
+                            class="d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="https://x.com"><img src="../imagenes/x.png"
+                                    alt="X" width="24"></a>
+                            <a href="https://facebook.com"><img
+                                    src="../imagenes/facebook.png"
+                                    alt="Facebook"
+                                    width="24"></a>
+                            <a href="https://instagram.com"><img
+                                    src="../imagenes/instagram.png"
+                                    alt="Instagram"
+                                    width="24"></a>
+                        </div>
                     </div>
                 </div>
-
-
-                <div class="footer-redes">
-                    <a href="https://x.com"><img src="../imagenes/x.png" alt="X" width="30"></a>
-                    <a href="https://facebook.com"><img src="../imagenes/facebook.png" alt="Facebook" width="30"></a>
-                    <a href="https://instagram.com"><img src="../imagenes/instagram.png" alt="Instagram" width="30"></a>
+                <div class="text-center small text-dark mt-4">
+                    WiredZone Av Schultz No 30 Gijon, Asturias
                 </div>
-
             </div>
+        </footer>
 
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-            <div class="direccion">
-                <p>PCMaster · Av. de la Costa Nº 184, Gijón, Asturias</p>
-            </div>
-    </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <script src="../js/script.js"></script>
     </body>
 </html>
