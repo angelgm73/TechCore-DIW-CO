@@ -28,8 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand d-flex align-items-center gap-2"
-                    href="index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2">
                     <img src="../imagenes/logoSinTexto.png" alt="Inicio"
                         height="36">
                     <span class="fw-bold text-light"
@@ -60,8 +59,13 @@
 
                     <form action="/buscar" method="get"
                         class="d-flex my-3 my-lg-0 me-lg-3" role="search">
-                        <input class="form-control me-2" type="search"
+                        <label for="buscar-principal"
+                            class="visually-hidden">Buscar en el
+                            catalogo</label>
+                        <input id="buscar-principal" class="form-control me-2"
+                            type="search"
                             name="buscar" placeholder="buscar"
+                            aria-label="Buscar en el catalogo"
                             style="border-radius: 20px; border: 1px solid #999;">
                         <button class="btn" type="submit">🔍</button>
                     </form>
@@ -103,7 +107,8 @@
                                     class="form-label text-light">Buscar</label>
                                 <input id="filtro-buscar" type="search"
                                     class="form-control text-light"
-                                    placeholder="Buscar">
+                                    placeholder="Buscar"
+                                    aria-label="Buscar en filtros">
                             </div>
 
                             <fieldset class="mb-3">
@@ -296,10 +301,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Monitor 1">
                                         <div class="card-body">
-                                            <h2 class="h6">Dell UltraSharp
-                                                U2720Q</h2>
+                                            <h3 class="h6">Dell UltraSharp
+                                                U2720Q</h3>
                                             <p
-                                                class="precio fw-bold text-success">399€</p>
+                                                class="precio fw-bold">399€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -313,10 +318,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Monitor 2">
                                         <div class="card-body">
-                                            <h2 class="h6">Monitor Lenovo
-                                                ThinkVision P24q-40</h2>
+                                            <h3 class="h6">Monitor Lenovo
+                                                ThinkVision P24q-40</h3>
                                             <p
-                                                class="precio fw-bold text-success">266€</p>
+                                                class="precio fw-bold">266€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -330,11 +335,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Monitor 3">
                                         <div class="card-body">
-                                            <h2 class="h6">LG UltraGear
-                                                27GL850</h2>
+                                            <h3 class="h6">LG UltraGear
+                                                27GL850</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">299€</span>
+                                                    class="oferta text-warning fw-bold">299€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>329€</s></span>
                                             </p>
@@ -351,10 +356,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Logitech G502">
                                         <div class="card-body">
-                                            <h2 class="h6">Logitech G502
-                                                HERO</h2>
+                                            <h3 class="h6">Logitech G502
+                                                HERO</h3>
                                             <p
-                                                class="precio fw-bold text-success">59€</p>
+                                                class="precio fw-bold">59€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -368,11 +373,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Razer DeathAdder V2">
                                         <div class="card-body">
-                                            <h2 class="h6">Logitech MX Master
-                                                3</h2>
+                                            <h3 class="h6">Logitech MX Master
+                                                3</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">90€</span>
+                                                    class="oferta text-warning fw-bold">90€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>99€</s></span>
                                             </p>
@@ -389,9 +394,9 @@
                                             class="card-img-top catalogo-img"
                                             alt="Corsair Harpoon">
                                         <div class="card-body">
-                                            <h2 class="h6">Glorious Model O</h2>
+                                            <h3 class="h6">Glorious Model O</h3>
                                             <p
-                                                class="precio fw-bold text-success">49€</p>
+                                                class="precio fw-bold">49€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -405,11 +410,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Epson EcoTank ET-2850">
                                         <div class="card-body">
-                                            <h2 class="h6">Epson EcoTank
-                                                ET-2850</h2>
+                                            <h3 class="h6">Epson EcoTank
+                                                ET-2850</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">220€</span>
+                                                    class="oferta text-warning fw-bold">220€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>249€</s></span>
                                             </p>
@@ -426,11 +431,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="HP OfficeJet Pro 9025e">
                                         <div class="card-body">
-                                            <h2 class="h6">HP OfficeJet Pro
-                                                9025e</h2>
+                                            <h3 class="h6">HP OfficeJet Pro
+                                                9025e</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">299€</span>
+                                                    class="oferta text-warning fw-bold">299€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>329€</s></span>
                                             </p>
@@ -447,10 +452,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Apple AirPods Pro (2.ª gen)">
                                         <div class="card-body">
-                                            <h2 class="h6">Brother
-                                                ADS-2700W</h2>
+                                            <h3 class="h6">Brother
+                                                ADS-2700W</h3>
                                             <p
-                                                class="precio fw-bold text-success">199€</p>
+                                                class="precio fw-bold">199€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -464,11 +469,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Logitech G Pro Keyboard">
                                         <div class="card-body">
-                                            <h2 class="h6">Logitech G Pro
-                                                Keyboard</h2>
+                                            <h3 class="h6">Logitech G Pro
+                                                Keyboard</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">100€</span>
+                                                    class="oferta text-warning fw-bold">100€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>119€</s></span>
                                             </p>
@@ -484,11 +489,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Keychron K2 (v2) — Wireless Mechanical Keyboard">
                                         <div class="card-body">
-                                            <h2 class="h6">Keychron K2 (v2) —
+                                            <h3 class="h6">Keychron K2 (v2) —
                                                 Wireless Mechanical
-                                                Keyboard</h2>
+                                                Keyboard</h3>
                                             <p
-                                                class="precio fw-bold text-success">
+                                                class="precio fw-bold">
                                                 86€
                                             </p>
                                         </div>
@@ -503,10 +508,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Corsair K70 RGB">
                                         <div class="card-body">
-                                            <h2 class="h6">Corsair K70 RGB</h2>
+                                            <h3 class="h6">Corsair K70 RGB</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">120€</span>
+                                                    class="oferta text-warning fw-bold">120€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>149€</s></span>
                                             </p>
@@ -522,10 +527,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="WD Elements Portable 2TB">
                                         <div class="card-body">
-                                            <h2 class="h6">WD Elements Portable
-                                                2TB</h2>
+                                            <h3 class="h6">WD Elements Portable
+                                                2TB</h3>
                                             <p
-                                                class="precio fw-bold text-success">59€</p>
+                                                class="precio fw-bold">59€</p>
                                         </div>
                                     </div>
                                 </a>
@@ -538,11 +543,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Seagate Backup Plus Portable 4TB">
                                         <div class="card-body">
-                                            <h2 class="h6">Seagate Backup Plus
-                                                Portable 4TB</h2>
+                                            <h3 class="h6">Seagate Backup Plus
+                                                Portable 4TB</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">85€</span>
+                                                    class="oferta text-warning fw-bold">85€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>99€</s></span>
                                             </p>
@@ -558,10 +563,10 @@
                                             class="card-img-top catalogo-img"
                                             alt="Samsung Portable SSD T7 1TB">
                                         <div class="card-body">
-                                            <h2 class="h6">Samsung Portable SSD
-                                                T7 1TB</h2>
+                                            <h3 class="h6">Samsung Portable SSD
+                                                T7 1TB</h3>
                                             <p
-                                                class="precio fw-bold text-success">129€
+                                                class="precio fw-bold">129€
                                             </p>
                                         </div>
                                     </div>
@@ -575,11 +580,11 @@
                                             class="card-img-top catalogo-img"
                                             alt="Crucial X8 Portable SSD 1TB">
                                         <div class="card-body">
-                                            <h2 class="h6">Crucial X8 Portable
-                                                SSD 1TB</h2>
+                                            <h3 class="h6">Crucial X8 Portable
+                                                SSD 1TB</h3>
                                             <p class="precio fw-bold">
                                                 <span
-                                                    class="oferta text-danger fw-bold">10€</span>
+                                                    class="oferta text-warning fw-bold">10€</span>
                                                 <span
                                                     class="preciomenos text-blue small"><s>129€</s></span>
                                             </p>
