@@ -21,6 +21,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menuPrincipal"
+          aria-label="Abrir menu de navegacion"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,7 +50,7 @@
                 >Inicio</a
               >
             </li>
-            <span class="separador d-none d-lg-inline mx-2" style="color: #ccc"
+            <span class="separador d-none d-lg-inline mx-2" style="color: #666"
               >|</span
             >
             <li class="nav-item">
@@ -58,7 +61,7 @@
                 >Catalogo</a
               >
             </li>
-            <span class="separador d-none d-lg-inline mx-2" style="color: #ccc"
+            <span class="separador d-none d-lg-inline mx-2" style="color: #666"
               >|</span
             >
             <li class="nav-item">
@@ -77,14 +80,20 @@
             class="d-flex my-3 my-lg-0 me-lg-3"
             role="search"
           >
+            <label for="buscar-productos" class="visually-hidden"
+              >Buscar productos</label
+            >
             <input
+              id="buscar-productos"
               class="form-control me-2"
               type="search"
               name="buscar"
-              placeholder="buscar"
+              placeholder="Buscar productos"
               style="border-radius: 20px; border: 1px solid #999"
             />
-            <button class="btn" type="submit">🔍</button>
+            <button class="btn" type="submit" aria-label="Buscar productos">
+              🔍
+            </button>
           </form>
 
           <div class="usuario d-flex flex-column flex-lg-row gap-3">
@@ -244,7 +253,7 @@
             <a href="index.html">
               <img
                 src="../imagenes/logojpg-removebg-preview.png"
-                alt="Inicio"
+                alt="TechCore"
                 height="60"
               />
             </a>
@@ -278,13 +287,13 @@
             <div
               class="d-flex justify-content-center justify-content-lg-end gap-3"
             >
-              <a href="https://x.com"
+              <a href="https://x.com" aria-label="X"
                 ><img src="../imagenes/x.png" alt="" width="24"
               /></a>
-              <a href="https://facebook.com"
+              <a href="https://facebook.com" aria-label="Facebook"
                 ><img src="../imagenes/facebook.png" alt="" width="24"
               /></a>
-              <a href="https://instagram.com"
+              <a href="https://instagram.com" aria-label="Instagram"
                 ><img src="../imagenes/instagram.png" alt="" width="24"
               /></a>
             </div>
